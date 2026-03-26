@@ -1,19 +1,19 @@
 spawn(function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/LoiSprite/Map-dit/refs/heads/main/Config%20Steal.txt'))()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/LoiSprite/MapDitV2/refs/heads/main/AntiAfk.lua'))()
 end)
 
 spawn(function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/LoiSprite/Map-dit/refs/heads/main/HeoBeo.lua'))()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/LoiSprite/MapDitV2/refs/heads/main/LockFPS.lua'))()
 end)
 
 spawn(function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/LoiSprite/Map-dit/refs/heads/main/LockFPS.lua'))()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/LoiSprite/MapDitV2/refs/heads/main/Sailor%20Piece.txt'))()
 end)
 
 spawn(function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/LoiSprite/Map-dit/refs/heads/main/TrackStatsChim.lua'))()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/LoiSprite/MapDitV2/refs/heads/main/TrackstatsBanana.lua'))()
 end)
 
 spawn(function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/LoiSprite/Map-dit/refs/heads/main/TrackStats.lua'))()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/LoiSprite/MapDitV2/refs/heads/main/TrackstatsYummy.lua'))()
 end)
