@@ -19,7 +19,7 @@ getgenv().kickALuckyBlockConfig = {
     -- Discord
     WEBHOOK_BRAINROT_NAME = {},
     WEBHOOK_BRAINROT_RARITY = { "Celestial", "Exclusive" },
-    WEBHOOK_BRAINROT_CPS = 1000000,
+    WEBHOOK_BRAINROT_CPS = 10000000,
     WEBHOOK_URL = "https://discord.com/api/webhooks/1447641028243750962/tDlf4gpZ_0f7lbkARI3V7rIebWej5D2LAC-U0n5Uxsg-aGDCMA0gdEVqSG86bE0Quo8Y",
     DISCORD_ID = "600936810092167179",
     WEBHOOK_NOTE = "mapthulu",
