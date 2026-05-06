@@ -2,6 +2,7 @@ script_key="CgLydZmuMcKEqRsEfjrOiOaWzXdOhUfX";
 setfpscap(10)
 
 getgenv().kickALuckyBlockConfig = {
+    AUTO_UPDATE_RESTART = true,
     -- Favourite = Prevent autosell
     FAVOURITE_BRAINROT_NAME = {}, 
     FAVOURITE_BRAINROT_RARITY = { "Celestial", "Exclusive" },  
