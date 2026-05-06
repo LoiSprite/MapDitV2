@@ -6,7 +6,7 @@ getgenv().kickALuckyBlockConfig = {
     -- Favourite = Prevent autosell
     FAVOURITE_BRAINROT_NAME = {}, 
     FAVOURITE_BRAINROT_RARITY = { "Celestial", "Exclusive" },  
-    FAVOURITE_BRAINROT_CPS = 1000000,  -- Base & Mutation CPS
+    FAVOURITE_BRAINROT_CPS = 10000000,  -- Base & Mutation CPS
 
     -- Force collect brainrot, doesn't skip when detected as weaker brainrot (Remember to include name/rarity in favourite as well)
     FORCE_COLLECT_BRAINROT_NAME = {}, 
