@@ -10,7 +10,7 @@ getgenv().kickALuckyBlockConfig = {
 
     -- Force collect brainrot, doesn't skip when detected as weaker brainrot (Remember to include name/rarity in favourite as well)
     FORCE_COLLECT_BRAINROT_NAME = {}, 
-    FORCE_COLLECT_BRAINROT_RARITY = {},  
+    FORCE_COLLECT_BRAINROT_RARITY = {Celestial},  
     FORCE_COLLECT_BRAINROT_CPS = 5000000,  -- Base & Mutation CPS
 
     -- SQUAT_UNTIL_KICK_POWER only applies when you have best weight, otherwise it will auto efficient squat
