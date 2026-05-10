@@ -1,5 +1,5 @@
 script_key="CgLydZmuMcKEqRsEfjrOiOaWzXdOhUfX";
-setfpscap(15)
+setfpscap(10)
 
 getgenv().kickALuckyBlockConfig = {
     AUTO_UPDATE_RESTART = true,
