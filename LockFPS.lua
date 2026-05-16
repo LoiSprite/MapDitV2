@@ -1,4 +1,4 @@
 while true do
-    setfpscap(15)
+    setfpscap(3)
     task.wait(10)
 end
