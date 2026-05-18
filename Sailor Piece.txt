@@ -1,4 +1,4 @@
-script_key="SHIGANSHINA";
+script_key="vGoBSjwfYJQxHwrgaQPIXeaUJVgDaqqC";
 getgenv().AOTR = {
     Raid = {
         Enabled     = false,
