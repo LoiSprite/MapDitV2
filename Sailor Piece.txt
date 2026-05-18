@@ -139,7 +139,7 @@ _G.TekkitConfig = {
   PrivateServerCode = "-",
   LeaveIfMorePlayers = true,
   AutoSelectSlot = true,
-  Slot = "A",
+  Slot = "B",
 
 }
 script_key="hcVRWWqjTNhdINverKhTdhtawQspzpkT";
