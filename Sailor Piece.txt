@@ -1,17 +1,14 @@
-getgenv().Config = {
-
-    ["Performance"] = {
-        ["FPS Cap"] = 15,
+script_key="vGoBSjwfYJQxHwrgaQPIXeaUJVgDaqqC";
+getgenv().AOTR = {
+    Raid = {
+        Enabled     = false,
+        Map         = "Chapel",
+        Objective   = "Attack Titan",
+        Difficulty  = "Hard",
+        LevelToRaid = 275,
     },
-
-    ["Auto Raid"] = {
-        ["Enabled"]    = true,
-        ["Map"]        = "Utgard",
-        ["Objective"]  = "Defend",
-        ["Difficulty"] = "Aberrant",
-    },
-
-    ["Modifiers"] = {
+    LobbyEveryRetries = 20,
+    Modifiers = {
         ["No Perks"]         = true,
         ["No Skills"]        = true,
         ["No Memories"]      = true,
@@ -25,36 +22,29 @@ getgenv().Config = {
         ["Boring"]           = false,
         ["Simple"]           = false,
     },
-
-    ["Auto Boosts"] = {
-        ["Auto Rebuy"]     = true,
-        ["Min Canes Keep"] = 0,
-        ["Items"] = {
-            ["XP"]   = { ["30m"] = true, ["1h"] = false, ["2h"] = false },
-            ["Gold"] = { ["30m"] = true, ["1h"] = false, ["2h"] = false },
-            ["Luck"] = { ["30m"] = true, ["1h"] = false, ["2h"] = false },
+    Boosts = {
+        AutoRebuy = true,
+        Items = {
+            XP   = { ["30m"] = true, ["1h"] = false, ["2h"] = false },
+            Gold = { ["30m"] = true, ["1h"] = false, ["2h"] = false },
+            Luck = { ["30m"] = true, ["1h"] = false, ["2h"] = false },
         },
     },
-
-    ["Auto Skip Cutscene"] = true,
-
-    ["Auto Prestige"] = {
-        ["Enabled"] = true,
-        ["Stop At"] = 3,
-        ["Gold Required"] = {
-            [0] = "200M",
-            [1] = "400M",
-            [2] = "600M",
-            [3] = "800M",
-            [4] = "1B",
+    AutoPrestige = {
+        Enabled = true,
+        GoldRequired = {
+            [0] = 200000000,
+            [1] = 400000000,
+            [2] = 600000000,
+            [3] = 800000000,
+            [4] = 1000000000,
         },
     },
-
-    ["Webhook"] = {
-        ["URL"] = "https://discord.com/api/webhooks/1447641028243750962/tDlf4gpZ_0f7lbkARI3V7rIebWej5D2LAC-U0n5Uxsg-aGDCMA0gdEVqSG86bE0Quo8Y",
-        ["Ping User ID"] = "",
-        ["Ping On Every Mission"] = true,
+    TargetFamily = {
+        Enabled        = false,
+        Targets        = { "Braus" },
+        Interval       = 2,
+        StopWhenNoSpin = true,
     },
 }
-
-loadstring(game:HttpGet("https://api.luarmor.net/files/v4/loaders/49922fb776c1f193bb12edd07b258bef.lua"))()
+loadstring(game:HttpGet("https://api.luarmor.net/files/v4/loaders/d6882ca362327ff6d4b1837fe0e4c809.lua"))()
