@@ -1,1 +1,2 @@
+script_key="vkRhTXIMJIqEfgIQkoIUfRyYbxGbUhSm";
 loadstring(game:HttpGet("https://api.luarmor.net/files/v4/loaders/1f179b0ee06c80b8ce8fdc93ccc55d16.lua"))()
