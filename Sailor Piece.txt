@@ -1,5 +1,5 @@
-_G.TekkitConfig = {
-  -- auto farm settings
+_G.TCFG = {
+
   AutoFarm = true,
   AutoFarmOptions = {
     "Close GUI",
@@ -17,12 +17,11 @@ _G.TekkitConfig = {
   PrestigeGold5 = 1000000000,
 
   -- auto start
- AutoStart = true,
+  AutoStart = true,
   AutoStartType = "Missions",
   AutoStartMap = "Shiganshina",
   AutoStartObjective = "Breach",
   AutoStartDifficulty = "Hardest",
-  PlayBoostedMap = false;
   AutoStartModifiers = {
     "No Skills",
     "No Talents",
@@ -32,14 +31,16 @@ _G.TekkitConfig = {
     "Chronic Injuries",
     "Fog",
     "Glass Cannon",
-    "Time Trial",
+    "Time Trial"
   },
 
   AutoReload = true,
-  SafetyTime = 21,
-  MultiHit = 9,
-  DisableHovering = true,
-  HitDistance = 1000,
+  MissionSafetyTime = 30, -- mission safety timer
+  RaidSafetyTime = 50,
+  WaitTime = 0, -- waits 5 seconds before killing any titans
+
+  HitDistance = 1000, -- blades
+  Multihit = 9,
   BossDamage = 9,
 
   AutoReturn = true,
@@ -48,14 +49,19 @@ _G.TekkitConfig = {
   StreakAmount = 100000,
   StreakDie = true,
   --waves
-  WaveToDieAt = 0,
-  AutoWaveDie = false,
+  WaveToDieAt = 95,
+  AutoWaveDie = true,
   WavesRollBlessing = false,
   WavesBuyUpgrades = false,
   WavesAutoUpgrade = false,
   WavesAutoSkip = false,
   WavesGetCrates = false,
   WavesUpgradesToBuy = {
+    "Max", --max hp for base
+    "Regen", --regens bases hp
+    "Replenish", --heals the base
+    "Refills", --this gives you more refills
+    "Revive" --this revives teammates
   },
   --autoclaim stuff
   ClaimQuests = true,
@@ -79,10 +85,12 @@ _G.TekkitConfig = {
 
   -- perks
   EnhancePerk = true,
-  PerkToEnhance = "Body",
+  PerkToEnhance = "Offense",
   PerksToUse = {
     "Common",
-    "Rare"
+    "Rare",
+    "Epic",
+    "Legendary"
   },
   EquipPerks = true,
 
@@ -111,14 +119,14 @@ _G.TekkitConfig = {
 
   -- boosts
   BuyBoosts = true,
-  ItemtoBuyWith = "Canes",
   Boosts = {
     "2x Gold Boost [2h]"
   },
+  ItemtoBuyWith = "Canes",
 
   -- general settings
-  HoverHeight = 265,
-  HoverSpeed = 3000,
+  HoverHeight = 300,
+  HoverSpeed = 1000,
   NoTitanLag = true,
   TitanEsp = false,
   NapeExtend = false,
@@ -128,7 +136,8 @@ _G.TekkitConfig = {
   Webhook = true,
   WebhookLink = "https://discord.com/api/webhooks/1447641028243750962/tDlf4gpZ_0f7lbkARI3V7rIebWej5D2LAC-U0n5Uxsg-aGDCMA0gdEVqSG86bE0Quo8Y",
   ShowUsername = true,
-  SendSafetyUpdate = true,
+  PingEveryone = false,
+  WebhookSendInterval = 1, -- how often to send the webhook message
 
   -- rejoin for titan skins
   OnikiriRejoin = false,
@@ -136,11 +145,22 @@ _G.TekkitConfig = {
   JotunnRejoin = false,
 
   -- server rejoining
-  PrivateServerCode = "-",
+  PrivateServerCode = "",
   LeaveIfMorePlayers = true,
   AutoSelectSlot = true,
   Slot = "A",
 
+  --selling
+  SellSerums = true,
+  AttackSerums = 1,
+  FemaleSerums = 1,
+  ArmoredSerums = 1,
+  ColossalSerums = 5,
+
+  SellAllCosmetics = false,
+  CosmeticMax = 20,
+
 }
+
 script_key="hcVRWWqjTNhdINverKhTdhtawQspzpkT";
 loadstring(game:HttpGet("https://api.luarmor.net/files/v4/loaders/3218f6d499bb0f738c70c5532b848d9a.lua"))()
