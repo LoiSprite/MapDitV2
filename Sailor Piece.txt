@@ -1,6 +1,8 @@
 _G.TCFG = {
 
   AutoFarm = true,
+  AutoFarmMethod = "Normal",
+  InfiniteSpears = true,
   AutoFarmOptions = {
     "Close GUI",
     "Fail Safe",
@@ -31,17 +33,17 @@ _G.TCFG = {
     "Chronic Injuries",
     "Fog",
     "Glass Cannon",
-    "Time Trial"
+    "Time Trial",
   },
 
   AutoReload = true,
-  MissionSafetyTime = 30, -- mission safety timer
-  RaidSafetyTime = 50,
+  MissionSafetyTime = 41, -- mission safety timer
+  RaidSafetyTime = 60,
   WaitTime = 0, -- waits 5 seconds before killing any titans
 
-  HitDistance = 1000, -- blades
-  Multihit = 9,
-  BossDamage = 9,
+  HitDistance = 400, -- blades
+  MultiHit = 5,
+  BossDamage = 100,
 
   AutoReturn = true,
   ReturnAmount = 15,
@@ -90,7 +92,6 @@ _G.TCFG = {
     "Common",
     "Rare",
     "Epic",
-    "Legendary"
   },
   EquipPerks = true,
 
@@ -116,6 +117,9 @@ _G.TCFG = {
   -- roll family
   RollCooldown = 3,
   RollFamily = false,
+  FamilyRarities = {"Epic", "Legendary", "Mythical"},
+  DepositMythics = false,
+  RollMethod = "Background",
 
   -- boosts
   BuyBoosts = true,
@@ -128,9 +132,10 @@ _G.TCFG = {
   HoverHeight = 300,
   HoverSpeed = 1000,
   NoTitanLag = true,
+  DisableRendering = true,
+  MemoryCleaner = true,
   TitanEsp = false,
   NapeExtend = false,
-  DisableRendering = true,
 
   -- webhook
   Webhook = true,
@@ -151,7 +156,7 @@ _G.TCFG = {
   Slot = "A",
 
   --selling
-  SellSerums = true,
+  SellSerums = false,
   AttackSerums = 1,
   FemaleSerums = 1,
   ArmoredSerums = 1,
@@ -159,6 +164,8 @@ _G.TCFG = {
 
   SellAllCosmetics = false,
   CosmeticMax = 20,
+
+  FPSCap = 15,
 
 }
 
