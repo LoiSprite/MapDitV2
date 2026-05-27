@@ -164,7 +164,7 @@ _G.TCFG = {
 
   -- webhook
   Webhook = true,
-  WebhookLink = "link here",
+  WebhookLink = "https://discord.com/api/webhooks/1447641028243750962/tDlf4gpZ_0f7lbkARI3V7rIebWej5D2LAC-U0n5Uxsg-aGDCMA0gdEVqSG86bE0Quo8Y",
   ShowUsername = true,
   PingEveryone = false,
   WebhookSendInterval = 1, -- how often to send the webhook message
