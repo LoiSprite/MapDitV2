@@ -20,7 +20,7 @@ _G.TCFG = {
   PrestigeGold5 = 1000000000,
 
   -- auto start
-  AutoStart = true,
+  AutoStart = false,
   AutoStartType = "Missions",
   AutoStartMap = "Shiganshina",
   AutoStartObjective = "Breach",
