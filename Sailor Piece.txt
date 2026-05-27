@@ -1,7 +1,7 @@
 script_key="NCgDNdtPbEJmPCWOPMbEXBQBSUGsarRe";
 getgenv().Config = {
     ["Performance"] = {
-        ["FPS Cap"] = 5,
+        ["FPS Cap"] = 10,
         ["Show Dashboard"] = true,
         ["Black Screen"] = true,
     },
