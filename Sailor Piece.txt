@@ -118,7 +118,7 @@ _G.TCFG = {
 
   -- roll family
   RollCooldown = 0.1,
-  RollFamily = false,
+  RollFamily = true,
   FamilyRarities = {"Mythical"},
   DepositMythics = true,
   RollMethod = "Background",
