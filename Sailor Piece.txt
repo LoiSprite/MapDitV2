@@ -9,16 +9,38 @@ _G.TCFG = {
     "Fail Safe"
   },
 
+  AutoReload = true,
+  MissionSafetyTime = 30, -- mission safety timer
+  RaidSafetyTime = 60,
+  WaitTime = 0, -- waits 5 seconds before killing any titans
+
   AutoReturn = true,
   ReturnAmount = 10,
   ReturnMethod = "Config", -- use "Executions" if your executors config system sucks
 
   -- roll family
   RollCooldown = 3,
-  RollFamily = true,
+  RollFamily = false,
   FamilyRarities = {"Epic", "Legendary", "Mythical"},
-  DepositMythics = true,
+  DepositMythics = false,
   RollMethod = "Background",
+
+  -- general settings
+  HoverHeight = 300,
+  HoverSpeed = 1000,
+  NoTitanLag = true,
+  DisableRendering = true,
+  MemoryCleaner = true,
+  EnableFPSCap = false,
+  FPSCap = 999,
+  TitanEsp = false,
+  NapeExtend = false,
+
+  -- server rejoining
+  PrivateServerCode = "",
+  LeaveIfMorePlayers = true,
+  AutoSelectSlot = true,
+  Slot = "A",
 
   -- webhook
   Webhook = true,
