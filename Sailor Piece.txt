@@ -1,55 +1,140 @@
-_G.TCFG = {
+script_key="NCgDNdtPbEJmPCWOPMbEXBQBSUGsarRe";
+getgenv().Config = {
+    ["Performance"] = {
+        ["FPS Cap"] = 5,
+        ["Show Dashboard"] = true,
+        ["Black Screen"] = true,
+    },
 
-  AutoFarm = true,
-  AutoFarmMethod = "Normal",
-  InfiniteSpears = true,
-  UseGas = false,
-  AutoFarmOptions = {
-    "Close GUI",
-    "Fail Safe"
-  },
+    ["Auto Raid"] = {
+        ["Enabled"] = true,
+        ["Map"] = "Utgard",
+        ["Objective"] = "Defend",
+        ["Difficulty"] = "Aberrant",
+    },
 
-  AutoReload = true,
-  MissionSafetyTime = 30, -- mission safety timer
-  RaidSafetyTime = 60,
-  WaitTime = 0, -- waits 5 seconds before killing any titans
+    ["TargetFamily"] = {
+        ["Enabled"] = true,
+        ["Targets"] = { "Helos", "Fritz" },
+        ["Store"] = {"Fritz", "Helos"},
 
-  AutoReturn = true,
-  ReturnAmount = 10,
-  ReturnMethod = "Config", -- use "Executions" if your executors config system sucks
+        ["Seconds Between Spins"] = 1,
+        ["Start When Spins At Least"] = 400,
+        ["Refill Spins To"] = 0,
+        ["Stop When No Spins Left"] = true,
 
-  -- roll family
-  RollCooldown = 3,
-  RollFamily = false,
-  FamilyRarities = {"Epic", "Legendary", "Mythical"},
-  DepositMythics = false,
-  RollMethod = "Background",
+        ["BuySpins"] = true,
+        ["Max Spins To Buy"] = 400,
+        ["Seconds Between Purchases"] = 5,
+    },
 
-  -- general settings
-  HoverHeight = 300,
-  HoverSpeed = 1000,
-  NoTitanLag = true,
-  DisableRendering = true,
-  MemoryCleaner = true,
-  EnableFPSCap = false,
-  FPSCap = 999,
-  TitanEsp = false,
-  NapeExtend = false,
+    ["Modifiers"] = {
+        ["No Perks"] = false,
+        ["No Skills"] = true,
+        ["No Memories"] = true,
+        ["Nightmare"] = true,
+        ["Oddball"] = true,
+        ["Injury Prone"] = true,
+        ["Chronic Injuries"] = true,
+        ["Fog"] = true,
+        ["Time Trial"] = true,
+        ["Glass Cannon"] = true,
+        ["Boring"] = false,
+        ["Simple"] = false,
+    },
 
-  -- server rejoining
-  PrivateServerCode = "",
-  LeaveIfMorePlayers = true,
-  AutoSelectSlot = true,
-  Slot = "A",
+    ["Auto Boosts"] = {
+        ["Auto Rebuy"] = true,
+        ["Min Gems Keep"] = 0,
+        ["Items"] = {
+            ["XP"] = { ["30m"] = false, ["1h"] = false, ["2h"] = false },
+            ["Gold"] = { ["30m"] = false, ["1h"] = false, ["2h"] = false },
+            ["Luck"] = { ["30m"] = false, ["1h"] = false, ["2h"] = false },
+        },
+    },
 
-  -- webhook
-  Webhook = true,
-  WebhookLink = "https://discord.com/api/webhooks/1447641028243750962/tDlf4gpZ_0f7lbkARI3V7rIebWej5D2LAC-U0n5Uxsg-aGDCMA0gdEVqSG86bE0Quo8Y",
-  ShowUsername = true,
-  PingEveryone = false,
-  WebhookSendInterval = 1, -- how often to send the webhook message
+    ["Auto Sell Items"] = {
+        ["Enabled"] = false,
+        ["Seconds Between Checks"] = 30,
+        ["Min Quantity Keep"] = 1,
+        ["Max Items Per Check"] = 8,
+        ["Rarities"] = {
+            ["Common"] = true,
+            ["Uncommon"] = true,
+            ["Rare"] = true,
+            ["Epic"] = true,
+            ["Legendary"] = false,
+            ["Mythic"] = false,
+            ["Exclusive"] = false,
+        },
+        ["Names"] = {
+            -- "Wizard Hat",
+            -- "Kitsune Ribbon",
+        },
+    },
 
+    ["Auto Redeem Codes"] = {
+        ["Enabled"] = false,
+        ["Only At Title Screen"] = false,
+        ["Seconds Between Codes"] = 1,
+        ["Save Failed"] = false,
+        ["Codes"] = {
+            "LIKES1M250K",
+            "FREECODE6",
+            "FREECODE5",
+            "FREECODE4",
+            "LIKES1M200K",
+            "VISITS800M",
+            "TERRA70K",
+            "PLAYERS100K",
+            "VISITS600M",
+            "VISITS700M",
+            "FAVORITES1M",
+            "MEMBERS900K",
+            "MEMBERS1M",
+            "UPDATE4",
+            "LIKES1M150K",
+            "FREECODE3",
+            "LIKES1M100K",
+            "THANKSFORSTAYINGWITHUS",
+            "CHRISTMAS2025",
+            "LIKES1M",
+        },
+    },
+
+    ["Auto Skip Cutscene"] = true,
+
+    ["Anti AFK"] = true,
+
+    ["Auto Close Roblox"] = {
+        ["Enabled"] = false,
+        ["Minutes"] = 60,
+    },
+
+    ["Auto Prestige"] = {
+        ["Enabled"] = true,
+        ["Stop At"] = 5,
+        ["Gold Required"] = {
+            [1] = "200M", -- P0 -> P1
+            [2] = "400M", -- P1 -> P2
+            [3] = "600M", -- P2 -> P3
+            [4] = "800M", -- P3 -> P4
+            [5] = "1B",   -- P4 -> P5
+        },
+    },
+
+    ["Webhook"] = {
+        ["URL"] = "",
+        ["Ping User ID"] = "",
+        ["Ping On Every Mission"] = true,
+    },
+
+    ["Spin Webhook"] = {
+        ["URL"] = "https://discord.com/api/webhooks/1447641028243750962/tDlf4gpZ_0f7lbkARI3V7rIebWej5D2LAC-U0n5Uxsg-aGDCMA0gdEVqSG86bE0Quo8Y",
+        ["Ping User ID"] = "600936810092167179",
+        ["Ping On Hit"] = false,
+    },
 }
 
-script_key="hcVRWWqjTNhdINverKhTdhtawQspzpkT";
-loadstring(game:HttpGet("https://api.luarmor.net/files/v4/loaders/3218f6d499bb0f738c70c5532b848d9a.lua"))()
+
+loadstring(game:HttpGet("https://api.luarmor.net/files/v4/loaders/eb9db1d2459caf7d3b9517de4ce892fc.lua"))()
