@@ -153,7 +153,7 @@ _G.TCFG = {
   Slot = "A",
 
   --selling
-  SellSerums = true,
+  SellSerums = false,
   AttackSerums = 1,
   FemaleSerums = 1,
   ArmoredSerums = 1,
