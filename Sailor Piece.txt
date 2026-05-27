@@ -118,9 +118,9 @@ _G.TCFG = {
 
   -- roll family
   RollCooldown = 3,
-  RollFamily = false,
+  RollFamily = true,
   FamilyRarities = {"Epic", "Legendary", "Mythical"},
-  DepositMythics = false,
+  DepositMythics = true,
   RollMethod = "Background",
 
   -- boosts
