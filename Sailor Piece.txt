@@ -1,141 +1,175 @@
-script_key="NCgDNdtPbEJmPCWOPMbEXBQBSUGsarRe";
-getgenv().Config = {
-    ["Performance"] = {
-        ["FPS Cap"] = 5,
-        ["Show Dashboard"] = true,
-        ["Black Screen"] = true,
-    },
+_G.TCFG = {
 
-    ["Auto Raid"] = {
-        ["Enabled"] = true,
-        ["Map"] = "Utgard",
-        ["Objective"] = "Defend",
-        ["Difficulty"] = "Aberrant",
-    },
+  AutoFarm = true,
+  AutoFarmMethod = "Normal",
+  InfiniteSpears = true,
+  UseGas = false,
+  AutoFarmOptions = {
+    "Close GUI",
+    "Fail Safe"
+  },
 
-    ["TargetFamily"] = {
-        ["Enabled"] = true,
-        ["Targets"] = { "Helos", "Fritz" },
-        ["Store"] = {"Fritz", "Helos"},
+  -- prestige
+  AutoPrestige = true,
+  PrestigeBoost = "Gold Boost",
+  PrestigeToStopAt = 5,
+  PrestigeGold1 = 80000000,
+  PrestigeGold2 = 180000000,
+  PrestigeGold3 = 600000000,
+  PrestigeGold4 = 800000000,
+  PrestigeGold5 = 1000000000,
 
-        ["Seconds Between Spins"] = 1,
-        ["Start When Spins At Least"] = 400,
-        ["Refill Spins To"] = 0,
-        ["Stop When No Spins Left"] = false,
+  -- auto start
+  AutoStart = true,
+  AutoStartType = "Missions",
+  AutoStartMap = "Shiganshina",
+  AutoStartObjective = "Breach",
+  AutoStartDifficulty = "Hardest",
+  AutoStartModifiers = {
+    "No Skills",
+    "No Memories",
+    "Nightmare",
+    "Oddball",
+    "Injury Prone",
+    "Chronic Injuries",
+    "Fog",
+    "Glass Cannon",
+    "Time Trial"
+  },
 
-        ["BuySpins"] = false,
-        ["Max Spins To Buy"] = 400,
-        ["Seconds Between Purchases"] = 5,
-    },
+  AutoReload = true,
+  MissionSafetyTime = 35, -- mission safety timer
+  RaidSafetyTime = 60,
+  WaitTime = 0, -- waits 5 seconds before killing any titans
 
-    ["Modifiers"] = {
-        ["No Perks"] = false,
-        ["No Skills"] = true,
-        ["No Memories"] = true,
-        ["Nightmare"] = true,
-        ["Oddball"] = true,
-        ["Injury Prone"] = true,
-        ["Chronic Injuries"] = true,
-        ["Fog"] = true,
-        ["Time Trial"] = true,
-        ["Glass Cannon"] = true,
-        ["Boring"] = false,
-        ["Simple"] = false,
-    },
+  HitDistance = 2500, -- blades
+  MultiHit = 9,
+  BossDamage = 9,
 
-    ["Auto Boosts"] = {
-        ["Auto Rebuy"] = true,
-        ["Min Gems Keep"] = 0,
-        ["Items"] = {
-            ["XP"] = { ["30m"] = false, ["1h"] = false, ["2h"] = false },
-            ["Gold"] = { ["30m"] = true, ["1h"] = false, ["2h"] = false },
-            ["Luck"] = { ["30m"] = false, ["1h"] = false, ["2h"] = false },
-        },
-    },
+  AutoReturn = true,
+  ReturnAmount = 10,
+  ReturnMethod = "Config", -- use "Executions" if your executors config system sucks
 
-    ["Auto Sell Items"] = {
-        ["Enabled"] = true,
-        ["Seconds Between Checks"] = 30,
-        ["Min Quantity Keep"] = 1,
-        ["Max Items Per Check"] = 8,
-        ["Rarities"] = {
-            ["Common"] = true,
-            ["Uncommon"] = true,
-            ["Rare"] = true,
-            ["Epic"] = true,
-            ["Legendary"] = true,
-            ["Mythic"] = false,
-            ["Exclusive"] = false,
-        },
-        ["Names"] = {
-            -- "Wizard Hat",
-            -- "Kitsune Ribbon",
-        },
-    },
+  StreakAmount = 100000,
+  StreakDie = true,
+  --waves
+  WaveToDieAt = 95,
+  AutoWaveDie = true,
+  WavesRollBlessing = false,
+  WavesBuyUpgrades = false,
+  WavesAutoUpgrade = false,
+  WavesAutoSkip = false,
+  WavesGetCrates = false,
+  WavesUpgradesToBuy = {
+    "Max", --max hp for base
+    "Regen", --regens bases hp
+    "Replenish", --heals the base
+    "Refills", --this gives you more refills
+    "Revive" --this revives teammates
+  },
+  --autoclaim stuff
+  ClaimQuests = true,
+  ClaimAchievements = true,
 
-    ["Auto Redeem Codes"] = {
-        ["Enabled"] = false,
-        ["Only At Title Screen"] = false,
-        ["Seconds Between Codes"] = 1,
-        ["Save Failed"] = false,
-        ["Codes"] = {
-            "LIKES1M250K",
-            "FREECODE6",
-            "FREECODE5",
-            "FREECODE4",
-            "LIKES1M200K",
-            "VISITS800M",
-            "TERRA70K",
-            "PLAYERS100K",
-            "VISITS600M",
-            "VISITS700M",
-            "FAVORITES1M",
-            "MEMBERS900K",
-            "MEMBERS1M",
-            "UPDATE4",
-            "LIKES1M150K",
-            "FREECODE3",
-            "LIKES1M100K",
-            "THANKSFORSTAYINGWITHUS",
-            "CHRISTMAS2025",
-            "LIKES1M",
-        },
-    },
+  UseSkills = false,
+  EquipSkills = true,
+  Skills = {
+    "Drill Thrust",
+    "Torrential Steel",
+    "Let it RIP",
+    "Red Flare",
+    "Black Flare",
+    "Order: Rage",
+    "Rage Mode"
+  },
 
-    ["Auto Skip Cutscene"] = true,
+  -- spears
+  AutoSpearQuests = false,
+  EquipSpears = false,
 
-    ["Anti AFK"] = true,
+  -- perks
+  EnhancePerk = true,
+  PerkToEnhance = "Offense",
+  PerksToUse = {
+    "Common",
+    "Rare",
+    "Epic"
+  },
+  EquipPerks = true,
 
-    ["Auto Close Roblox"] = {
-        ["Enabled"] = false,
-        ["Minutes"] = 60,
-    },
+  BodySlot = "Heavenly Restriction",
+  OffenseSlot = "Kengo",
+  DefenseSlot = "",
+  SupportSlot = "",
+  DeletePerks = true,
+  RarityToDelete = {
+    "Common",
+    "Rare",
+    "Epic"
+  },
 
-    ["Auto Prestige"] = {
-        ["Enabled"] = true,
-        ["Stop At"] = 5,
-        ["Keep Memory Scrolls"] = 9999,
-        ["Gold Required"] = {
-            [1] = "50M", -- P0 -> P1
-            [2] = "100M", -- P1 -> P2
-            [3] = "150M", -- P2 -> P3
-            [4] = "200M", -- P3 -> P4
-            [5] = "400M",   -- P4 -> P5
-        },
-    },
+  -- upgrades
+  UpgradeGear = true,
+  AutoSkillTree = true,
+  LeftPath = "Skill Cooldown",
+  MiddlePath = "Damage",
+  RightPath = "Damage Reduction",
+  PathPriority = "Middle",
 
-    ["Webhook"] = {
-        ["URL"] = "",
-        ["Ping User ID"] = "",
-        ["Ping On Every Mission"] = true,
-    },
+  -- roll family
+  RollCooldown = 0.1,
+  RollFamily = false,
+  FamilyRarities = {"Mythical"},
+  DepositMythics = true,
+  RollMethod = "Background",
 
-    ["Spin Webhook"] = {
-        ["URL"] = "https://discord.com/api/webhooks/1447641028243750962/tDlf4gpZ_0f7lbkARI3V7rIebWej5D2LAC-U0n5Uxsg-aGDCMA0gdEVqSG86bE0Quo8Y",
-        ["Ping User ID"] = "",
-        ["Ping On Hit"] = false,
-    },
+  -- boosts
+  BuyBoosts = true,
+  Boosts = {
+    "2x Gold Boost [2h]"
+  },
+  ItemtoBuyWith = "Gems",
+
+  -- general settings
+  HoverHeight = 300,
+  HoverSpeed = 1000,
+  NoTitanLag = true,
+  DisableRendering = true,
+  MemoryCleaner = true,
+  EnableFPSCap = false,
+  FPSCap = 999,
+  TitanEsp = false,
+  NapeExtend = false,
+
+  -- rejoin for titan skins
+  OnikiriRejoin = false,
+  DeusRejoin = false,
+  JotunnRejoin = false,
+
+  -- server rejoining
+  PrivateServerCode = "",
+  LeaveIfMorePlayers = true,
+  AutoSelectSlot = true,
+  Slot = "A",
+
+  --selling
+  SellSerums = true,
+  AttackSerums = 1,
+  FemaleSerums = 1,
+  ArmoredSerums = 1,
+  ColossalSerums = 5,
+
+  SellAllCosmetics = false,
+  CosmeticMax = 20,
+
+  -- webhook
+  Webhook = true,
+  WebhookLink = "https://discord.com/api/webhooks/1447641028243750962/tDlf4gpZ_0f7lbkARI3V7rIebWej5D2LAC-U0n5Uxsg-aGDCMA0gdEVqSG86bE0Quo8Y",
+  ShowUsername = true,
+  PingEveryone = false,
+  WebhookSendInterval = 1, -- how often to send the webhook message
+
 }
 
-
-loadstring(game:HttpGet("https://api.luarmor.net/files/v4/loaders/eb9db1d2459caf7d3b9517de4ce892fc.lua"))()
+script_key="hcVRWWqjTNhdINverKhTdhtawQspzpkT"; -- please put your premium key here
+loadstring(game:HttpGet("https://api.luarmor.net/files/v4/loaders/3218f6d499bb0f738c70c5532b848d9a.lua"))()
