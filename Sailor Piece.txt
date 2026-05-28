@@ -12,7 +12,7 @@ _G.TCFG = {
   -- prestige
   AutoPrestige = true,
   PrestigeBoost = "Gold Boost",
-  PrestigeToStopAt = 3,
+  PrestigeToStopAt = 5,
   PrestigeGold1 = 80000000,
   PrestigeGold2 = 180000000,
   PrestigeGold3 = 600000000,
