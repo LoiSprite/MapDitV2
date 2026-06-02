@@ -26,6 +26,7 @@ _G.TCFG = {
   AutoStartObjective = "Breach",
   AutoStartDifficulty = "Hardest",
   AutoStartModifiers = {
+    "No Perks",
     "No Skills",
     "No Memories",
     "Nightmare",
@@ -93,7 +94,8 @@ _G.TCFG = {
   PerksToUse = {
     "Common",
     "Rare",
-    "Epic"
+    "Epic",
+    "Legendary"
   },
   EquipPerks = true,
 
@@ -107,6 +109,7 @@ _G.TCFG = {
     "Rare",
     "Epic",
     "Legendary"
+
   },
 
   -- upgrades
@@ -118,10 +121,10 @@ _G.TCFG = {
   PathPriority = "Middle",
 
   -- roll family
-  RollCooldown = 0.1,
+  RollCooldown = 3,
   RollFamily = false,
-  FamilyRarities = {"Mythical"},
-  DepositMythics = true,
+  FamilyRarities = {"Epic", "Legendary", "Mythical"},
+  DepositMythics = false,
   RollMethod = "Background",
 
   -- boosts
@@ -133,7 +136,7 @@ _G.TCFG = {
 
   -- general settings
   HoverHeight = 300,
-  HoverSpeed = 1000,
+  HoverSpeed = 2000,
   NoTitanLag = true,
   DisableRendering = true,
   MemoryCleaner = true,
@@ -148,13 +151,14 @@ _G.TCFG = {
   JotunnRejoin = false,
 
   -- server rejoining
-  PrivateServerCode = "",
+  PrivateServerCode = "", -- PRIVATE SERVER
   LeaveIfMorePlayers = true,
   AutoSelectSlot = true,
   Slot = "A",
+  AutoNextSlotIfMax = true,
 
   --selling
-  SellSerums = false,
+  SellSerums = true,
   AttackSerums = 1,
   FemaleSerums = 1,
   ArmoredSerums = 1,
@@ -172,5 +176,5 @@ _G.TCFG = {
 
 }
 
-script_key="hcVRWWqjTNhdINverKhTdhtawQspzpkT"; -- please put your premium key here
+script_key="hcVRWWqjTNhdINverKhTdhtawQspzpkT";
 loadstring(game:HttpGet("https://api.luarmor.net/files/v4/loaders/3218f6d499bb0f738c70c5532b848d9a.lua"))()
