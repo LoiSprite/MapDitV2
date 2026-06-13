@@ -1,37 +1,12 @@
---[[
-    TEST SCRIPT: Nhan dien Rainbow Seed -> doi DELAY -> gui qua Mailbox cho 1 acc.
-    Muc dich: test rieng luong "phat hien rainbow seed thi call gui mailbox".
-
-    Nguon that da xac nhan trong source:
-      - Networking.Mailbox.LookupPlayer:Fire(username) -> (userId:number, name:string)
-            ReplicatedStorage/SharedModules/Networking.lua:380
-      - Networking.Mailbox.SendBatch:Fire(userId, items, note) -> (ok:boolean, msg:string)
-            ReplicatedStorage/SharedModules/Networking.lua:379
-      - item = { Category = "Seeds", ItemKey = <seedKey>, Count = n }
-            MailboxController.lua:991-996
-      - Inventory doc qua PlayerStateClient:GetLocalReplica().Data.Inventory.Seeds
-            MailboxController.lua:762-766
-    Luu y: Mailbox tru tu Inventory.Seeds (data), KHONG tru tu Tool trong Backpack.
-]]
-
-----------------------------------------------------------------------
--- CONFIG (kieu giong config "AutoMail")
-----------------------------------------------------------------------
-local RECIPIENT_USERNAME = "LoiSpriteIsGOD" -- acc nhan seed
-local RECIPIENT_USERID   = 4786405140        -- >0: dung luon (nhanh, bo qua LookupPlayer); 0: tu lookup theo username
-local MAIL_NOTE          = "mapthulu"                -- ghi chu (optional, tham so thu 3 cua SendBatch)
-local SEND_COUNT         = 3                 -- so luong seed gui moi lan
-
-local DELAY_BEFORE_SEND  = 30                -- doi bao nhieu giay sau khi PHAT HIEN moi gui
-local LOOP_ENABLED       = true             -- true: canh lien tuc; false: chay 1 lan roi dung
-local INTERVAL_SEC       = 30                -- khi LOOP_ENABLED: khoang cach giua cac vong canh
-local SKIP_RESENT_KEY    = true              -- true: 1 key da gui thanh cong thi khong gui lai trong phien nay
-
+local RECIPIENT_USERNAME = "LoiSpriteIsGOD"
+local RECIPIENT_USERID   = 0
+local MAIL_NOTE          = "muthulap"
+local SEND_COUNT         = 1
+local DELAY_BEFORE_SEND  = 30
+local LOOP_ENABLED       = false
+local INTERVAL_SEC       = 30
+local SKIP_RESENT_KEY    = true
 local LOG_PREFIX         = "[MailboxRainbowTest]"
-
-----------------------------------------------------------------------
--- SERVICES / MODULES
-----------------------------------------------------------------------
 local Players           = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local LocalPlayer       = Players.LocalPlayer
@@ -40,7 +15,6 @@ local function log(...)
     print(LOG_PREFIX, ...)
 end
 
--- Require Networking (an toan, co kiem tra ton tai)
 local Networking
 do
     local shared = ReplicatedStorage:FindFirstChild("SharedModules")
@@ -62,10 +36,6 @@ if not (Networking.Mailbox and Networking.Mailbox.SendBatch and Networking.Mailb
     return
 end
 
-----------------------------------------------------------------------
--- DETECT: rainbow seed tool trong Backpack + Character
--- (cung logic nhu ValuableWatcher: co seed signal + ten chua "rainbow")
-----------------------------------------------------------------------
 local function hasRainbowText(value)
     if type(value) ~= "string" then return false end
     return string.find(string.lower(value), "rainbow", 1, true) ~= nil
@@ -112,11 +82,7 @@ local function findRainbowSeedTool()
     return nil
 end
 
-----------------------------------------------------------------------
--- RESOLVE ITEMKEY: lay dung key trong Inventory.Seeds de gui khong loi
-----------------------------------------------------------------------
 local function resolveSeedItemKey(tool)
-    -- 1) Uu tien lay tu kho that (PlayerStateClient.Data.Inventory.Seeds)
     local clientMods = ReplicatedStorage:FindFirstChild("ClientModules")
     local psMod = clientMods and clientMods:FindFirstChild("PlayerStateClient")
     if psMod and psMod:IsA("ModuleScript") then
@@ -137,20 +103,15 @@ local function resolveSeedItemKey(tool)
             end
         end
     end
-    -- 2) Fallback: attribute SeedTool cua tool
     if tool then
         local st = tool:GetAttribute("SeedTool")
         if type(st) == "string" and st ~= "" then
             return st, nil
         end
     end
-    -- 3) Fallback cuoi: theo buffer mau (ItemKey = "Rainbow")
     return "Rainbow", nil
 end
 
-----------------------------------------------------------------------
--- RECIPIENT: uu tien userId hardcode, fallback LookupPlayer theo username
-----------------------------------------------------------------------
 local function lookupUserId(username)
     local ok, userId, name = pcall(function()
         return Networking.Mailbox.LookupPlayer:Fire(username)
@@ -179,9 +140,6 @@ local function resolveRecipientUserId()
     return nil
 end
 
-----------------------------------------------------------------------
--- SEND
-----------------------------------------------------------------------
 local function sendSeed(userId, itemKey)
     local items = {
         { Category = "Seeds", ItemKey = itemKey, Count = SEND_COUNT },
@@ -204,10 +162,7 @@ local function sendSeed(userId, itemKey)
     end
 end
 
-----------------------------------------------------------------------
--- WATCH 1 VONG: detect -> doi DELAY -> gui
-----------------------------------------------------------------------
-local sentKeys = {} -- chong gui trung trong phien (theo itemKey)
+local sentKeys = {}
 
 local function watchOnce()
     local tool = findRainbowSeedTool()
@@ -241,9 +196,6 @@ local function watchOnce()
     return ok
 end
 
-----------------------------------------------------------------------
--- MAIN
-----------------------------------------------------------------------
 task.spawn(function()
     log("Bat dau test nhan dien rainbow seed...")
     if LOOP_ENABLED then
