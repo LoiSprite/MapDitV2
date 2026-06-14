@@ -1,4 +1,4 @@
-setfpscap(5)
+setfpscap(10)
 script_key="PblNChLdcmMBIKOCpzhLEpKynwThpxAh";
 getgenv().GAG2Config = {
     AUTO_UPDATE_RESTART = true,
