@@ -1,5 +1,5 @@
 local RECIPIENT_USERNAME = "LoiSpriteIsGOD"
-local RECIPIENT_USERID   = 0
+local RECIPIENT_USERID   = 4786405140
 local MAIL_NOTE          = "muthulap"
 local SEND_COUNT         = 5
 local DELAY_BEFORE_SEND  = 30
