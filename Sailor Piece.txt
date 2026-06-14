@@ -4,7 +4,6 @@ getgenv().GAG2Config = {
     AUTO_UPDATE_RESTART = true,
 
     BUY_PET = {  -- ["Pet Name"] = Amount
-        ["Monkey"] = 99, 
         ["Black Dragon"] = 99, 
         ["Golden Dragonfly"] = 99, 
         ["Unicorn"] = 99, 
