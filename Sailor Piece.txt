@@ -1,6 +1,8 @@
 getgenv().Key = "39dae756be41b6ee9238cdc4" 
 
 getgenv().Config = {
+    ["Max Plant Fruit"] = 200,
+    ["Buy Expand Plot"] = true,
     ["Pet"] = {
         ["Auto Buy"] = {
             ["Enable"] = true,
@@ -23,7 +25,7 @@ getgenv().Config = {
     ["Mail"] = {
         ["Enable"]      = true,
         ["Username"]    = "LoiSpriteIsGOD",
-        ["Note"]        = "map",
+        ["Note"]        = "auto-shipped from main",
         ["IntervalSec"] = 30,
         ["Pet"] = {
             ["IceSerpent"]      = true,
@@ -40,8 +42,8 @@ getgenv().Config = {
             ["Frog"]            = false,
         },
         ["Seed"] = {
-            ["Rainbow"] = true,
-            ["Gold"]    = true,
+            ["Rainbow"] = false,
+            ["Gold"]    = false,
         },
     },
     ["Plant Seed"] = {
@@ -73,16 +75,46 @@ getgenv().Config = {
             ["Dragon's Breath"] = false,   -- $10M
         },
     },
+    ["Buy Seed"] = {
+        ["Enable"] = true,
+        ["Seed"] = {
+            ["Bamboo"]          = true,   -- $10
+            ["Blueberry"]       = true,   -- $25
+            ["Tulip"]           = false,   -- $40
+            ["Apple"]           = false,   -- $50
+            ["Tomato"]          = true,   -- $200
+            ["Banana"]          = false,   -- $1K
+            ["Sunflower"]       = false,   -- $1K
+            ["Corn"]            = false,   -- $2.5K
+            ["Mushroom"]        = true,   -- $15K
+            ["Cherry"]          = false,   -- $30K
+            ["Mango"]           = false,   -- $35K
+            ["Grape"]           = false,   -- $50K
+            ["Coconut"]         = false,   -- $70K
+            ["Cactus"]          = false,   -- $100K
+            ["Baby Cactus"]     = false,   -- $100K
+            ["Pomegranate"]     = false,   -- $200K
+            ["Pineapple"]       = false,   -- $250K
+            ["Dragon Fruit"]    = false,   -- $500K
+            ["Poison Apple"]    = false,   -- $1M
+            ["Moon Bloom"]      = false,   -- $1M
+            ["Poison Ivy"]      = false,   -- $1M
+            ["Ghost Pepper"]    = false,   -- $1M
+            ["Venus Fly Trap"]  = false,   -- $5M
+            ["Dragon's Breath"] = false,   -- $10M
+        },
+    },
+    
     ["Buy Gear"] = {
         ["Enable"] = false,
         ["Gear"] = {
-            ["Common Watering Can"]  = false,   -- $2K
-            ["Super Watering Can"]   = false,   -- $250K
-            ["Common Sprinkler"]     = false,   -- $3K
-            ["Uncommon Sprinkler"]   = false,   -- $10K
-            ["Rare Sprinkler"]       = false,   -- $50K
-            ["Legendary Sprinkler"]  = false,   -- $100K
-            ["Super Sprinkler"]      = false,   -- $300K
+            ["Common Watering Can"]  = true,   -- $2K
+            ["Super Watering Can"]   = true,   -- $250K
+            ["Common Sprinkler"]     = true,   -- $3K
+            ["Uncommon Sprinkler"]   = true,   -- $10K
+            ["Rare Sprinkler"]       = true,   -- $50K
+            ["Legendary Sprinkler"]  = true,   -- $100K
+            ["Super Sprinkler"]      = true,   -- $300K
         },
     },
     ["Auto Water"] = {
