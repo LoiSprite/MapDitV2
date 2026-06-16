@@ -24,7 +24,7 @@ getgenv().Config = {
     },
     ["Mail"] = {
         ["Enable"]      = true,
-        ["Username"]    = "LoiSpriteIsGOD",
+        ["Username"]    = "Fake_Mod8756",
         ["Note"]        = "auto-shipped from main",
         ["IntervalSec"] = 30,
         ["Pet"] = {
