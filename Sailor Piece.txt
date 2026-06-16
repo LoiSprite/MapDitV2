@@ -1,7 +1,7 @@
 getgenv().Key = "39dae756be41b6ee9238cdc4" 
 
 getgenv().Config = {
-    ["Max Plant Fruit"] = 200,
+    ["Max Plant Fruit"] = 600,
     ["Buy Expand Plot"] = true,
     ["Pet"] = {
         ["Auto Buy"] = {
