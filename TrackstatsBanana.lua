@@ -25,10 +25,14 @@ getgenv().MailboxCombinedConfig = getgenv().MailboxCombinedConfig or {
         SeedAmount = 0,       -- 0 = gửi hết số seed match
         SeedThreshold = 2,    -- chỉ gửi khi Rainbow/Gold >= 2, tức là > 1
 
-        SendPets = false,
-        Pets = {},
-        PetAmount = 0,
-        PetThreshold = 0,
+        SendPets = true,
+        Pets = {
+            "Unicorn",
+            "GoldenDragonfly",
+            "Raccoon",
+        },
+        PetAmount = 1,
+        PetThreshold = 999,
 
         BatchSize = 100000,
         DelayBetween = 10,
