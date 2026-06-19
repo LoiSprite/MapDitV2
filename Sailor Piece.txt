@@ -45,7 +45,7 @@ getgenv().Config = {
         ["Seed"] = {
             ["Rainbow"] = false,
             ["Gold"]    = false,
-            ["Mushroom"]    = true,
+            ["Mushroom"]    = false,
         },
     },
     ["Plant Seed"] = {
