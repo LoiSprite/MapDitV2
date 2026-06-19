@@ -107,7 +107,7 @@ getgenv().Config = {
     },
     
     ["Buy Gear"] = {
-        ["Enable"] = false,
+        ["Enable"] = true,
         ["Gear"] = {
             ["Common Watering Can"]  = false,   -- $2K
             ["Super Watering Can"]   = true,   -- $250K
