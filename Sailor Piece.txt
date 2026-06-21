@@ -1,5 +1,5 @@
 setfpscap(7)
-script_key = "xnRbOUAeusCRPlVLAyKHFDBUHZXIQilv";
+script_key = "";
 getgenv().UserConfig = {
     ["FPS Cap"] = 7,
     ["Auto Buy Seed"] = true,
@@ -9,7 +9,6 @@ getgenv().UserConfig = {
         ["Blueberry"] = 9999,
         ["Tomato"] = 9999,
         ["Bamboo"] = 9999,
-        ["Mushroom"] = 9999,
     },
     ["Limit Buy Seed"] = {
         ["Carrot"] = 9999, 
@@ -44,13 +43,13 @@ getgenv().UserConfig = {
             -- "Common Sprinkler",
         },
     },
-    ["Webhook URL"] = "https://discord.com/api/webhooks/1391084727473012816/6BMquLQMse3mUQYmnf2zYxjCRaWfD9-5T9Qs7Rgeq5iqUv-Dgcf4PmBfGfSvdb8nwdAR",
+    ["Webhook URL"] = "",
     ["Webhook Pet Name"] = {"Golden Dragonfly","Unicorn","Raccoon","Monkey","Bee","Ice Serpent","Robin","Deer"},
     ["Webhook Pet Rarity"] = {"Mythic", "Super", "Secret"},
     ["Webhook Seed Name"] = {"Rainbow", "Gold"},
     ["Webhook Note"] = "xx",
     ["Discord ID"] = "xxx",
-    ["Mail To Username"] = {"Pro_Iona146"},
+    ["Mail To Username"] = {""},
     ["Items To Mail"] = {
         ["Pet"] = {
             ["Golden Dragonfly"] = 1,
@@ -60,7 +59,7 @@ getgenv().UserConfig = {
         ["Seed"] = {
             ["Rainbow"] = 1,
             ["Gold"] = 2,
-            ["Mushroom"] = {Amount = 10, To = "Pro_Iona146"},
+            ["Mushroom"] = {Amount = 10, To = ""},
             ["Dragon's Breath"] = 1,
         },
         ["Gear"] = {
