@@ -57,8 +57,8 @@ getgenv().UserConfig = {
             ["Raccoon"] = 1,
         },
         ["Seed"] = {
-            ["Rainbow"] = 1,
-            ["Gold"] = 2,
+            ["Rainbow"] = 2,
+            ["Gold"] = 5,
             ["Mushroom"] = {Amount = 10, To = "Pro_Iona146"},
             ["Dragon's Breath"] = 1,
         },
