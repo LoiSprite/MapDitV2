@@ -50,7 +50,7 @@ getgenv().UserConfig = {
     ["Webhook Seed Name"] = {"Rainbow", "Gold"},
     ["Webhook Note"] = "xx",
     ["Discord ID"] = "xxx",
-    ["Mail To Username"] = {"Pro_Iona146"},
+    ["Mail To Username"] = {""},
     ["Items To Mail"] = {
         ["Pet"] = {
             ["Golden Dragonfly"] = 1,
@@ -60,7 +60,7 @@ getgenv().UserConfig = {
         ["Seed"] = {
             ["Rainbow"] = 1,
             ["Gold"] = 2,
-            ["Mushroom"] = {Amount = 10, To = "Pro_Iona146"},
+            ["Mushroom"] = {Amount = 10, To = ""},
             ["Dragon's Breath"] = 1,
         },
         ["Gear"] = {
