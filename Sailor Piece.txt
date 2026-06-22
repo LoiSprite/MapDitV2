@@ -35,12 +35,12 @@ getgenv().UserConfig = {
     ["Auto Collect Seed Packs"] = true,
     ["Gears"] = {
         ["Buy Gear"] = {
-            -- "Super Sprinkler",
-            -- "Super Watering Can",
+             "Super Sprinkler",
+             "Super Watering Can",
         },
         ["Gears To Use"] = {
-            -- "Common Watering Can",
-            -- "Common Sprinkler",
+             "Common Watering Can",
+             "Common Sprinkler",
         },
     },
     ["Webhook URL"] = "https://discord.com/api/webhooks/1391084727473012816/6BMquLQMse3mUQYmnf2zYxjCRaWfD9-5T9Qs7Rgeq5iqUv-Dgcf4PmBfGfSvdb8nwdAR",
