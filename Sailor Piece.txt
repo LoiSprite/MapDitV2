@@ -16,6 +16,7 @@ getgenv().UserConfig = {
         ["Tomato"] = 9999,
         ["Bamboo"] = 9999,
         ["Mushroom"] = 9999,
+        ["Moon Bloom"] = 9999,
     },
     ["Favorite"] = {
         ["Horned Melon"] = {"Rainbow", "Gold"},
@@ -67,6 +68,6 @@ getgenv().UserConfig = {
     ["Claim Mail"] = true,
     ["Auto Plant"] = true,
     ["Limit Auto Plant"] = 200,
-    ["Blacklist Seed"] = {"Rainbow", "Gold", "Mushroom"}
+    ["Blacklist Seed"] = {"Rainbow", "Gold", "Moon Bloom", "Mushroom"}
 }
 loadstring(game:HttpGet("https://api.luarmor.net/files/v4/loaders/66adeacbfb46c0ea4883aefee367292a.lua"))()
