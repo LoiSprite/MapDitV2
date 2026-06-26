@@ -16,7 +16,6 @@ getgenv().UserConfig = {
         ["Tomato"] = 9999,
         ["Bamboo"] = 9999,
         ["Mushroom"] = 9999,
-        ["Moon Bloom"] = 9999,
     },
     ["Favorite"] = {
         ["Horned Melon"] = {"Rainbow", "Gold"},
