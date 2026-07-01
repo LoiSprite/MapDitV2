@@ -1,31 +1,40 @@
-setfpscap(7)
+setfpscap(5)
 script_key = "meuLVMMiLHRYDTVSxZQukPyOMGzAMfyP";
 getgenv().UserConfig = {
-    ["FPS Cap"] = 7,
+    ["FPS Cap"] = 5,
     ["Auto Buy Seed"] = true,
     ["Auto Plant Seed"] = true,
     ["Limit Plant Seed"] = {
         ["Carrot"] = 9999, 
-        ["Blueberry"] = 999,
-        ["Tomato"] = 999,
-        ["Bamboo"] = 9999,
-    },
-    ["Limit Buy Seed"] = {
-        ["Carrot"] = 9999, 
-        ["Blueberry"] = 9999,
-        ["Hypno Bloom"] = 9999,
-        ["Tomato"] = 9999,
+        ["Blueberry"] = 200,
+        ["Tomato"] = 200,
         ["Bamboo"] = 9999,
         ["Mushroom"] = 9999,
     },
+    ["Limit Buy Seed"] = {
+        ["Carrot"] = 9999, 
+        ["Blueberry"] = 200,
+        ["Tomato"] = 200,
+        ["Bamboo"] = 9999,
+        ["Mushroom"] = 9999,
+    },
+	["Blacklist Shovel"] = {"Mega", "Gold", "Rainbow", "Dragon's Breath", "Hypno Bloom" ,"Moon Bloom", "Ghost Pepper", "Venom Spitter", "Poison Apple", "Pomegranate", "Venus Fly Trap"},
+	["Shovel Plant Once"] = {"Strawberry", "Apple", "Corn", "Cactus", "Pineapple" ,"Green Bean", "Banana", "Grape", "Coconut", "Mango", "Dragon Fruit"},
     ["Favorite"] = {
-        ["Horned Melon"] = {"Rainbow", "Gold"},
+        -- ["Horned Melon"] = {"Rainbow", "Gold"},
+    },
+	["Harvest Mutation Only"] = {
+        ["Carrot"] = {"Rainbow", "Gold", "Bloodlit", "Electric", "Starstruck", "Frozen", "Aurora"},
+        ["Blueberry"] = {"Rainbow", "Gold", "Bloodlit", "Electric", "Starstruck", "Frozen", "Aurora"},
+        ["Tomato"] = {"Rainbow", "Gold", "Bloodlit", "Electric", "Starstruck", "Frozen", "Aurora"},
+        ["Mushroom"] = {"Rainbow", "Gold", "Bloodlit", "Electric", "Starstruck", "Frozen", "Aurora"},
+        ["Bamboo"] = {"Rainbow", "Gold", "Bloodlit", "Electric", "Starstruck", "Frozen", "Aurora"},
     },
     ["Buy Pets"] = {
         ["Raccoon"] = 999,
     },
     ["Equip Pets"] = {
-        {"Deer", 5, 3},
+        {"Deer", 5, 1},
     },
     ["Expand Plot"] = true,
     ["Plot Expansions"] = 3,
@@ -68,6 +77,6 @@ getgenv().UserConfig = {
     ["Claim Mail"] = true,
     ["Auto Plant"] = true,
     ["Limit Auto Plant"] = 800,
-    ["Blacklist Seed"] = {"Rainbow", "Gold", "Mega", "Mushroom"}
+    ["Blacklist Seed"] = {"Rainbow", "Dragon's Breath", "Hypno Bloom" ,"Moon Bloom"}
 }
 loadstring(game:HttpGet("https://api.luarmor.net/files/v4/loaders/66adeacbfb46c0ea4883aefee367292a.lua"))()
