@@ -4,6 +4,7 @@ getgenv().UserConfig = {
     ["FPS Cap"] = 5,
     ["Auto Buy Seed"] = true,
     ["Auto Plant Seed"] = true,
+    ["Auto Add Friends"] = true
     ["Limit Plant Seed"] = {
         ["Blueberry"] = 200,
         ["Tomato"] = 200,
