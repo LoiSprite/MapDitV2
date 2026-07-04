@@ -8,12 +8,14 @@ getgenv().UserConfig = {
         ["Blueberry"] = 200,
         ["Tomato"] = 200,
         ["Bamboo"] = 9999,
+        ["Rocket Pop"] = 9999,
     },
     ["Limit Buy Seed"] = {
         ["Carrot"] = 9999, 
         ["Blueberry"] = 200,
         ["Tomato"] = 200,
         ["Bamboo"] = 9999,
+        ["Rocket Pop"] = 9999,
         ["Mushroom"] = 9999,
     },
 	["Blacklist Shovel"] = {"Mega", "Gold", "Rainbow", "Dragon's Breath", "Hypno Bloom" ,"Moon Bloom", "Ghost Pepper", "Venom Spitter", "Poison Apple", "Pomegranate", "Venus Fly Trap"},
@@ -25,6 +27,7 @@ getgenv().UserConfig = {
         ["Carrot"] = {"Rainbow", "Gold", "Bloodlit", "Electric", "Starstruck", "Frozen", "Aurora"},
         ["Mushroom"] = {"Rainbow", "Gold", "Bloodlit", "Electric", "Starstruck", "Frozen", "Aurora"},
         ["Bamboo"] = {"Rainbow", "Gold", "Bloodlit", "Electric", "Starstruck", "Frozen", "Aurora"},
+        ["Rocket Pop"] = {"Rainbow", "Gold", "Bloodlit", "Electric", "Starstruck", "Frozen", "Aurora"},
     },
     ["Buy Pets"] = {
         ["Raccoon"] = 999,
