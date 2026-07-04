@@ -8,6 +8,7 @@ getgenv().UserConfig = {
         ["Blueberry"] = 100,
         ["Tomato"] = 100,
         ["Bamboo"] = 9999,
+        ["Carrot"] = 9999,
         ["Rocket Pop"] = 200,
         ["Mushroom"] = 200,
     },
