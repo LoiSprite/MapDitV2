@@ -7,7 +7,7 @@ getgenv().UserConfig = {
     ["Limit Plant Seed"] = {
         ["Blueberry"] = 100,
         ["Tomato"] = 100,
-        ["Bamboo"] = 200,
+        ["Bamboo"] = 9999,
         ["Rocket Pop"] = 200,
         ["Mushroom"] = 200,
     },
@@ -25,9 +25,7 @@ getgenv().UserConfig = {
         -- ["Horned Melon"] = {"Rainbow", "Gold"},
     },
 	["Harvest Mutation Only"] = {
-        ["Carrot"] = {"Rainbow", "Gold", "Bloodlit", "Electric", "Starstruck", "Frozen", "Aurora"},
         ["Mushroom"] = {"Rainbow", "Gold", "Bloodlit", "Electric", "Starstruck", "Frozen", "Aurora"},
-        ["Bamboo"] = {"Rainbow", "Gold", "Bloodlit", "Electric", "Starstruck", "Frozen", "Aurora"},
         ["Rocket Pop"] = {"Rainbow", "Gold", "Bloodlit", "Electric", "Starstruck", "Frozen", "Aurora"},
     },
     ["Buy Pets"] = {
