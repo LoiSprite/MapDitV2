@@ -14,6 +14,10 @@ getgenv().UserConfig = {
         ["Venus Fly Trap"] = 200,
         ["Venom Spitter"] = 200,
         ["Fire Fern"] = 200,
+        ["Briar Rose"] = 200,
+        ["Moon Bloom"] = 200,
+        ["Hypno Bloom"] = 200,
+        ["Dragon's Breath"] = 200,
     },
     ["Limit Buy Seed"] = {
         ["Carrot"] = 9999, 
@@ -26,8 +30,8 @@ getgenv().UserConfig = {
         ["Fire Fern"] = 200,
         ["Venus Fly Trap"] = 200,
     },
-	["Blacklist Shovel"] = {"Mega", "Gold", "Rainbow", "Dragon's Breath", "Hypno Bloom" ,"Moon Bloom", "Ghost Pepper", "Venom Spitter", "Poison Apple", "Pomegranate", "Venus Fly Trap"},
-	["Shovel Plant Once"] = {"Strawberry", "Apple", "Corn", "Cactus", "Pineapple" ,"Green Bean", "Banana", "Grape", "Coconut", "Mango", "Dragon Fruit"},
+	["Blacklist Shovel"] = {"Mega", "Gold", "Rainbow", "Dragon's Breath", "Hypno Bloom" ,"Moon Bloom", ,"Briar Rose", "Venom Spitter", "Rocket Pop",  "Mushroom", "Fire Fern", "Venus Fly Trap"},
+	["Shovel Plant Once"] = {"Strawberry", "Apple", "Corn", "Cactus", "Pineapple" ,"Green Bean", "Banana", "Grape", "Coconut", "Pomegranate", "Acorn", "Mango", "Cherry", "Sunflower", "Poison Apple", "Dragon Fruit"},
     ["Favorite"] = {
         -- ["Horned Melon"] = {"Rainbow", "Gold"},
     },
@@ -37,6 +41,10 @@ getgenv().UserConfig = {
         ["Venus Fly Trap"] = {"Rainbow", "Gold", "Bloodlit", "Electric", "Starstruck", "Frozen", "Aurora"},
         ["Venom Spitter"] = {"Rainbow", "Gold", "Bloodlit", "Electric", "Starstruck", "Frozen", "Aurora"},
         ["Fire Fern"] = {"Rainbow", "Gold", "Bloodlit", "Electric", "Starstruck", "Frozen", "Aurora"},
+        ["Briar Rose"] = {"Rainbow", "Gold", "Bloodlit", "Electric", "Starstruck", "Frozen", "Aurora"},
+        ["Moon Bloom"] = {"Rainbow", "Gold", "Bloodlit", "Electric", "Starstruck", "Frozen", "Aurora"},
+        ["Hypno Bloom"] = {"Rainbow", "Gold", "Bloodlit", "Electric", "Starstruck", "Frozen", "Aurora"},
+        ["Dragon's Breath"] = {"Rainbow", "Gold", "Bloodlit", "Electric", "Starstruck", "Frozen", "Aurora"},
     },
     ["Buy Pets"] = {
         ["Raccoon"] = 999,
