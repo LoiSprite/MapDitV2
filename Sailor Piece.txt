@@ -12,7 +12,6 @@ getgenv().UserConfig = {
         ["Mushroom"] = 9999,
         ["Venus Fly Trap"] = 9999,
         ["Venom Spitter"] = 9999,
-        ["Fire Fern"] = 9999,
         ["Briar Rose"] = 9999,
         ["Moon Bloom"] = 9999,
         ["Hypno Bloom"] = 9999,
@@ -42,7 +41,6 @@ getgenv().UserConfig = {
         ["Mushroom"] = {"Rainbow", "Gold", "Bloodlit", "Electric", "Starstruck", "Frozen", "Aurora"},
         ["Venus Fly Trap"] = {"Rainbow", "Gold", "Bloodlit", "Electric", "Starstruck", "Frozen", "Aurora"},
         ["Venom Spitter"] = {"Rainbow", "Gold", "Bloodlit", "Electric", "Starstruck", "Frozen", "Aurora"},
-        ["Fire Fern"] = {"Rainbow", "Gold", "Bloodlit", "Electric", "Starstruck", "Frozen", "Aurora"},
         ["Briar Rose"] = {"Rainbow", "Gold", "Bloodlit", "Electric", "Starstruck", "Frozen", "Aurora"},
         ["Moon Bloom"] = {"Rainbow", "Gold", "Bloodlit", "Electric", "Starstruck", "Frozen", "Aurora"},
         ["Hypno Bloom"] = {"Rainbow", "Gold", "Bloodlit", "Electric", "Starstruck", "Frozen", "Aurora"},
@@ -107,6 +105,6 @@ getgenv().UserConfig = {
     ["Claim Mail"] = true,
     ["Auto Plant"] = true,
     ["Limit Auto Plant"] = 800,
-    ["Blacklist Seed"] = {"Rainbow", "Mega",  "Gold", "Rocket Pop" ,"Ghost Pepper"}
+    ["Blacklist Seed"] = {"Rainbow", "Mega",  "Gold", "Rocket Pop" ,"Fire Fern"}
 }
 loadstring(game:HttpGet("https://api.luarmor.net/files/v4/loaders/66adeacbfb46c0ea4883aefee367292a.lua"))()
