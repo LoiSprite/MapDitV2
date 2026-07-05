@@ -85,24 +85,14 @@ getgenv().UserConfig = {
     ["Mail To Username"] = {""},
     ["Items To Mail"] = {
         ["Pet"] = {
-            ["Golden Dragonfly"] = {Normal = 2, Big = 1, Huge = 1, Rainbow = 1, To = {"", ""}},
-            ["Unicorn"] = {Normal = 2, Big = 1, Huge = 1, Rainbow = 1, To = {"", ""}},
             ["Raccoon"] = {Normal = 1, Big = 1, Huge = 1, Rainbow = 1, To = ""},
-            ["Black Dragon"] = {Normal = 1, Big = 1, Huge = 1, Rainbow = 1, To = ""},
         },
         ["Seed"] = {
-            ["Rainbow"] = {Amount = 2, To = ""},
-            ["Gold"] = {Amount = 10, To = {"", ""}},
-            ["Mega"] = {Amount = 3, To = {"", ""}},
             ["Mushroom"] = {Amount = 50, To = {"Dien_Username_Nhan_1", ""}},
-            ["Dragon's Breath"] = {Amount = 1, To = ""},
-            ["Moon Bloom"] = {Amount = 1, To = ""},
-            ["Hypno Bloom"] = {Amount = 1, To = ""},
         },
         ["Gear"] = {
             ["Super Sprinkler"] = {Amount = 5, To = {"", ""}},
             ["Super Watering Can"] = {Amount = 5, To = {"", ""}},
-            ["Legendary Sprinkler"] = {Amount = 5, To = {"", ""}},
         },
     },
     ["Claim Mail"] = true,
