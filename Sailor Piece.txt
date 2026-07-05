@@ -9,7 +9,6 @@ getgenv().UserConfig = {
         ["Tomato"] = 100,
         ["Bamboo"] = 9999,
         ["Carrot"] = 9999,
-        ["Rocket Pop"] = 200,
         ["Mushroom"] = 200,
         ["Venus Fly Trap"] = 200,
         ["Venom Spitter"] = 200,
@@ -41,7 +40,6 @@ getgenv().UserConfig = {
     },
 	["Harvest Mutation Only"] = {
         ["Mushroom"] = {"Rainbow", "Gold", "Bloodlit", "Electric", "Starstruck", "Frozen", "Aurora"},
-        ["Rocket Pop"] = {"Rainbow", "Gold", "Bloodlit", "Electric", "Starstruck", "Frozen", "Aurora"},
         ["Venus Fly Trap"] = {"Rainbow", "Gold", "Bloodlit", "Electric", "Starstruck", "Frozen", "Aurora"},
         ["Venom Spitter"] = {"Rainbow", "Gold", "Bloodlit", "Electric", "Starstruck", "Frozen", "Aurora"},
         ["Fire Fern"] = {"Rainbow", "Gold", "Bloodlit", "Electric", "Starstruck", "Frozen", "Aurora"},
@@ -110,6 +108,6 @@ getgenv().UserConfig = {
     ["Claim Mail"] = true,
     ["Auto Plant"] = true,
     ["Limit Auto Plant"] = 800,
-    ["Blacklist Seed"] = {"Rainbow", "Mega",  "Gold", "Hypno Bloom" ,"Dragon's Breath"}
+    ["Blacklist Seed"] = {"Rainbow", "Mega",  "Gold", "Rocket Pop"}
 }
 loadstring(game:HttpGet("https://api.luarmor.net/files/v4/loaders/66adeacbfb46c0ea4883aefee367292a.lua"))()
