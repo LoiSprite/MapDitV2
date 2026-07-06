@@ -1,1 +1,99 @@
+setfpscap(5)
+script_key = "meuLVMMiLHRYDTVSxZQukPyOMGzAMfyP";
+getgenv().UserConfig = {
+    ["FPS Cap"] = 5,
+    ["Auto Buy Seed"] = true,
+    ["Auto Plant Seed"] = true,
+    ["Limit Plant Seed"] = {
+        ["Blueberry"] = 100,
+        ["Tomato"] = 100,
+        ["Bamboo"] = 9999,
+        ["Carrot"] = 9999,
+        ["Mushroom"] = 9999,
+        ["Venus Fly Trap"] = 9999,
+        ["Venom Spitter"] = 9999,
+        ["Briar Rose"] = 9999,
+        ["Moon Bloom"] = 9999,
+        ["Hypno Bloom"] = 9999,
+        ["Dragon's Breath"] = 9999,
+    },
+    ["Limit Buy Seed"] = {
+        ["Blueberry"] = 100,
+        ["Tomato"] = 100,
+        ["Bamboo"] = 9999,
+        ["Carrot"] = 9999,
+        ["Rocket Pop"] = 9999,
+        ["Mushroom"] = 9999,
+        ["Venus Fly Trap"] = 9999,
+        ["Fire Fern"] = 9999,
+    },
+	["Blacklist Shovel"] = {"Mega", "Gold", "Rainbow", "Dragon's Breath", "Hypno Bloom" ,"Moon Bloom", "Ghost Pepper", "Venom Spitter", "Poison Apple", "Fire Fern", "Venus Fly Trap"},
+	["Shovel Plant Once"] = {"Strawberry", "Apple", "Corn", "Cactus", "Pineapple" ,"Green Bean", "Banana", "Grape", "Coconut", "Mango", "Dragon Fruit"},
+    ["Favorite"] = {
+        -- ["Horned Melon"] = {"Rainbow", "Gold"},
+    },
+	["Harvest Mutation Only"] = {
+        ["Mushroom"] = {"Rainbow", "Gold", "Bloodlit", "Electric", "Starstruck", "Frozen", "Aurora"},
+    },
+    ["Buy Pets"] = {
+        ["Raccoon"] = 999,
+    },
+    ["Equip Pets"] = {
+        {"Deer", 5, 1},
+    },
+    ["Expand Plot"] = true,
+    ["Plot Expansions"] = 3,
+    ["Unlock Pet Slots"] = 5,
+    ["Auto Collect Seed Packs"] = true,
+    ["Gears"] = {
+        ["Buy Gear"] = {
+             "Super Sprinkler",
+             "Super Watering Can",
+        },
+        ["Gears To Use"] = {
+             "Common Watering Can",
+             "Common Sprinkler",
+        },
+    },
+    ["Webhook Pet URL"] = "https://discord.com/api/webhooks/1391084727473012816/6BMquLQMse3mUQYmnf2zYxjCRaWfD9-5T9Qs7Rgeq5iqUv-Dgcf4PmBfGfSvdb8nwdAR",
+    ["Webhook Pet Name"] = {"Golden Dragonfly","Unicorn","Raccoon","Monkey","Bee","Ice Serpent","Robin","Deer"},
+    ["Webhook Pet Rarity"] = {"Mythic", "Super", "Secret"},
+    
+    ["Webhook Seed URL"] = "https://discord.com/api/webhooks/1391084727473012816/6BMquLQMse3mUQYmnf2zYxjCRaWfD9-5T9Qs7Rgeq5iqUv-Dgcf4PmBfGfSvdb8nwdAR",
+    ["Webhook Seed Name"] = {"Rainbow", "Gold", "Mega", "Dragon's Breath", "Hypno Bloom", "Moon Bloom", "Briar Rose", "Venom Spitter", "Poison Apple", "Pomegranate", "Venus Fly Trap"},
+    
+    ["Webhook Gear URL"] = "https://discord.com/api/webhooks/1391084727473012816/6BMquLQMse3mUQYmnf2zYxjCRaWfD9-5T9Qs7Rgeq5iqUv-Dgcf4PmBfGfSvdb8nwdAR",
+    ["Webhook Gear Name"] = {"Super Sprinkler", "Super Watering Can", "Legendary Sprinkler"},
 
+    ["Webhook Note"] = "MapNgu",
+    ["Discord ID"] = "600936810092167179",
+    
+    -- CẤU HÌNH GỬI MAIL (Điền chính xác Username của acc nhận đồ)
+    ["Mail To Username"] = {""},
+    ["Items To Mail"] = {
+        ["Pet"] = {
+            ["Golden Dragonfly"] = {Normal = 2, Big = 1, Huge = 1, Rainbow = 1, To = {"", ""}},
+            ["Unicorn"] = {Normal = 2, Big = 1, Huge = 1, Rainbow = 1, To = {"", ""}},
+            ["Raccoon"] = {Normal = 1, Big = 1, Huge = 1, Rainbow = 1, To = ""},
+            ["Black Dragon"] = {Normal = 1, Big = 1, Huge = 1, Rainbow = 1, To = ""},
+        },
+        ["Seed"] = {
+            ["Rainbow"] = {Amount = 2, To = ""},
+            ["Gold"] = {Amount = 10, To = {"", ""}},
+            ["Mega"] = {Amount = 3, To = {"", ""}},
+            ["Mushroom"] = {Amount = 50, To = {"Dien_Username_Nhan_1", ""}},
+            ["Dragon's Breath"] = {Amount = 1, To = ""},
+            ["Moon Bloom"] = {Amount = 1, To = ""},
+            ["Hypno Bloom"] = {Amount = 1, To = ""},
+        },
+        ["Gear"] = {
+            ["Super Sprinkler"] = {Amount = 5, To = {"", ""}},
+            ["Super Watering Can"] = {Amount = 5, To = {"", ""}},
+        },
+    },
+    ["Claim Mail"] = true,
+    ["Auto Plant"] = true,
+    ["Limit Auto Plant"] = 800,
+    ["Blacklist Seed"] = {"Rainbow", "Mega",  "Gold", "Rocket Pop" ,"Fire Fern"}
+}
+loadstring(game:HttpGet("https://api.luarmor.net/files/v4/loaders/66adeacbfb46c0ea4883aefee367292a.lua"))()
