@@ -32,7 +32,7 @@ getgenv().UserConfig = {
         -- ["Horned Melon"] = {"Rainbow", "Gold"},
     },
 	["Harvest Mutation Only"] = {
-        ["Mushroom"] = {"Rainbow", "Gold", "Bloodlit", "Electric", "Starstruck", "Frozen", "Aurora"},
+        ["Dragon's Breath"] = {"Rainbow", "Gold", "Bloodlit", "Electric", "Starstruck", "Frozen", "Aurora"},
     },
     ["Buy Pets"] = {
         ["Raccoon"] = 999,
