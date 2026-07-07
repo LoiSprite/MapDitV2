@@ -35,7 +35,7 @@ getgenv().UserConfig = {
         ["Dragon's Breath"] = {"Rainbow", "Gold", "Bloodlit", "Electric", "Starstruck", "Frozen", "Aurora"},
     },
     ["Buy Pets"] = {
-        ["Raccoon"] = 999,
+        ["Ice Serpent"] = 999,
     },
     ["Equip Pets"] = {
         {"Deer", 5, 1},
