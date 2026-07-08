@@ -1,5 +1,5 @@
 setfpscap(5)
-script_key = "meuLVMMiLHRYDTVSxZQukPyOMGzAMfyP";
+script_key = "lOCtKhUyKevWxNGsVOWljQcNZgPTrlMG";
 getgenv().UserConfig = {
     ["FPS Cap"] = 5,
     ["Auto Buy Seed"] = true,
