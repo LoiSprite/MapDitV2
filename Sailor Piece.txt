@@ -22,7 +22,7 @@ getgenv().UserConfig = {
         ["Tomato"] = 100,
         ["Bamboo"] = 9999,
         ["Carrot"] = 9999,
-        ["Rocket Pop"] = 9999,
+        ["Pineapple"] = 9999,
         ["Mushroom"] = 9999,
         ["Fire Fern"] = 9999,
     },
@@ -93,6 +93,6 @@ getgenv().UserConfig = {
     ["Claim Mail"] = true,
     ["Auto Plant"] = true,
     ["Limit Auto Plant"] = 800,
-    ["Blacklist Seed"] = {"Rainbow", "Mega",  "Gold", "Rocket Pop" ,"Fire Fern"}
+    ["Blacklist Seed"] = {"Rainbow", "Mega", "Gold", "Pineapple", "Rocket Pop" ,"Fire Fern"}
 }
 loadstring(game:HttpGet("https://api.luarmor.net/files/v4/loaders/2df5fc5e0dcd634a4405a4740eab1890.lua"))()
