@@ -24,7 +24,7 @@ getgenv().UserConfig = {
         ["Carrot"] = 9999,
         ["Pineapple"] = 9999,
         ["Mushroom"] = 9999,
-        ["Fire Fern"] = 9999,
+        ["Rocket Pop"] = 9999,
     },
 	["Blacklist Shovel"] = {"Mega", "Gold", "Rainbow", "Dragon's Breath", "Hypno Bloom" ,"Moon Bloom", "Ghost Pepper", "Venom Spitter", "Poison Apple", "Fire Fern", "Venus Fly Trap"},
 	["Shovel Plant Once"] = {"Strawberry", "Apple", "Corn", "Cactus", "Pineapple" ,"Green Bean", "Banana", "Grape", "Coconut", "Mango", "Dragon Fruit"},
