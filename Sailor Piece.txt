@@ -1,7 +1,7 @@
 script_key = "ZjCgGsCNolUxTwkUyCZQiRGNJAitOfGX"
 
 getgenv().PS99Config = {
-    ["FPS Cap"] = 7,
+    ["FPS Cap"] = 5,
 
     ["Webhook"] = {
         ["Webhook URL"] = "https://discord.com/api/webhooks/1391084727473012816/6BMquLQMse3mUQYmnf2zYxjCRaWfD9-5T9Qs7Rgeq5iqUv-Dgcf4PmBfGfSvdb8nwdAR",
