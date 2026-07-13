@@ -4,8 +4,8 @@ getgenv().PS99Config = {
     ["FPS Cap"] = 7,
 
     ["Webhook"] = {
-        ["Webhook URL"] = "",
-        ["ID"] = { "" },
+        ["Webhook URL"] = "https://discord.com/api/webhooks/1391084727473012816/6BMquLQMse3mUQYmnf2zYxjCRaWfD9-5T9Qs7Rgeq5iqUv-Dgcf4PmBfGfSvdb8nwdAR",
+        ["ID"] = { "600936810092167179" },
         ["Alert Huges"] = true,
     },
 
