@@ -1,1 +1,36 @@
+script_key = "ZjCgGsCNolUxTwkUyCZQiRGNJAitOfGX"
 
+getgenv().PS99Config = {
+    ["FPS Cap"] = 7,
+
+    ["Webhook"] = {
+        ["Webhook URL"] = "",
+        ["ID"] = { "" },
+        ["Alert Huges"] = true,
+    },
+
+    ["Tap Heroes Upgrades"] = {
+        ["Tap Damage"] = 99,
+        ["Pet Damage"] = 99,
+        ["Coin Bonus"] = 99,
+        ["Egg"] = 99,
+    },
+
+    ["Rebirth"] = true,
+    ["Rebirth Cap"] = 10,
+
+    ["Items"] = {
+        ["Cracked Marble Clover"] = 1,
+        ["Tap Damage Booster"] = 1,
+    },
+
+    ["Mail"] = {
+        ["Claim Mails"] = true,
+        ["Mail To"] = "",
+        ["Items To Mail"] = {
+        },
+        ["Mail Message"] = "gg",
+    },
+}
+
+loadstring(game:HttpGet("https://api.luarmor.net/files/v4/loaders/f906304da84f44c66d2f5184a409f4c5.lua"))()
