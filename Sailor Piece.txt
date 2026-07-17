@@ -1,1 +1,227 @@
-
+getgenv().Config = {
+	["Expedition Joiner"] = {
+		["Difficulty Level"] = 1,
+		["Auto Join"] = false,
+		["Match Making"] = true
+	},
+	["Webhook"] = {
+		["Stage Finished"] = true,
+		["Mention"] = "600936810092167179",
+		["URL"] = "https://discord.com/api/webhooks/1391084727473012816/6BMquLQMse3mUQYmnf2zYxjCRaWfD9-5T9Qs7Rgeq5iqUv-Dgcf4PmBfGfSvdb8nwdAR"
+	},
+	["Auto Join Setting"] = {
+		["Joiner Priority"] = {
+			["Weekly Challenge Joiner"] = 6,
+			["Expedition Joiner"] = 3,
+			["Regular Challenge Joiner"] = 4,
+			["Raid Joiner"] = 2,
+			["Story Joiner"] = 1,
+			["Daily Challenge Joiner"] = 5
+		},
+		["Team Equipper"] = {
+			["Enable"] = false,
+			["Auto Join Team"] = {
+				["Weekly Challenge Joiner"] = 0,
+				["Expedition Joiner"] = 0,
+				["Regular Challenge Joiner"] = 0,
+				["Raid Joiner"] = 0,
+				["Story Joiner"] = 0,
+				["Daily Challenge Joiner"] = 0
+			}
+		},
+		["Joiner Cooldown"] = 0
+	},
+	["Game Finished"] = {
+		["Auto Return Lobby"] = false,
+		["Return Lobby Failsafe"] = false,
+		["Auto Replay"] = true,
+		["Auto Next"] = false
+	},
+	["Story Joiner"] = {
+		["Difficulty"] = "Normal",
+		["Auto Join"] = true,
+		["Act"] = "Act 1",
+		["Match Making"] = false,
+		["Map"] = "School Grounds"
+	},
+	["Failsafe"] = {
+		["Teleport Lobby if Player"] = false,
+		["Disable Auto Teleport AFK Chamber"] = true
+	},
+	["Weekly Challenge Joiner"] = {
+		["Ignore Effect"] = {
+			["ShortRange"] = false,
+			["BossWaves"] = false,
+			["Mirror"] = false,
+			["Speedy"] = false,
+			["Traitless"] = false,
+			["NoFarms"] = false,
+			["Shielded"] = false,
+			["Resistance"] = false,
+			["UpgradeCap"] = false
+		},
+		["Ignore Map"] = {
+			["Flower Forest"] = false,
+			["King's Tomb"] = false,
+			["Rose Kingdom"] = false,
+			["Fairy King Forest"] = false,
+			["School Grounds"] = false
+		},
+		["Auto Join"] = false,
+		["Match Making"] = false
+	},
+	["Secure"] = {
+		["Walk Around"] = false,
+		["Random Offset"] = false
+	},
+	["Macros"] = {
+		["Macro Retry Limit"] = 0,
+		["No Ignore Sell Timing"] = true,
+		["Macro"] = "loisprite",
+		["Play"] = true,
+		["Ignore Macro Timing"] = true
+	},
+	["Regular Challenge Joiner"] = {
+		["Select Reward"] = {
+			["Sprite (Blue)"] = false,
+			["Player EXP"] = false,
+			["Sprite (Yellow)"] = false,
+			["Equipment Lock"] = false,
+			["Gold"] = false,
+			["Sprite (Red)"] = false,
+			["Stat Reroll"] = false,
+			["Stat Lock"] = false,
+			["Sprite (Pink)"] = false,
+			["Unit EXP"] = false,
+			["Equipment Reroll"] = false,
+			["Sprite (Rainbow)"] = false,
+			["Gem"] = false,
+			["Sprite (Green)"] = false,
+			["Sprite (Grey)"] = false,
+			["Sprite (Purple)"] = false,
+			["Trait Crystal"] = false,
+			["Sprite"] = false
+		},
+		["Auto Join"] = false,
+		["Ignore Effect"] = {
+			["ShortRange"] = false,
+			["BossWaves"] = false,
+			["Mirror"] = false,
+			["Speedy"] = false,
+			["Traitless"] = false,
+			["NoFarms"] = false,
+			["Shielded"] = false,
+			["Resistance"] = false,
+			["UpgradeCap"] = false
+		},
+		["Match Making"] = false,
+		["Ignore Map"] = {
+			["Flower Forest"] = false,
+			["King's Tomb"] = false,
+			["Rose Kingdom"] = false,
+			["Fairy King Forest"] = false,
+			["School Grounds"] = false
+		}
+	},
+	["Auto Play"] = {
+		["Auto Upgrade"] = {
+			["Upgrade Order"] = {
+				["1"] = 1,
+				["3"] = 3,
+				["2"] = 2,
+				["5"] = 5,
+				["4"] = 4,
+				["6"] = 6
+			},
+			["Place and Upgrade"] = false,
+			["Enable"] = true,
+			["Focus on Farm"] = false,
+			["Upgrade Method"] = "Hotbar left to right (until Max)",
+			["Upgrade Limit"] = {
+				["1"] = 0,
+				["3"] = 0,
+				["2"] = 0,
+				["5"] = 0,
+				["4"] = 0,
+				["6"] = 0
+			}
+		},
+		["Place Limit"] = {
+			["1"] = 0,
+			["3"] = 0,
+			["2"] = 0,
+			["5"] = 0,
+			["4"] = 0,
+			["6"] = 0
+		},
+		["Enable"] = false,
+		["Place Order"] = {
+			["1"] = 1,
+			["3"] = 3,
+			["2"] = 2,
+			["5"] = 5,
+			["4"] = 4,
+			["6"] = 6
+		},
+		["Place Wave"] = {
+			["1"] = 0,
+			["3"] = 0,
+			["2"] = 0,
+			["5"] = 0,
+			["4"] = 0,
+			["6"] = 0
+		}
+	},
+	["Gameplay"] = {
+		["Auto Sell"] = {
+			["Auto Sell Farm"] = {
+				["Enable"] = false,
+				["Wave"] = 1
+			},
+			["Auto Sell Unit"] = {
+				["Enable"] = false,
+				["Wave"] = 1
+			}
+		},
+		["Auto Skip Wave"] = {
+			["Enable"] = true,
+			["Stop at Wave"] = 0
+		},
+		["Auto Restart"] = {
+			["Enable"] = false,
+			["Wave"] = 1
+		},
+		["Auto Vote Start"] = true
+	},
+	["Daily Challenge Joiner"] = {
+		["Ignore Effect"] = {
+			["ShortRange"] = false,
+			["BossWaves"] = false,
+			["Mirror"] = false,
+			["Speedy"] = false,
+			["Traitless"] = false,
+			["NoFarms"] = false,
+			["Shielded"] = false,
+			["Resistance"] = false,
+			["UpgradeCap"] = false
+		},
+		["Ignore Map"] = {
+			["Flower Forest"] = false,
+			["King's Tomb"] = false,
+			["Rose Kingdom"] = false,
+			["Fairy King Forest"] = false,
+			["School Grounds"] = false
+		},
+		["Auto Join"] = false,
+		["Match Making"] = false
+	},
+	["Raid Joiner"] = {
+		["Difficulty"] = "Hard",
+		["Match Making"] = false,
+		["Auto Join"] = false,
+		["Act"] = "Act 1"
+	}
+}
+getgenv().Key = "k719a889a8e9b7246d844cac"
+repeat wait() until game:IsLoaded()
+loadstring(game:HttpGet("https://nousigi.com/loader.lua"))()
