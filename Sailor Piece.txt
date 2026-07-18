@@ -1,4 +1,103 @@
 getgenv().Config = {
+	["Game Finished"] = {
+		["Auto Return Lobby"] = false,
+		["Auto Next"] = false,
+		["Auto Run Joiner Features"] = true,
+		["Return Lobby Failsafe"] = false,
+		["Auto Replay"] = true
+	},
+	["Story Joiner"] = {
+		["Difficulty"] = "Normal",
+		["Auto Join"] = true,
+		["Act"] = "Act 1",
+		["Match Making"] = false,
+		["Map"] = "School Grounds"
+	},
+	["Regular Challenge Joiner"] = {
+		["Select Reward"] = {
+			["Sprite"] = false,
+			["Trait Crystal"] = false,
+			["Equipment Lock"] = false,
+			["Equipment Reroll"] = false,
+			["Stat Reroll"] = false,
+			["Stat Lock"] = false
+		},
+		["Auto Join"] = false,
+		["Ignore Effect"] = {
+			["ShortRange"] = false,
+			["BossWaves"] = false,
+			["Mirror"] = false,
+			["Speedy"] = false,
+			["NoFarms"] = false,
+			["Traitless"] = false,
+			["Shielded"] = false,
+			["Resistance"] = false,
+			["UpgradeCap"] = false
+		},
+		["Change Gamemode If new Challenge"] = false,
+		["Match Making"] = false,
+		["Ignore Map"] = {
+			["Flower Forest"] = false,
+			["King's Tomb"] = false,
+			["Rose Kingdom"] = false,
+			["Fairy King Forest"] = false,
+			["School Grounds"] = false
+		}
+	},
+	["Auto Play"] = {
+		["Auto Upgrade"] = {
+			["Upgrade Order"] = {
+				["1"] = 1,
+				["3"] = 3,
+				["2"] = 2,
+				["5"] = 5,
+				["4"] = 4,
+				["6"] = 6
+			},
+			["Place and Upgrade"] = false,
+			["Enable"] = true,
+			["Focus on Farm"] = false,
+			["Upgrade Limit"] = {
+				["1"] = 0,
+				["3"] = 0,
+				["2"] = 0,
+				["5"] = 0,
+				["4"] = 0,
+				["6"] = 0
+			},
+			["Upgrade Method"] = "Hotbar left to right (until Max)"
+		},
+		["Place Limit"] = {
+			["1"] = 0,
+			["3"] = 0,
+			["2"] = 0,
+			["5"] = 0,
+			["4"] = 0,
+			["6"] = 0
+		},
+		["Enable"] = true,
+		["Slot Position"] = {
+			["School Grounds"] = {
+				["2"] = "3084.97266, 1798.93152, 3368.66626, 1, 0, 0, 0, 1, 0, 0, 0, 1"
+			}
+		},
+		["Place Wave"] = {
+			["1"] = 0,
+			["3"] = 0,
+			["2"] = 0,
+			["5"] = 0,
+			["4"] = 0,
+			["6"] = 0
+		},
+		["Place Order"] = {
+			["1"] = 1,
+			["3"] = 3,
+			["2"] = 2,
+			["5"] = 5,
+			["4"] = 4,
+			["6"] = 6
+		}
+	},
 	["Expedition Joiner"] = {
 		["Difficulty Level"] = 1,
 		["Match Making"] = true,
@@ -36,19 +135,22 @@ getgenv().Config = {
 		["Auto Join"] = false,
 		["Act"] = "Act 1"
 	},
-	["Story Joiner"] = {
-		["Difficulty"] = "Normal",
-		["Auto Join"] = true,
-		["Act"] = "Act 1",
-		["Match Making"] = false,
-		["Map"] = "School Grounds"
-	},
 	["Failsafe"] = {
-		["Teleport Lobby if Player"] = false,
+		["Teleport Lobby if Player"] = true,
 		["Disable Auto Teleport AFK Chamber"] = true
 	},
 	["Weekly Challenge Joiner"] = {
-		["Auto Join"] = false,
+		["Ignore Effect"] = {
+			["ShortRange"] = false,
+			["BossWaves"] = false,
+			["Mirror"] = false,
+			["Speedy"] = false,
+			["NoFarms"] = false,
+			["Traitless"] = false,
+			["Shielded"] = false,
+			["Resistance"] = false,
+			["UpgradeCap"] = false
+		},
 		["Ignore Map"] = {
 			["Flower Forest"] = false,
 			["King's Tomb"] = false,
@@ -56,101 +158,12 @@ getgenv().Config = {
 			["Fairy King Forest"] = false,
 			["School Grounds"] = false
 		},
-		["Match Making"] = false,
-		["Ignore Effect"] = {
-			["ShortRange"] = false,
-			["BossWaves"] = false,
-			["Mirror"] = false,
-			["Speedy"] = false,
-			["Traitless"] = false,
-			["NoFarms"] = false,
-			["Shielded"] = false,
-			["Resistance"] = false,
-			["UpgradeCap"] = false
-		}
+		["Auto Join"] = false,
+		["Match Making"] = false
 	},
 	["Secure"] = {
-		["Walk Around"] = false,
-		["Random Offset"] = false
-	},
-	["Auto Play"] = {
-		["Auto Upgrade"] = {
-			["Upgrade Order"] = {
-				["1"] = 1,
-				["3"] = 3,
-				["2"] = 2,
-				["5"] = 5,
-				["4"] = 4,
-				["6"] = 6
-			},
-			["Place and Upgrade"] = false,
-			["Enable"] = true,
-			["Focus on Farm"] = false,
-			["Upgrade Method"] = "Hotbar left to right (until Max)",
-			["Upgrade Limit"] = {
-				["1"] = 0,
-				["3"] = 0,
-				["2"] = 0,
-				["5"] = 0,
-				["4"] = 0,
-				["6"] = 0
-			}
-		},
-		["Place Limit"] = {
-			["1"] = 0,
-			["3"] = 0,
-			["2"] = 0,
-			["5"] = 0,
-			["4"] = 0,
-			["6"] = 0
-		},
-		["Enable"] = true,
-		["Place Order"] = {
-			["1"] = 1,
-			["3"] = 3,
-			["2"] = 2,
-			["5"] = 5,
-			["4"] = 4,
-			["6"] = 6
-		},
-		["Place Wave"] = {
-			["1"] = 0,
-			["3"] = 0,
-			["2"] = 0,
-			["5"] = 0,
-			["4"] = 0,
-			["6"] = 0
-		}
-	},
-	["Regular Challenge Joiner"] = {
-		["Ignore Effect"] = {
-			["ShortRange"] = false,
-			["BossWaves"] = false,
-			["Mirror"] = false,
-			["Speedy"] = false,
-			["Traitless"] = false,
-			["NoFarms"] = false,
-			["Shielded"] = false,
-			["Resistance"] = false,
-			["UpgradeCap"] = false
-		},
-		["Auto Join"] = false,
-		["Select Reward"] = {
-			["Equipment Reroll"] = false,
-			["Stat Lock"] = false,
-			["Trait Crystal"] = false,
-			["Sprite"] = false,
-			["Stat Reroll"] = false,
-			["Equipment Lock"] = false
-		},
-		["Match Making"] = false,
-		["Ignore Map"] = {
-			["Flower Forest"] = false,
-			["King's Tomb"] = false,
-			["Rose Kingdom"] = false,
-			["Fairy King Forest"] = false,
-			["School Grounds"] = false
-		}
+		["Random Offset"] = false,
+		["Walk Around"] = false
 	},
 	["Macros"] = {
 		["Macro Retry Limit"] = 0,
@@ -158,7 +171,46 @@ getgenv().Config = {
 		["Play"] = false,
 		["No Ignore Sell Timing"] = true
 	},
+	["Lobby"] = {
+		["Crafter"] = {
+			["Sprite"] = {
+				["SpriteBlue"] = false,
+				["SpriteGreen"] = false,
+				["SpriteRed"] = false,
+				["SpriteRainbow"] = false,
+				["SpritePink"] = false,
+				["SpriteYellow"] = false,
+				["SpritePurple"] = false
+			},
+			["Sprite Limit"] = {
+				["SpriteBlue"] = 50,
+				["SpriteGreen"] = 50,
+				["SpriteRed"] = 50,
+				["SpriteRainbow"] = 25,
+				["SpritePink"] = 50,
+				["SpriteYellow"] = 50,
+				["SpritePurple"] = 50
+			},
+			["Enable"] = false
+		}
+	},
+	["Claimer"] = {
+		["Auto Claim Quest"] = true,
+		["Auto Claim Index"] = true,
+		["Auto Claim Event"] = true,
+		["Auto Claim Level Milestone"] = true,
+		["Auto Claim Battlepass"] = true
+	},
 	["Gameplay"] = {
+		["Auto Vote Start"] = true,
+		["Auto Skip Wave"] = {
+			["Enable"] = true,
+			["Stop at Wave"] = 0
+		},
+		["Auto Restart"] = {
+			["Enable"] = false,
+			["Wave"] = 1
+		},
 		["Auto Sell"] = {
 			["Auto Sell Farm"] = {
 				["Enable"] = false,
@@ -168,19 +220,20 @@ getgenv().Config = {
 				["Enable"] = false,
 				["Wave"] = 1
 			}
-		},
-		["Auto Skip Wave"] = {
-			["Enable"] = false,
-			["Stop at Wave"] = 0
-		},
-		["Auto Restart"] = {
-			["Enable"] = false,
-			["Wave"] = 1
-		},
-		["Auto Vote Start"] = true
+		}
 	},
 	["Daily Challenge Joiner"] = {
-		["Auto Join"] = false,
+		["Ignore Effect"] = {
+			["ShortRange"] = false,
+			["BossWaves"] = false,
+			["Mirror"] = false,
+			["Speedy"] = false,
+			["NoFarms"] = false,
+			["Traitless"] = false,
+			["Shielded"] = false,
+			["Resistance"] = false,
+			["UpgradeCap"] = false
+		},
 		["Ignore Map"] = {
 			["Flower Forest"] = false,
 			["King's Tomb"] = false,
@@ -188,24 +241,14 @@ getgenv().Config = {
 			["Fairy King Forest"] = false,
 			["School Grounds"] = false
 		},
-		["Match Making"] = false,
-		["Ignore Effect"] = {
-			["ShortRange"] = false,
-			["BossWaves"] = false,
-			["Mirror"] = false,
-			["Speedy"] = false,
-			["Traitless"] = false,
-			["NoFarms"] = false,
-			["Shielded"] = false,
-			["Resistance"] = false,
-			["UpgradeCap"] = false
-		}
+		["Auto Join"] = false,
+		["Match Making"] = false
 	},
-	["Game Finished"] = {
-		["Auto Return Lobby"] = false,
-		["Return Lobby Failsafe"] = false,
-		["Auto Replay"] = true,
-		["Auto Next"] = false
+	["Performance"] = {
+		["Delete Map"] = true,
+		["Delete Enemies"] = true,
+		["Black Screen"] = true,
+		["Boost FPS"] = true
 	}
 }
 getgenv().Key = "k719a889a8e9b7246d844cac"
