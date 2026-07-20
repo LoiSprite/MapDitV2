@@ -7,7 +7,7 @@ getgenv().Config = {
 		["Auto Replay"] = true
 	},
 	["Story Joiner"] = {
-		["Difficulty"] = "Normal",
+		["Difficulty"] = "Hard",
 		["Auto Join"] = true,
 		["Act"] = "Act 1",
 		["Match Making"] = false,
