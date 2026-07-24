@@ -11,10 +11,16 @@ getgenv().UserConfig = {
         ["Level"] = 10,
         ["Farmsync"] = {
             ["Enabled"] = true,
-            ["Folder From"] = "215faab22bf854c8513721a6616406919c77bea54e78831bb4508fb3bb0fd98d",
-            ["Folder To"] = "2bc83f3a30d9bce6d7cc71df2d7acc1f7d5c2cbc488bc6b95fb51b9ba5e816c2",
             ["Without Replace"] = false,
-            ["Config ID"] = nil
+            ["Config ID"] = nil,
+            ["Normal"] = {
+                ["Folder From"] = "215faab22bf854c8513721a6616406919c77bea54e78831bb4508fb3bb0fd98d",
+                ["Folder To"] = "ffbe57df265f45bde90fa44580ded360a3d43db10ce0ebd83ecc485a53875e69",
+            },
+            ["Godly"] = {
+                ["Folder From"] = "215faab22bf854c8513721a6616406919c77bea54e78831bb4508fb3bb0fd98d",
+                ["Folder To"] = "2bc83f3a30d9bce6d7cc71df2d7acc1f7d5c2cbc488bc6b95fb51b9ba5e816c2",
+            },
         },
         ["Yummy"] = {
             ["Enabled"] = false
