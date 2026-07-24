@@ -1,6 +1,6 @@
 -- Danny
 if not game:IsLoaded() then game.Loaded:Wait() end
-script_key = "qjcSTLLVJANNnoHRtFndXkpMkNtnsHPu";
+script_key = "UQlAcigfZQHgXaapEBGCKEpblGztnizx";
 setfpscap(15)
 -- [ USER CONFIGURATION ]
 getgenv().UserConfig = {
