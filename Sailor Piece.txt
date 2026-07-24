@@ -10,9 +10,9 @@ getgenv().UserConfig = {
     ["Auto Change"] = {
         ["Level"] = 10,
         ["Farmsync"] = {
-            ["Enabled"] = false,
-            ["Folder From"] = "folder_id_from",
-            ["Folder To"] = "folder_id_to",
+            ["Enabled"] = true,
+            ["Folder From"] = "215faab22bf854c8513721a6616406919c77bea54e78831bb4508fb3bb0fd98d",
+            ["Folder To"] = "2bc83f3a30d9bce6d7cc71df2d7acc1f7d5c2cbc488bc6b95fb51b9ba5e816c2",
             ["Without Replace"] = false,
             ["Config ID"] = nil
         },
