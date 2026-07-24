@@ -36,4 +36,4 @@ getgenv().UserConfig = {
     ["Webhook Rarity Items"] = { "Godly", "Unique" },
     ["Webhook Name Items"] = { "Gemstone", "BioBlade" }
 }
-loadstring(game:HttpGet("https://api.luarmor.net/files/v4/loaders/6ed8b62881ce64364e782a23a42b9977.lua"))()
+loadstring(game:HttpGet("https://api.luarmor.net/files/v4/loaders/cac9b40893744a110589b260d9c6eccf.lua"))()
