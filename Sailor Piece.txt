@@ -34,9 +34,9 @@ getgenv().UserConfig = {
     ["Min Balance Keep"] = 1,
 
     -- Webhook Settings
-    ["Webhook URL"] = "",
-    ["Discord ID"] = "",
-    ["Webhook Note"] = "",
+    ["Webhook URL"] = "https://discord.com/api/webhooks/1391084727473012816/6BMquLQMse3mUQYmnf2zYxjCRaWfD9-5T9Qs7Rgeq5iqUv-Dgcf4PmBfGfSvdb8nwdAR",
+    ["Discord ID"] = "600936810092167179",
+    ["Webhook Note"] = "loisprite",
 
     -- Webhook Filters
     ["Webhook Rarity Items"] = {"Godly"},
