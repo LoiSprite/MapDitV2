@@ -2,7 +2,7 @@ getgenv().Key = "k719a889a8e9b7246d844cac"
 getgenv().KaitunConfig = {
     ["Method"] = "Full Progresstion",
     ["Performance"] = {
-        ["FPS Cap"] = 5,
+        ["FPS Cap"] = 15,
         ["Black Screen"] = true,
     },
 }
