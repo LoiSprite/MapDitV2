@@ -1,59 +1,9 @@
--- Danny
-if not game:IsLoaded() then game.Loaded:Wait() end
-script_key = "UQlAcigfZQHgXaapEBGCKEpblGztnizx";
-setfpscap(5)
--- [ USER CONFIGURATION ]
-getgenv().UserConfig = {
-    ["Enable Auto Hop"] = true,
-    ["Min Coin Hop Threshold"] = 250,
-    ["Coin Check Interval"] = 1800,
-    ["Auto Change"] = {
-        ["Level"] = 10,
-        ["Farmsync"] = {
-            ["Enabled"] = true,
-            ["Without Replace"] = false,
-            ["Config ID"] = nil,
-            ["Normal"] = {
-                ["Folder From"] = "5178455e59d2d46de062cdc3349eaf0abdc0f5e7579b0bdb3a5d617badece1bf",
-                ["Folder To"] = "ffbe57df265f45bde90fa44580ded360a3d43db10ce0ebd83ecc485a53875e69",
-            },
-            ["Godly"] = {
-                ["Folder From"] = "5178455e59d2d46de062cdc3349eaf0abdc0f5e7579b0bdb3a5d617badece1bf",
-                ["Folder To"] = "2bc83f3a30d9bce6d7cc71df2d7acc1f7d5c2cbc488bc6b95fb51b9ba5e816c2",
-            },
-        },
-        ["Yummy"] = {
-            ["Enabled"] = false
-        }
 getgenv().Key = "k719a889a8e9b7246d844cac"
 getgenv().KaitunConfig = {
     ["Method"] = "Full Progresstion",
     ["Performance"] = {
-        ["FPS Cap"] = 5,
+        ["FPS Cap"] = 15,
         ["Black Screen"] = true,
     },
-
-    -- Auto Unbox Settings
-    ["Auto Unbox"] = true,
-    ["Selected Box"] = "Summer2026Box",
-    ["Currency Type"] = "Shells",
-    ["Min Balance Keep"] = 1,
-
-    -- Webhook Settings
-    ["Webhook URL"] = "https://discord.com/api/webhooks/1391084727473012816/6BMquLQMse3mUQYmnf2zYxjCRaWfD9-5T9Qs7Rgeq5iqUv-Dgcf4PmBfGfSvdb8nwdAR",
-    ["Discord ID"] = "600936810092167179",
-    ["Webhook Note"] = "loisprite",
-
-    -- Webhook Filters
-    ["Webhook Rarity Items"] = {"Godly"},
-    ["Webhook Name Items"] = {}
 }
-task.spawn(function()
-    local s = os.clock()
-    repeat task.wait(1) until getgenv().QuackQuack or os.clock() - s >= 240
-    if not getgenv().QuackQuack then
-        pcall(function() game:GetService("TeleportService"):TeleportToPlaceInstance(game.PlaceId, game.JobId, game.Players.LocalPlayer) end)
-    end
-end)
-loadstring(game:HttpGet("https://api.luarmor.net/files/v4/loaders/cac9b40893744a110589b260d9c6eccf.lua"))()
 repeat wait()spawn(function()loadstring(game:HttpGet("https://nousigi.com/loader.lua"))()end)wait(20)until getgenv().Joebiden
