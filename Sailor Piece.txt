@@ -118,9 +118,9 @@ getgenv().UserConfig = {
             ["Maple Mushroom"] = {Amount = 50, To = {"XXJAXON_GigaxX12", "7id2CodeVenomCore"}},
         },
         ["Gear"] = {
-            ["Super Syrup Sprinkler"] = {Amount = 5, To = {"WolfPowerBane51", "SparklyLightChaos202"}},
-            ["Super Syrup Watering Can"] = {Amount = 5, To = {"roblox_user_11106900904", "roblox_user_11073225321"}},
-            ["Super Magic Mail"] = {Amount = 5, To = {"JamesFlashSilver2019", "ReneStudio9175"}},
+            ["Super Syrup Sprinkler"] = {Amount = 10, To = {"WolfPowerBane51", "SparklyLightChaos202"}},
+            ["Super Syrup Watering Can"] = {Amount = 50, To = {"roblox_user_11106900904", "roblox_user_11073225321"}},
+            ["Super Magic Mail"] = {Amount = 2, To = {"JamesFlashSilver2019", "ReneStudio9175"}},
         },
 		["Other"] = {
             
