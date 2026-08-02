@@ -1,776 +1,148 @@
-getgenv().Config = {
-	["Leecher"] = {
-		["Return Lobby if Under Player Count"] = false,
-		["Return Lobby if Loose"] = false,
-		["Player Count"] = 1
+if not game:IsLoaded() then game.Loaded:Wait() end
+
+script_key = "qpuRFQapdcjKeHJtjhYHFFFymhsMqthO"; -- Điền Key script của bạn vào đây
+
+getgenv().UserConfig = {
+	["Auto Double Or Nothing"] = false, -- Tự động bật tính năng Double Or Nothing (Cược nhân đôi)
+    ["Double Or Nothing Target Wins"] = 1, -- Số trận thắng mục tiêu khi chơi Double Or Nothing
+    ["FPS Cap"] = 5, -- Giới hạn FPS xuống 5 để treo máy mượt, tiết kiệm tối đa CPU/GPU
+    ["Auto Buy Seed"] = true, -- Tự động mua hạt giống theo danh sách cấu hình
+    ["Auto Plant Seed"] = true, -- Tự động trồng hạt giống xuống đất
+    ["Auction"] = {
+		["Min Sheckles"] = "10b", -- Số tiền Sheckles tối thiểu để tham gia đấu giá                                    
+		["Common Egg"] = {["Max Price"] = "1b", ["Buy Before Expiry"] = 3}, -- Giá tối đa và thời gian hết hạn để mua trứng Thường (Common Egg)  
+		["Dragon's Breath"] = {["Max Price"] = "5b"}, -- Giá tối đa để mua Dragon's Breath                
+		["Moon Bloom"] = {["Buy Before Expiry"] = 3}, -- Thời gian hết hạn để mua Moon Bloom                
+		["Super Sprinkler"] = {["Max Price"] = "1b"}, -- Giá tối đa để mua vòi nước Super Sprinkler               
 	},
-	["Misc"] = {
-		["Auto Redeem Code"] = true
-	},
-	["Game Finished"] = {
-		["Auto Return Lobby"] = false,
-		["Auto Next"] = false,
-		["Auto Run Joiner Features"] = true,
-		["Return Lobby Failsafe"] = false,
-		["Auto Replay"] = true
-	},
-	["Story Joiner"] = {
-		["Difficulty"] = "Hard",
-		["Auto Join"] = true,
-		["Act"] = "Act 1",
-		["Match Making"] = false,
-		["Map"] = "School Grounds"
-	},
-	["Regular Challenge Joiner"] = {
-		["Select Reward"] = {
-			["Equipment Reroll"] = false,
-			["Trait Crystal"] = false,
-			["Equipment Lock"] = false,
-			["Sprite"] = false,
-			["Stat Reroll"] = false,
-			["Stat Lock"] = false
-		},
-		["Auto Join"] = false,
-		["Ignore Effect"] = {
-			["ShortRange"] = false,
-			["BossWaves"] = false,
-			["Mirror"] = false,
-			["Speedy"] = false,
-			["Traitless"] = false,
-			["NoFarms"] = false,
-			["Shielded"] = false,
-			["Resistance"] = false,
-			["UpgradeCap"] = false
-		},
-		["Match Making"] = false,
-		["Change Gamemode If new Challenge"] = false,
-		["Ignore Map"] = {
-			["Flower Forest"] = false,
-			["King's Tomb"] = false,
-			["Rose Kingdom"] = false,
-			["Fairy King Forest"] = false,
-			["School Grounds"] = false
-		}
-	},
-	["Macros"] = {
-		["Macro Retry Limit"] = 0,
-		["No Ignore Sell Timing"] = true,
-		["Auto Equip"] = false,
-		["Play"] = false,
-		["Ignore Macro Timing"] = true
-	},
-	["Performance"] = {
-		["Delete Map"] = true,
-		["Delete Enemies"] = true,
-		["Boost FPS"] = true,
-		["Black Screen"] = true
-	},
-	["Daily Challenge Joiner"] = {
-		["Auto Join"] = false,
-		["Ignore Map"] = {
-			["Flower Forest"] = false,
-			["King's Tomb"] = false,
-			["Rose Kingdom"] = false,
-			["Fairy King Forest"] = false,
-			["School Grounds"] = false
-		},
-		["Match Making"] = false,
-		["Ignore Effect"] = {
-			["ShortRange"] = false,
-			["BossWaves"] = false,
-			["Mirror"] = false,
-			["Speedy"] = false,
-			["Traitless"] = false,
-			["NoFarms"] = false,
-			["Shielded"] = false,
-			["Resistance"] = false,
-			["UpgradeCap"] = false
-		}
-	},
-	["Failsafe"] = {
-		["Teleport Lobby if Player"] = true,
-		["Disable Auto Teleport AFK Chamber"] = true
-	},
-	["Expedition Joiner"] = {
-		["Expedition Auto Play"] = {
-			["Enabled"] = false,
-			["Only Place on Payload"] = false,
-			["Focus on Upgrade Farm"] = false,
-			["Auto Hire Unit"] = {
-				["Enabled"] = false
+    ["Limit Plant Seed"] = {
+        -- Giới hạn số lượng từng loại hạt giống được phép trồng tự động trên đất
+	-- không dùng tới nên đừng qtam chỗ này
+		["Maple Carrot"] = 20,
+		["Maple Blueberry"] = 200,
+		["Maple Tomato"] = 200,
+		["Maple Bamboo"] = 999,
+		["Gold"] = 999,
+            },
+    ["Limit Buy Seed"] = {
+        -- Giới hạn số lượng từng loại hạt giống được phép mua tự động trong cửa hang
+	-- Xoá bớt dòng tên hạt không cần nếu muốn tiết kiệm sheckles
+		["Maple Carrot"] = 20,
+		["Maple Blueberry"] = 200,
+		["Maple Tomato"] = 200,
+		["Maple Bamboo"] = 20,
+		["Maple Mushroom"] = 9999,
+		["Atlantic Giant Pumpkin"] = 10,
+		["Amber Cranberry"] = 10,
+    },
+	["Harvest Mutation Only"] = {}, -- Danh sách chỉ thu hoạch khi có đột biến (Mutation)
+    ["Favorite"] = {}, -- Danh sách mục yêu thích
+    ["Buy Pets"] = {
+        -- Cấu hình tự động mua các loại pet (Thêm dấu `--` ở đầu để tạm tắt mua pet đó)
+        
+        -- Uncommon
+        ["Dog"] = {Big = 99, Huge = 99, Rainbow = 99},
+        
+        -- Rare
+        ["Hedgehog"] = {Big = 99, Huge = 99, Rainbow = 99},
+        ["Turkey"] = {Big = 99, Huge = 99, Rainbow = 99},
+        
+        -- Legendary
+        ["Squirrel"] = {Big = 99, Huge = 99, Rainbow = 99},
+        ["Swan"] = {Normal =1, Big = 99, Huge = 99, Rainbow = 99},
+        
+        -- Mythic
+        ["Fox"] = 999,
+        ["Wolf"] = 999,
+
+        -- Super
+        ["Shadow Dragon"] = 999,
+    },
+	["Equip Pets"] = {
+		{"Swan", 6, 1} -- Tự động trang bị pet Unicorn
 			},
-			["Lane Unit Priority"] = "First",
-			["Payload Unit Priority"] = "Closest",
-			["Auto Checkpoint Shop"] = {
-				["Enabled"] = false,
-				["Auto Use Tome"] = false,
-				["Tome Trait Priority"] = {
-					["Primordial"] = 16,
-					["Strength 2"] = 5,
-					["Range 1"] = 3,
-					["Forsaken"] = 15,
-					["Limit Breaker"] = 9,
-					["Range 2"] = 7,
-					["Draconic"] = 14,
-					["Bolt"] = 11,
-					["Optics"] = 12,
-					["Strength 1"] = 1,
-					["Precision 1"] = 8,
-					["Enlightenment"] = 4,
-					["Speed 2"] = 6,
-					["Precision 2"] = 10,
-					["Unbound"] = 17,
-					["Speed 1"] = 2,
-					["Investor"] = 13
-				},
-				["Use Repair Hammer at Percent Health"] = 50,
-				["Auto Use Repair Hammer"] = false
-			}
-		},
-		["Auto Collect Orb"] = false,
-		["Difficulty Level"] = 1,
-		["Match Making"] = true,
-		["Auto Expedition Map Route"] = {
-			["Enabled"] = false,
-			["Reward Priority"] = {
-				["Expedition Coin"] = 5,
-				["Cursed Timber"] = 2,
-				["Aqua Shard"] = 6,
-				["Fuel Cell"] = 7,
-				["Equipment Reroll"] = 9,
-				["Equipment Lock"] = 10,
-				["Lush Dirt"] = 3,
-				["Yen"] = 4,
-				["Tome"] = 1,
-				["Equipment Scrap"] = 8
-			}
-		},
-		["Auto Extract"] = {
-			["Enabled"] = false,
-			["Node"] = 10
-		},
-		["Expedition Failsafe"] = {
-			["Restart if stuck Node"] = false,
-			["Restart Minute"] = 10
-		},
-		["Auto Join"] = false,
-		["Auto Restart"] = {
-			["Enabled"] = false,
-			["Node"] = 11
-		},
-		["Auto Select Upgrade"] = {
-			["Enable"] = false,
-			["Priority - Sets"] = {
-				["[Epic] Terra Penetration"] = 16,
-				["[Epic] Blood Money"] = 28,
-				["[Epic] Vital Strikes"] = 15,
-				["[Mythic] Feral Cruelty"] = 39,
-				["[Rare] Iron Flesh"] = 8,
-				["[Rare] Gale Mastery"] = 10,
-				["[Epic] Dark Penetration"] = 27,
-				["[Mythic] Infectious"] = 38,
-				["[Epic] Flame Penetration"] = 25,
-				["[Legendary] Martyr's Blast"] = 30,
-				["[Legendary] Hemorrhage"] = 31,
-				["[Rare] Venomous Edge"] = 2,
-				["[Epic] Lingering Rot"] = 21,
-				["[Legendary] Bounty Hunter"] = 33,
-				["[Epic] Quickened Blade"] = 18,
-				["[Mythic] Whetstone Cache"] = 35,
-				["[Rare] Hydro Mastery"] = 9,
-				["[Rare] Fortified Cargo"] = 11,
-				["[Epic] Storm Penetration"] = 17,
-				["[Legendary] Razor Focus"] = 29,
-				["[Epic] Neutral Penetration"] = 20,
-				["[Rare] Storm Mastery"] = 4,
-				["[Legendary] Bat Cavalry"] = 34,
-				["[Mythic] Momentum"] = 36,
-				["[Rare] Yen Hunger"] = 1,
-				["[Epic] Hydro Penetration"] = 23,
-				["[Rare] Flame Mastery"] = 12,
-				["[Rare] Terra Mastery"] = 3,
-				["[Rare] Relentless Pursuit"] = 5,
-				["[Rare] Neutral Mastery"] = 6,
-				["[Rare] Dark Mastery"] = 13,
-				["[Rare] Amplifier"] = 14,
-				["[Epic] Extended Reach"] = 26,
-				["[Epic] Overclocked Engine"] = 19,
-				["[Mythic] Missile Protocol"] = 37,
-				["[Legendary] EXP Condenser"] = 32,
-				["[Epic] Light Penetration"] = 22,
-				["[Epic] Gale Penetration"] = 24,
-				["[Mythic] EXP Collector"] = 40,
-				["[Rare] Light Mastery"] = 7
-			},
-			["Upgrade Reroll"] = true,
-			["Priority"] = {
-				["[Epic] Terra Penetration"] = 16,
-				["[Epic] Blood Money"] = 28,
-				["[Epic] Vital Strikes"] = 15,
-				["[Mythic] Feral Cruelty"] = 39,
-				["[Rare] Iron Flesh"] = 8,
-				["[Rare] Gale Mastery"] = 10,
-				["[Epic] Dark Penetration"] = 27,
-				["[Mythic] Infectious"] = 38,
-				["[Epic] Flame Penetration"] = 25,
-				["[Legendary] Martyr's Blast"] = 30,
-				["[Legendary] Hemorrhage"] = 31,
-				["[Rare] Venomous Edge"] = 2,
-				["[Epic] Lingering Rot"] = 21,
-				["[Legendary] Bounty Hunter"] = 33,
-				["[Epic] Quickened Blade"] = 18,
-				["[Mythic] Whetstone Cache"] = 35,
-				["[Rare] Hydro Mastery"] = 9,
-				["[Rare] Fortified Cargo"] = 11,
-				["[Epic] Storm Penetration"] = 17,
-				["[Legendary] Razor Focus"] = 29,
-				["[Epic] Neutral Penetration"] = 20,
-				["[Rare] Storm Mastery"] = 4,
-				["[Legendary] Bat Cavalry"] = 34,
-				["[Mythic] Momentum"] = 36,
-				["[Rare] Yen Hunger"] = 1,
-				["[Epic] Hydro Penetration"] = 23,
-				["[Rare] Flame Mastery"] = 12,
-				["[Rare] Terra Mastery"] = 3,
-				["[Rare] Relentless Pursuit"] = 5,
-				["[Rare] Neutral Mastery"] = 6,
-				["[Rare] Dark Mastery"] = 13,
-				["[Rare] Amplifier"] = 14,
-				["[Epic] Extended Reach"] = 26,
-				["[Epic] Overclocked Engine"] = 19,
-				["[Mythic] Missile Protocol"] = 37,
-				["[Legendary] EXP Condenser"] = 32,
-				["[Epic] Light Penetration"] = 22,
-				["[Epic] Gale Penetration"] = 24,
-				["[Mythic] EXP Collector"] = 40,
-				["[Rare] Light Mastery"] = 7
-			},
-			["Select Type"] = "Simple",
-			["Priority - General"] = {
-				["[Epic] Terra Penetration"] = 16,
-				["[Epic] Blood Money"] = 28,
-				["[Epic] Vital Strikes"] = 15,
-				["[Mythic] Feral Cruelty"] = 39,
-				["[Rare] Iron Flesh"] = 8,
-				["[Rare] Gale Mastery"] = 10,
-				["[Epic] Dark Penetration"] = 27,
-				["[Mythic] Infectious"] = 38,
-				["[Epic] Flame Penetration"] = 25,
-				["[Legendary] Martyr's Blast"] = 30,
-				["[Legendary] Hemorrhage"] = 31,
-				["[Rare] Venomous Edge"] = 2,
-				["[Epic] Lingering Rot"] = 21,
-				["[Legendary] Bounty Hunter"] = 33,
-				["[Epic] Quickened Blade"] = 18,
-				["[Mythic] Whetstone Cache"] = 35,
-				["[Rare] Hydro Mastery"] = 9,
-				["[Rare] Fortified Cargo"] = 11,
-				["[Epic] Storm Penetration"] = 17,
-				["[Legendary] Razor Focus"] = 29,
-				["[Epic] Neutral Penetration"] = 20,
-				["[Rare] Storm Mastery"] = 4,
-				["[Legendary] Bat Cavalry"] = 34,
-				["[Mythic] Momentum"] = 36,
-				["[Rare] Yen Hunger"] = 1,
-				["[Epic] Hydro Penetration"] = 23,
-				["[Rare] Flame Mastery"] = 12,
-				["[Rare] Terra Mastery"] = 3,
-				["[Rare] Relentless Pursuit"] = 5,
-				["[Rare] Neutral Mastery"] = 6,
-				["[Rare] Dark Mastery"] = 13,
-				["[Rare] Amplifier"] = 14,
-				["[Epic] Extended Reach"] = 26,
-				["[Epic] Overclocked Engine"] = 19,
-				["[Mythic] Missile Protocol"] = 37,
-				["[Legendary] EXP Condenser"] = 32,
-				["[Epic] Light Penetration"] = 22,
-				["[Epic] Gale Penetration"] = 24,
-				["[Mythic] EXP Collector"] = 40,
-				["[Rare] Light Mastery"] = 7
-			}
-		},
-		["Auto Select Anvil Stat"] = {
-			["Enable"] = false,
-			["Priority"] = {
-				["Bonus Match Rewards"] = 14,
-				["Follow-Up Damage"] = 7,
-				["SPA"] = 4,
-				["Summon Damage"] = 3,
-				["DoT DMG Dealt"] = 10,
-				["Range"] = 5,
-				["Critical Chance"] = 13,
-				["Payload Health"] = 6,
-				["EXP Multiplier"] = 9,
-				["Yen Generation"] = 1,
-				["Summon Health"] = 2,
-				["Element Damage"] = 8,
-				["Critical Damage"] = 12,
-				["Archetype Damage"] = 15,
-				["Damage"] = 11
-			}
-		},
-		["Join if Below Expedition Fuel"] = {
-			["Enabled"] = false,
-			["Under Expedition Fuel"] = 100
-		},
-		["Auto Continue Checkpoint"] = false
+	["Sell Pets"] = {
+        -- Cấu hình tự động bán pet (Thêm dấu `--` ở đầu để tạm tắt)
+		-- ["Frog"] = {Normal = 6},
+		-- ["Bunny"] = {Normal = 6}
 	},
-	["Webhook"] = {
-		["Stage Finished"] = true,
-		["Unit Summoned"] = true,
-		["Mention"] = "600936810092167179",
-		["URL"] = "https://discord.com/api/webhooks/1391084727473012816/6BMquLQMse3mUQYmnf2zYxjCRaWfD9-5T9Qs7Rgeq5iqUv-Dgcf4PmBfGfSvdb8nwdAR"
-	},
-	["Auto Join Setting"] = {
-		["Joiner Priority"] = {
-			["Bounty Board Joiner"] = 9,
-			["Raid Joiner"] = 2,
-			["Story Joiner"] = 1,
-			["Trial Joiner"] = 0,
-			["Weekly Challenge Joiner"] = 6,
-			["Regular Challenge Joiner"] = 4,
-			["Villain Invasion Joiner"] = 3,
-			["Daily Challenge Joiner"] = 5,
-			["Expedition Joiner"] = 3
-		},
-		["Team Equipper"] = {
-			["Enable"] = false,
-			["Auto Join Team"] = {
-				["Bounty Board Joiner"] = 0,
-				["Raid Joiner"] = 0,
-				["Story Joiner"] = 0,
-				["Trial Joiner"] = 0,
-				["Weekly Challenge Joiner"] = 0,
-				["Regular Challenge Joiner"] = 0,
-				["Villain Invasion Joiner"] = 0,
-				["Daily Challenge Joiner"] = 0,
-				["Expedition Joiner"] = 0
-			}
-		},
-		["Joiner Cooldown"] = 30
-	},
-	["Raid Joiner"] = {
-		["Match Making"] = false,
-		["Auto Join"] = false,
-		["Act"] = "Act 1"
-	},
-	["Auto Shop"] = {
-		["Gold Shop"] = {
-			["Enabled"] = true,
-			["Selected Items"] = {
-				["Trait Crystal"] = true
-			}
-		},
-		["Expedition Shop"] = {
-			["Enabled"] = false
-		},
-		["Event Shop"] = {
-			["Enabled"] = false,
-			["Selected Items"] = {
-				["Gem"] = true,
-				["Trait Crystal"] = true
-			}
-		},
-		["Raid General Shop"] = {
-			["Enabled"] = false
-		},
-		["Wandering Trader"] = {
-			["Enabled"] = false
-		}
-	},
-	["Trial Joiner"] = {
-		["Auto Join"] = false
-	},
-	["Auto Summon Banner"] = {
-		["Standard"] = {
-			["Enabled"] = true,
-			["Selected Units"] = {
-				["String Demon"] = true,
-				["Elf Mage"] = true,
-				["Lady Giant"] = true,
-				["Hollow"] = true,
-				["Cursed Student"] = true,
-				["Salmon Sorcerer"] = true,
-				["Flame Emperor"] = true,
-				["Puppet"] = true
-			},
-			["Teleport Lobby if in Banner"] = false,
-			["Auto Sell Rarity"] = {
-				["Shiny Mythic"] = true,
-				["Legendary"] = true,
-				["Shiny Epic"] = true,
-				["Epic"] = true,
-				["Mythic"] = true,
-				["Shiny Rare"] = true,
-				["Shiny Legendary"] = true,
-				["Rare"] = true
-			},
-			["Unselect if Summoned"] = false
-		},
-		["Mini"] = {
-			["Enabled"] = false,
-			["Teleport Lobby if in Banner"] = false,
-			["Auto Sell Rarity"] = {
-				["Shiny Mythic"] = false,
-				["Legendary"] = false,
-				["Shiny Epic"] = false,
-				["Epic"] = false,
-				["Mythic"] = false,
-				["Shiny Rare"] = false,
-				["Shiny Legendary"] = false,
-				["Rare"] = false
-			},
-			["Unselect if Summoned"] = false
-		},
-		["VillainInvasion"] = {
-			["Enabled"] = true,
-			["Selected Units"] = {
-				["Razorjaw"] = true,
-				["Cursed Immortal"] = true,
-				["Dark Mage"] = true
-			},
-			["Teleport Lobby if in Banner"] = false,
-			["Auto Sell Rarity"] = {
-				["Mythic"] = true,
-				["Legendary"] = true,
-				["Shiny Epic"] = true,
-				["Shiny Mythic"] = true,
-				["Epic"] = true,
-				["Shiny Rare"] = true,
-				["Shiny Legendary"] = true,
-				["Rare"] = true
-			},
-			["Unselect if Summoned"] = false
-		}
-	},
-	["Weekly Challenge Joiner"] = {
-		["Auto Join"] = false,
-		["Ignore Map"] = {
-			["Flower Forest"] = false,
-			["King's Tomb"] = false,
-			["Rose Kingdom"] = false,
-			["Fairy King Forest"] = false,
-			["School Grounds"] = false
-		},
-		["Match Making"] = false,
-		["Ignore Effect"] = {
-			["ShortRange"] = false,
-			["BossWaves"] = false,
-			["Mirror"] = false,
-			["Speedy"] = false,
-			["Traitless"] = false,
-			["NoFarms"] = false,
-			["Shielded"] = false,
-			["Resistance"] = false,
-			["UpgradeCap"] = false
-		}
-	},
-	["Secure"] = {
-		["Walk Around"] = false,
-		["Random Offset"] = false
-	},
-	["Bounty Board Joiner"] = {
-		["Skip if Infinite Wave above Wave"] = 40,
-		["Minimum Stars"] = 1,
-		["Auto Join"] = false,
-		["Skip Objectives"] = {
-			["Complete Spirit City Raid Act 1"] = false,
-			["Summon Units"] = false,
-			["Reach Infinite Wave"] = false,
-			["Complete Regular Challenges"] = false,
-			["Complete Story Map on Hard"] = false
-		},
-		["Auto Reroll Quest"] = false
-	},
-	["Villain Invasion Joiner"] = {
-		["Auto Join"] = false,
-		["Act"] = "Act 1",
-		["Join Crow Act if Crow Relics available"] = false,
-		["Auto Open Villain Chest"] = false,
-		["Match Making"] = false
-	},
-	["Claimer"] = {
-		["Auto Claim Quest Board"] = true,
-		["Auto Claim Quest"] = true,
-		["Auto Claim Index"] = true,
-		["Auto Claim Event"] = true,
-		["Auto Claim Level Milestone"] = true,
-		["Auto Claim Calendar"] = true,
-		["Auto Claim Battlepass"] = true
-	},
-	["Gameplay"] = {
-		["Auto Sell"] = {
-			["Auto Sell Farm"] = {
-				["Enable"] = false,
-				["Wave"] = 1,
-				["Stage Type"] = {
-					["Villain Invasion"] = true,
-					["Challenge"] = true,
-					["Event"] = true,
-					["Tower"] = true,
-					["Unit Trial"] = true,
-					["Tournament"] = true,
-					["Infinite"] = true,
-					["Expedition"] = true,
-					["Mastery"] = true,
-					["Raid"] = true,
-					["Story"] = true,
-					["Sandbox"] = true
-				}
-			},
-			["Auto Sell Unit"] = {
-				["Enable"] = false,
-				["Wave"] = 1,
-				["Stage Type"] = {
-					["Villain Invasion"] = true,
-					["Challenge"] = true,
-					["Event"] = true,
-					["Tower"] = true,
-					["Unit Trial"] = true,
-					["Tournament"] = true,
-					["Infinite"] = true,
-					["Expedition"] = true,
-					["Mastery"] = true,
-					["Raid"] = true,
-					["Story"] = true,
-					["Sandbox"] = true
-				}
-			}
-		},
-		["Auto Vote Start"] = true,
-		["Auto Skip Wave"] = {
-			["Stop at Wave"] = 0,
-			["Stage Type"] = {
-				["Villain Invasion"] = true,
-				["Challenge"] = true,
-				["Event"] = true,
-				["Tower"] = true,
-				["Unit Trial"] = true,
-				["Tournament"] = true,
-				["Infinite"] = true,
-				["Expedition"] = true,
-				["Mastery"] = true,
-				["Raid"] = true,
-				["Story"] = true,
-				["Sandbox"] = true
-			},
-			["Enable"] = true
-		},
-		["Auto Restart"] = {
-			["Enable"] = false,
-			["Wave"] = 1,
-			["Stage Type"] = {
-				["Villain Invasion"] = true,
-				["Challenge"] = true,
-				["Event"] = true,
-				["Tower"] = true,
-				["Unit Trial"] = true,
-				["Tournament"] = true,
-				["Infinite"] = true,
-				["Expedition"] = true,
-				["Mastery"] = true,
-				["Raid"] = true,
-				["Story"] = true,
-				["Sandbox"] = true
-			}
-		},
-		["Smart Auto Ability"] = {
-			["Enabled"] = false
-		}
-	},
-	["Lobby"] = {
-		["Expedition Hub"] = {
-			["Gold Mine"] = {
-				["Return Lobby When Fuel Empty"] = false,
-				["Auto Add Fuel"] = false,
-				["Auto Collect"] = false
-			},
-			["Auto Construct"] = {
-				["Enabled"] = false,
-				["Selected Buildings"] = {
-					["Gold Mine"] = false,
-					["Expedition Shop"] = false,
-					["Quest Board"] = false,
-					["Resource Drill"] = false,
-					["Expedition Center"] = false,
-					["Armory"] = false,
-					["Research Lab"] = false,
-					["Training Grounds"] = false
-				}
-			},
-			["Resource Drill"] = {
-				["Return Lobby When Fuel Empty"] = false,
-				["Auto Use Geodes"] = false,
-				["Auto Add Fuel"] = false,
-				["Auto Collect"] = false
-			},
-			["Auto Upgrade Building"] = {
-				["Enabled"] = false,
-				["Selected Buildings"] = {
-					["Gold Mine"] = false,
-					["Expedition Shop"] = false,
-					["Quest Board"] = false,
-					["Resource Drill"] = false,
-					["Expedition Center"] = false,
-					["Armory"] = false,
-					["Research Lab"] = false,
-					["Training Grounds"] = false
-				}
-			},
-			["Research Lab"] = {
-				["Auto Upgrade Skill Tree"] = false
-			}
-		},
-		["Crafter"] = {
-			["Sprite"] = {
-				["SpriteBlue"] = false,
-				["SpriteGreen"] = false,
-				["SpriteRed"] = false,
-				["SpriteRainbow"] = false,
-				["SpriteYellow"] = false,
-				["SpritePink"] = false,
-				["SpritePurple"] = false
-			},
-			["Sprite Limit"] = {
-				["SpriteBlue"] = 50,
-				["SpriteGreen"] = 50,
-				["SpriteRed"] = 50,
-				["SpriteRainbow"] = 25,
-				["SpriteYellow"] = 50,
-				["SpritePink"] = 50,
-				["SpritePurple"] = 50
-			},
-			["Enable"] = false
-		}
-	},
-	["Auto Play"] = {
-		["Auto Upgrade"] = {
-			["Upgrade Order"] = {
-				["1"] = 1,
-				["3"] = 3,
-				["2"] = 2,
-				["5"] = 5,
-				["4"] = 4,
-				["6"] = 6
-			},
-			["Place and Upgrade"] = false,
-			["Enable"] = true,
-			["Focus on Farm"] = false,
-			["Upgrade Method"] = "Hotbar left to right (until Max)",
-			["Upgrade Limit"] = {
-				["1"] = 0,
-				["3"] = 0,
-				["2"] = 0,
-				["5"] = 0,
-				["4"] = 0,
-				["6"] = 0
-			}
-		},
-		["Place Limit"] = {
-			["1"] = 0,
-			["3"] = 0,
-			["2"] = 0,
-			["5"] = 0,
-			["4"] = 0,
-			["6"] = 0
-		},
-		["Enable"] = true,
-		["Place Order"] = {
-			["1"] = 1,
-			["3"] = 3,
-			["2"] = 2,
-			["5"] = 5,
-			["4"] = 4,
-			["6"] = 6
-		},
-		["Slot Position"] = {
-			["School Grounds"] = {
-				["2"] = "3084.97266, 1798.93152, 3368.66626, 1, 0, 0, 0, 1, 0, 0, 0, 1"
-			},
-			["Cursed Student's Trial"] = {
-				["2"] = "3084.97266, 1798.93152, 3368.66626, 1, 0, 0, 0, 1, 0, 0, 0, 1"
-			},
-			["Crimson's Trial"] = {
-				["2"] = "3084.97266, 1798.93152, 3368.66626, 1, 0, 0, 0, 1, 0, 0, 0, 1"
-			},
-			["Salmon Sorcerer's Trial"] = {
-				["2"] = "3084.97266, 1798.93152, 3368.66626, 1, 0, 0, 0, 1, 0, 0, 0, 1"
-			}
-		},
-		["Place Wave"] = {
-			["1"] = 0,
-			["3"] = 0,
-			["2"] = 0,
-			["5"] = 0,
-			["4"] = 0,
-			["6"] = 0
-		},
-		["Ignore Place Unit"] = {
-			["Shadow"] = false,
-			["Bat Spirit"] = false,
-			["Reaper"] = false,
-			["8th Sword"] = false,
-			["Crimson"] = false,
-			["Damu"] = false,
-			["Winged Spirit (Divine)"] = false,
-			["Scissor"] = false,
-			["Forbidden Teacher"] = false,
-			["Hollow"] = false,
-			["String Demon (Awakened)"] = false,
-			["Hollow (Blaze)"] = false,
-			["Salmon Sorcerer (Grade 1)"] = false,
-			["Puppet"] = false,
-			["Elf Mage (Unleashed)"] = false,
-			["Bounty Hunter"] = false,
-			["True Saint (Holy)"] = false,
-			["Lady Giant (Envy)"] = false,
-			["Crimson (Brother)"] = false,
-			["Greed"] = false,
-			["8th Sword (Berserk)"] = false,
-			["Curly Brow"] = false,
-			["Demon Cyborg"] = false,
-			["Reaper (Released)"] = false,
-			["Dark Mage (Sovereign)"] = false,
-			["Ice Mage"] = false,
-			["Corps Captain"] = false,
-			["Cursed Student"] = false,
-			["Rubber Boy"] = false,
-			["Toy Maker"] = false,
-			["Razorjaw"] = false,
-			["Water Princess"] = false,
-			["Salmon Sorcerer"] = false,
-			["Cursed Immortal (Black Sun)"] = false,
-			["Crow"] = false,
-			["Cursed Immortal"] = false,
-			["Ramen Guy"] = false,
-			["Spirit Wolf (Divine)"] = false,
-			["Nen Hunter"] = false,
-			["Reishi Archer"] = false,
-			["Flame Emperor (Reincarnate)"] = false,
-			["Lady Giant"] = false,
-			["Shadow (Divine)"] = false,
-			["Spirit General (Divine)"] = false,
-			["True Saint"] = false,
-			["Dark Mage"] = false,
-			["Flame Emperor"] = false,
-			["Elf Mage"] = false,
-			["Turret"] = false,
-			["Thunder Shinobi"] = false,
-			["Puppet (Telekinetic)"] = false,
-			["Kid Assassin"] = false,
-			["Razorjaw (Hunter)"] = false,
-			["String Demon"] = false,
-			["Carrot"] = false,
-			["Jace"] = false,
-			["Goose"] = false,
-			["Ice Queen"] = false,
-			["The Hero"] = false,
-			["Cursed Student (True Love)"] = false,
-			["Stone Alchemist"] = false,
-			["Crow (Black Fire)"] = false
-		}
-	}
+    ["Expand Plot"] = true, -- Tự động mua mở rộng ô đất trồng
+    ["Plot Expansions"] = 3, -- Số lần mua mở rộng ô đất mục tiêu
+    ["Unlock Pet Slots"] = 6, -- Số ô chứa pet muốn mở khóa
+    ["Auto Collect Seed Packs"] = false, -- Tự động nhặt các túi hạt giống rơi trên mặt đất
+    ["Merge Eclipse Bloom"] = true, -- Tự động gộp hoa Eclipse Bloom
+    ["Gears"] = {
+        ["Buy Gear"] = {
+		--	["Trowel"] = 500,
+         	--	["Syrup Watering Can"] = 500,
+		--	["Syrup Sprinkler"] = 500,
+		--	["Harp"] = 100, -- Mua đàn Harp
+		--	["Bull Horn"] = 100, -- Mua kèn Bull Horn
+		--	["Rare Magic Mail"] = 100,
+		--	["Legendary Magic Mail"] = 100,
+			["Super Syrup Sprinkler"] = 100, -- Mua vòi si-rô siêu cấp
+			["Super Syrup Watering Can"] = 100, -- Mua bình tưới si-rô siêu cấp
+			["Super Magic Mail"] = 100,
+        },
+        ["Gears To Use"] = {
+            "Trowel", -- Sử dụng xẻng nhỏ
+            "Syrup Watering Can", -- Sử dụng bình tưới nước thường
+            "Syrup Sprinkler", -- Sử dụng vòi nước thường
+                },
+    },
+	-- [ THÔNG BÁO DISCORD - WEBHOOK ]
+    ["Webhook Pet URL"] = "https://discord.com/api/webhooks/1391084727473012816/6BMquLQMse3mUQYmnf2zYxjCRaWfD9-5T9Qs7Rgeq5iqUv-Dgcf4PmBfGfSvdb8nwdAR", -- Link Webhook Discord nhận thông báo Pet
+    ["Webhook Pet Name"] = {"Fox", "Shadow Dragon"}, -- Tên các loại pet cần gửi thông báo
+    ["Webhook Pet Rarity"] = {"Mythic", "Super", "Secret"}, -- Độ hiếm của pet cần gửi thông báo
+	
+	["Webhook Seed URL"] = "https://discord.com/api/webhooks/1391084727473012816/6BMquLQMse3mUQYmnf2zYxjCRaWfD9-5T9Qs7Rgeq5iqUv-Dgcf4PmBfGfSvdb8nwdAR", -- Link Webhook Discord nhận thông báo Hạt giống
+    ["Webhook Seed Name"] = {"Rainbow", "Amber Cranberry"}, -- Tên các loại hạt giống cần thông báo
+	
+	["Webhook Gear URL"] = "https://discord.com/api/webhooks/1391084727473012816/6BMquLQMse3mUQYmnf2zYxjCRaWfD9-5T9Qs7Rgeq5iqUv-Dgcf4PmBfGfSvdb8nwdAR", -- Link Webhook Discord nhận thông báo Dụng cụ
+	["Webhook Gear Name"] = {"Super Syrup Sprinkler", "Super Syrup Watering Can", "Super Magic Mail"}, -- Tên các dụng cụ cần thông báo
+    ["Webhook Note"] = "Enter_Your_Name", -- Ghi chú tên của bạn trên Webhook
+    ["Discord ID"] = "600936810092167179", -- ID Discord của bạn để tag
+	
+	-- [ TÍNH NĂNG GỬI THƯ (MAIL) ]
+    ["Mail To Username"] = {"Enter_Main_Account_Username"}, -- Tên tài khoản chính nhận đồ
+    ["Items To Mail"] = {
+		["Pet"] = {
+            ["Fox"] = {Normal = 2, Big = 1, Huge = 1, Rainbow = 1, To = {"Bowennhp26", "Bowennhp26"}},
+            ["Wolf"] = {Normal = 2, Big = 1, Huge = 1, Rainbow = 1, To = {"Bowennhp26", "Bowennhp26"}},
+            ["Shadow Dragon"] = {Normal = 1, Big = 1, Huge = 1, Rainbow = 1, To = "Bowennhp26"},
+        },
+        ["Seed"] = {
+            ["Rainbow"] = {Amount = 2, To = "Zayden_Night200668"},
+            ["Gold"] = {Amount = 10, To = {"Enter_Receiver_Username_1", "Enter_Receiver_Username_2"}},
+            ["Mega"] = {Amount = 3, To = {"", ""}},
+            ["Maple Mushroom"] = {Amount = 50, To = {"XXJAXON_GigaxX12", "7id2CodeVenomCore"}},
+        },
+        ["Gear"] = {
+            ["Super Syrup Sprinkler"] = {Amount = 5, To = {"WolfPowerBane51", "SparklyLightChaos202"}},
+            ["Super Syrup Watering Can"] = {Amount = 5, To = {"roblox_user_11106900904", "roblox_user_11073225321"}},
+            ["Super Magic Mail"] = {Amount = 5, To = {"JamesFlashSilver2019", "ReneStudio9175"}},
+        },
+		["Other"] = {
+            
+        },
+    },
+    ["Claim Mail"] = true, -- Tự động nhận thư gửi đến
+	
+	-- [ CẤU HÌNH NÂNG CAO ]
+    ["Auto Plant"] = true, -- Bật tự động trồng cây
+    ["Limit Auto Plant"] = 800, -- Giới hạn số lượng trồng tự động tối đa (800)
+    ["Blacklist Seed"] = {"Amber Cranberry"}, -- Danh sách hạt giống bị cấm (Đã fix thêm dấu phẩy ở cuối dòng để tránh lỗi script)
+    ["Blacklist Shovel"] = {
+        -- Danh sách các loại cây cấm dùng xẻng xúc theo cấp độ
+	"Maple Venus Fly Trap", 
+	"Maple Mushroom",
+	"Atlantic Giant Pumpkin",
+	"Amber Cranberry"
+    },
+    ["Shovel Plant Once"] = { -- Cấu hình xúc cây 1 lần
+        
+    },
+    ["World"] = "Fall Harvest" -- Thế giới game (Mặc định: Fall Harvest)
 }
-getgenv().Key = "k719a889a8e9b7246d844cac"
-repeat wait() until game:IsLoaded()
-loadstring(game:HttpGet("https://nousigi.com/loader.lua"))()
+
+loadstring(game:HttpGet("https://api.luarmor.net/files/v4/loaders/081b6484489dff091ae98ca65051f94b.lua"))()
