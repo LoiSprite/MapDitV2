@@ -119,7 +119,7 @@ getgenv().UserConfig = {
         },
         ["Gear"] = {
             ["Super Syrup Sprinkler"] = {Amount = 10, To = {"WolfPowerBane51", "SparklyLightChaos202"}},
-            ["Super Syrup Watering Can"] = {Amount = 50, To = {"roblox_user_11106900904", "roblox_user_11073225321"}},
+            ["Super Syrup Watering Can"] = {Amount = 50, To = {"Hodge20175", "Magnus_rbtn376"}},
             ["Super Magic Mail"] = {Amount = 1, To = {"JamesFlashSilver2019", "ReneStudio9175"}},
         },
 		["Other"] = {
