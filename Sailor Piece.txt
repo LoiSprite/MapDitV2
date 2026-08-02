@@ -104,17 +104,15 @@ getgenv().UserConfig = {
     ["Discord ID"] = "600936810092167179", -- ID Discord của bạn để tag
 	
 	-- [ TÍNH NĂNG GỬI THƯ (MAIL) ]
-    ["Mail To Username"] = {"Enter_Main_Account_Username"}, -- Tên tài khoản chính nhận đồ
+    ["Mail To Username"] = {}, -- Tên tài khoản chính nhận đồ
     ["Items To Mail"] = {
 		["Pet"] = {
-            ["Fox"] = {Normal = 1, Big = 1, Huge = 1, Rainbow = 1, To = {"Bowennhp26", "Bowennhp26"}},
-            ["Wolf"] = {Normal = 1, Big = 1, Huge = 1, Rainbow = 1, To = {"Bowennhp26", "Bowennhp26"}},
+            ["Fox"] = {Normal = 1, Big = 1, Huge = 1, Rainbow = 1, To = "Bowennhp26"},
+            ["Wolf"] = {Normal = 1, Big = 1, Huge = 1, Rainbow = 1, To = "Bowennhp26"},
             ["Shadow Dragon"] = {Normal = 1, Big = 1, Huge = 1, Rainbow = 1, To = "Bowennhp26"},
         },
         ["Seed"] = {
             ["Rainbow"] = {Amount = 2, To = "Zayden_Night200668"},
-            ["Gold"] = {Amount = 10, To = {"Enter_Receiver_Username_1", "Enter_Receiver_Username_2"}},
-            ["Mega"] = {Amount = 3, To = {"", ""}},
             ["Maple Mushroom"] = {Amount = 50, To = {"XXJAXON_GigaxX12", "7id2CodeVenomCore"}},
         },
         ["Gear"] = {
@@ -122,9 +120,7 @@ getgenv().UserConfig = {
             ["Super Syrup Watering Can"] = {Amount = 50, To = {"Hodge20175", "Magnus_rbtn376"}},
             ["Super Magic Mail"] = {Amount = 1, To = {"JamesFlashSilver2019", "ReneStudio9175"}},
         },
-		["Other"] = {
-            
-        },
+		["Other"] = {},
     },
     ["Claim Mail"] = true, -- Tự động nhận thư gửi đến
 	
