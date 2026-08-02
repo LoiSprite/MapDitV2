@@ -107,8 +107,8 @@ getgenv().UserConfig = {
     ["Mail To Username"] = {"Enter_Main_Account_Username"}, -- Tên tài khoản chính nhận đồ
     ["Items To Mail"] = {
 		["Pet"] = {
-            ["Fox"] = {Normal = 2, Big = 1, Huge = 1, Rainbow = 1, To = {"Bowennhp26", "Bowennhp26"}},
-            ["Wolf"] = {Normal = 2, Big = 1, Huge = 1, Rainbow = 1, To = {"Bowennhp26", "Bowennhp26"}},
+            ["Fox"] = {Normal = 1, Big = 1, Huge = 1, Rainbow = 1, To = {"Bowennhp26", "Bowennhp26"}},
+            ["Wolf"] = {Normal = 1, Big = 1, Huge = 1, Rainbow = 1, To = {"Bowennhp26", "Bowennhp26"}},
             ["Shadow Dragon"] = {Normal = 1, Big = 1, Huge = 1, Rainbow = 1, To = "Bowennhp26"},
         },
         ["Seed"] = {
