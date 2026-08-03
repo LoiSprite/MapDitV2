@@ -118,7 +118,7 @@ getgenv().UserConfig = {
         },
         ["Seed"] = {
             ["Rainbow"] = {Amount = 5, To = "JamesFlashSilver2019"},
-            ["Atlantic Giant Pumpkin"] = {Amount = 1, To = "JamesFlashSilver2019"},
+            ["Atlantic Giant Pumpkin"] = {Amount = 2, To = "JamesFlashSilver2019"},
             ["Maple Mushroom"] = {Amount = 10, To = {"Luciano_Bishop90577", "Salgado_Gamer194"}},
         },
         ["Gear"] = {
