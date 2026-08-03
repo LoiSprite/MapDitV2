@@ -23,6 +23,7 @@ getgenv().UserConfig = {
 		["Maple Tomato"] = 200,
 		["Maple Bamboo"] = 999,
 		["Atlantic Giant Pumpkin"] = 999,
+		["Rainbow"] = 999,
 		["Gold"] = 999,
             },
     ["Limit Buy Seed"] = {
@@ -118,7 +119,6 @@ getgenv().UserConfig = {
             ["Swan"] = {Normal = 99, Big = 1, Huge = 1, Rainbow = 1, To = "ReneStudio9175"},
         },
         ["Seed"] = {
-            ["Rainbow"] = {Amount = 5, To = "JamesFlashSilver2019"},
             ["Maple Mushroom"] = {Amount = 10, To = {"Luciano_Bishop90577", "Salgado_Gamer194"}},
         },
         ["Gear"] = {
