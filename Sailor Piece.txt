@@ -81,7 +81,7 @@ getgenv().UserConfig = {
 		--	["Legendary Magic Mail"] = 100,
 			["Super Syrup Sprinkler"] = 100, -- Mua vòi si-rô siêu cấp
 			["Super Syrup Watering Can"] = 100, -- Mua bình tưới si-rô siêu cấp
-			["Super Magic Mail"] = 100,
+		--	["Super Magic Mail"] = 100,
         },
         ["Gears To Use"] = {
             "Trowel", -- Sử dụng xẻng nhỏ
