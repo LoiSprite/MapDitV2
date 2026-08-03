@@ -108,8 +108,8 @@ getgenv().UserConfig = {
     ["Mail To Username"] = {}, -- Tên tài khoản chính nhận đồ
     ["Items To Mail"] = {
 		["Pet"] = {
-            ["Fox"] = {Normal = 1, Big = 1, Huge = 1, Rainbow = 1, To = "ReneStudio9175"},
-            ["Wolf"] = {Normal = 1, Big = 1, Huge = 1, Rainbow = 1, To = "ReneStudio9175"},
+            ["Fox"] = {Normal = 99, Big = 1, Huge = 1, Rainbow = 1, To = "ReneStudio9175"},
+            ["Wolf"] = {Normal = 99, Big = 1, Huge = 1, Rainbow = 1, To = "ReneStudio9175"},
             ["Shadow Dragon"] = {Normal = 1, Big = 1, Huge = 1, Rainbow = 1, To = "ReneStudio9175"},
             ["Dog"] = {Normal = 99, Big = 1, Huge = 1, Rainbow = 1, To = "ReneStudio9175"},
             ["Hedgehog"] = {Normal = 99, Big = 1, Huge = 1, Rainbow = 1, To = "ReneStudio9175"},
@@ -119,7 +119,6 @@ getgenv().UserConfig = {
         },
         ["Seed"] = {
             ["Rainbow"] = {Amount = 5, To = "JamesFlashSilver2019"},
-            ["Atlantic Giant Pumpkin"] = {Amount = 2, To = "JamesFlashSilver2019"},
             ["Maple Mushroom"] = {Amount = 10, To = {"Luciano_Bishop90577", "Salgado_Gamer194"}},
         },
         ["Gear"] = {
@@ -133,7 +132,7 @@ getgenv().UserConfig = {
 	-- [ CẤU HÌNH NÂNG CAO ]
     ["Auto Plant"] = true, -- Bật tự động trồng cây
     ["Limit Auto Plant"] = 800, -- Giới hạn số lượng trồng tự động tối đa (800)
-    ["Blacklist Seed"] = {"Maple Mushroom", "Atlantic Giant Pumpkin", "Amber Cranberry"}, -- Danh sách hạt giống bị cấm (Đã fix thêm dấu phẩy ở cuối dòng để tránh lỗi script)
+    ["Blacklist Seed"] = {"Maple Mushroom", "Amber Cranberry"}, -- Danh sách hạt giống bị cấm (Đã fix thêm dấu phẩy ở cuối dòng để tránh lỗi script)
     ["Blacklist Shovel"] = {
         -- Danh sách các loại cây cấm dùng xẻng xúc theo cấp độ
 	"Maple Venus Fly Trap", 
