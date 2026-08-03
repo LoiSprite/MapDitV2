@@ -117,12 +117,12 @@ getgenv().UserConfig = {
             ["Swan"] = {Normal = 99, Big = 1, Huge = 1, Rainbow = 1, To = "Bowennhp26"},
         },
         ["Seed"] = {
-            ["Rainbow"] = {Amount = 2, To = "Zayden_Night200668"},
-            ["Maple Mushroom"] = {Amount = 20, To = {"XXJAXON_GigaxX12", "7id2CodeVenomCore"}},
+            ["Rainbow"] = {Amount = 5, To = "Zayden_Night200668"},
+            ["Maple Mushroom"] = {Amount = 50, To = {"XXJAXON_GigaxX12", "7id2CodeVenomCore"}},
         },
         ["Gear"] = {
-            ["Super Syrup Sprinkler"] = {Amount = 1, To = {"WolfPowerBane51", "SparklyLightChaos202"}},
-            ["Super Syrup Watering Can"] = {Amount = 2, To = {"Hodge20175", "Magnus_rbtn376"}},
+            ["Super Syrup Sprinkler"] = {Amount = 2, To = {"WolfPowerBane51", "SparklyLightChaos202"}},
+            ["Super Syrup Watering Can"] = {Amount = 5, To = {"Hodge20175", "Magnus_rbtn376"}},
             ["Super Magic Mail"] = {Amount = 1, To = {"JamesFlashSilver2019", "ReneStudio9175"}},
         },
 		["Other"] = {},
