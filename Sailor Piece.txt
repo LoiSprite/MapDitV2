@@ -32,8 +32,8 @@ getgenv().UserConfig = {
 		["Maple Tomato"] = 200,
 		["Maple Bamboo"] = 20,
 		["Maple Mushroom"] = 9999,
-		["Atlantic Giant Pumpkin"] = 10,
-		["Amber Cranberry"] = 10,
+		["Atlantic Giant Pumpkin"] = 9999,
+		["Amber Cranberry"] = 9999,
     },
 	["Harvest Mutation Only"] = {}, -- Danh sách chỉ thu hoạch khi có đột biến (Mutation)
     ["Favorite"] = {}, -- Danh sách mục yêu thích
