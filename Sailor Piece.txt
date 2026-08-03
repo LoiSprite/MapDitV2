@@ -122,8 +122,8 @@ getgenv().UserConfig = {
             ["Maple Mushroom"] = {Amount = 10, To = {"XXJAXON_GigaxX12", "7id2CodeVenomCore"}},
         },
         ["Gear"] = {
-            ["Super Syrup Sprinkler"] = {Amount = 2, To = {"WolfPowerBane51", "SparklyLightChaos202"}},
-            ["Super Syrup Watering Can"] = {Amount = 5, To = {"Hodge20175", "Magnus_rbtn376"}},
+            ["Super Syrup Sprinkler"] = {Amount = 1, To = {"WolfPowerBane51", "SparklyLightChaos202"}},
+            ["Super Syrup Watering Can"] = {Amount = 2, To = {"Hodge20175", "Magnus_rbtn376"}},
         },
 		["Other"] = {},
     },
