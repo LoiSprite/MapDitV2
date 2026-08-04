@@ -42,15 +42,15 @@ getgenv().UserConfig = {
         -- Cấu hình tự động mua các loại pet (Thêm dấu `--` ở đầu để tạm tắt mua pet đó)
         
         -- Uncommon
-        ["Dog"] = {Big = 99, Huge = 99, Rainbow = 99},
+        ["Dog"] = {Big = 99, Rainbow = 99},
         
         -- Rare
-        ["Hedgehog"] = {Big = 99, Huge = 99, Rainbow = 99},
-        ["Turkey"] = {Big = 99, Huge = 99, Rainbow = 99},
+        ["Hedgehog"] = {Big = 99, Rainbow = 99},
+        ["Turkey"] = {Big = 99, Rainbow = 99},
         
         -- Legendary
-        ["Squirrel"] = {Big = 99, Huge = 99, Rainbow = 99},
-        ["Swan"] = {Normal =1, Big = 99, Huge = 99, Rainbow = 99},
+        ["Squirrel"] = {Big = 99, Rainbow = 99},
+        ["Swan"] = {Big = 99, Rainbow = 99},
         
         -- Mythic
         ["Fox"] = {Big = 99, Huge = 99, Rainbow = 99},
@@ -111,11 +111,11 @@ getgenv().UserConfig = {
             ["Fox"] = {Normal = 99, Big = 1, Huge = 1, Rainbow = 1, To = "ReneStudio9175"},
             ["Wolf"] = {Normal = 99, Big = 1, Huge = 1, Rainbow = 1, To = "ReneStudio9175"},
             ["Shadow Dragon"] = {Normal = 1, Big = 1, Huge = 1, Rainbow = 1, To = "ReneStudio9175"},
-            ["Dog"] = {Normal = 99, Big = 1, Huge = 1, Rainbow = 1, To = "ReneStudio9175"},
-            ["Hedgehog"] = {Normal = 99, Big = 1, Huge = 1, Rainbow = 1, To = "ReneStudio9175"},
-            ["Turkey"] = {Normal = 99, Big = 1, Huge = 1, Rainbow = 1, To = "ReneStudio9175"},
-            ["Squirrel"] = {Normal = 99, Big = 1, Huge = 1, Rainbow = 1, To = "ReneStudio9175"},
-            ["Swan"] = {Normal = 99, Big = 1, Huge = 1, Rainbow = 1, To = "ReneStudio9175"},
+            ["Dog"] = {Normal = 99, Big = 99, Huge = 1, Rainbow = 1, To = "ReneStudio9175"},
+            ["Hedgehog"] = {Normal = 99, Big = 99, Huge = 1, Rainbow = 1, To = "ReneStudio9175"},
+            ["Turkey"] = {Normal = 99, Big = 99, Huge = 1, Rainbow = 1, To = "ReneStudio9175"},
+            ["Squirrel"] = {Normal = 99, Big = 99, Huge = 1, Rainbow = 1, To = "ReneStudio9175"},
+            ["Swan"] = {Normal = 99, Big = 99, Huge = 1, Rainbow = 1, To = "ReneStudio9175"},
         },
         ["Seed"] = {
             ["Maple Mushroom"] = {Amount = 10, To = {"HadleeElliotr1", "EleanorSoul993"}},
