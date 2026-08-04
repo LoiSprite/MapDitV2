@@ -18,7 +18,7 @@ getgenv().UserConfig = {
     ["Limit Plant Seed"] = {
         -- Giới hạn số lượng từng loại hạt giống được phép trồng tự động trên đất
 	-- không dùng tới nên đừng qtam chỗ này
-		["Maple Carrot"] = 20,
+		["Maple Carrot"] = 999,
 		["Maple Mushroom"] = 999,
 		["Maple Bamboo"] = 999,
 		["Gold"] = 999,
@@ -27,7 +27,7 @@ getgenv().UserConfig = {
     ["Limit Buy Seed"] = {
         -- Giới hạn số lượng từng loại hạt giống được phép mua tự động trong cửa hang
 	-- Xoá bớt dòng tên hạt không cần nếu muốn tiết kiệm sheckles
-		["Maple Carrot"] = 20,
+		["Maple Carrot"] = 99,
 		["Maple Mushroom"] = 99,
 		["Maple Venus Fly Trap"] = 99,
 		["Maple Pomegranate"] = 99,
@@ -120,6 +120,12 @@ getgenv().UserConfig = {
         },
         ["Seed"] = {
             ["Atlantic Giant Pumpkin"] = {Amount = 2, To = "JamesFlashSilver2019"},
+            ["Maple Venus Fly Trap"] = {Amount = 1, To = "HadleeElliotr1"},
+            ["Maple Pomegranate"] = {Amount = 1, To = "HadleeElliotr1"},
+            ["Maple Poison Apple"] = {Amount = 1, To = "HadleeElliotr1"},
+            ["Maple Venom Spitter"] = {Amount = 1, To = "HadleeElliotr1"},
+            ["Conifer Cone"] = {Amount = 1, To = "HadleeElliotr1"},
+            ["Amber Cranberry"] = {Amount = 1, To = "HadleeElliotr1"},
         },
         ["Gear"] = {
             ["Super Syrup Sprinkler"] = {Amount = 1, To = {"ConnerMekhi5q89", "FreyjaKash452"}},
