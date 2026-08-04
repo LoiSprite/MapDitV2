@@ -22,6 +22,8 @@ getgenv().UserConfig = {
 		["Maple Blueberry"] = 200,
 		["Maple Tomato"] = 200,
 		["Maple Bamboo"] = 999,
+		["Gold"] = 999,
+		["Rainbow"] = 999,
             },
     ["Limit Buy Seed"] = {
         -- Giới hạn số lượng từng loại hạt giống được phép mua tự động trong cửa hang
