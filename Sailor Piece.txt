@@ -19,8 +19,7 @@ getgenv().UserConfig = {
         -- Giới hạn số lượng từng loại hạt giống được phép trồng tự động trên đất
 	-- không dùng tới nên đừng qtam chỗ này
 		["Maple Carrot"] = 20,
-		["Maple Blueberry"] = 200,
-		["Maple Tomato"] = 200,
+		["Maple Mushroom"] = 200,
 		["Maple Bamboo"] = 999,
 		["Gold"] = 999,
 		["Rainbow"] = 999,
