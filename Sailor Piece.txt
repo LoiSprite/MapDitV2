@@ -28,11 +28,14 @@ getgenv().UserConfig = {
         -- Giới hạn số lượng từng loại hạt giống được phép mua tự động trong cửa hang
 	-- Xoá bớt dòng tên hạt không cần nếu muốn tiết kiệm sheckles
 		["Maple Carrot"] = 20,
-		["Maple Blueberry"] = 200,
-		["Maple Tomato"] = 200,
-		["Maple Bamboo"] = 20,
-		["Atlantic Giant Pumpkin"] = 9999,
-		["Amber Cranberry"] = 9999,
+		["Maple Mushroom"] = 99,
+		["Maple Venus Fly Trap"] = 99,
+		["Maple Pomegranate"] = 99,
+		["Maple Poison Apple"] = 99,
+		["Maple Venom Spitter"] = 99,
+		["Conifer Cone"] = 99,
+		["Atlantic Giant Pumpkin"] = 99,
+		["Amber Cranberry"] = 99,
     },
 	["Harvest Mutation Only"] = {}, -- Danh sách chỉ thu hoạch khi có đột biến (Mutation)
     ["Favorite"] = {}, -- Danh sách mục yêu thích
