@@ -22,7 +22,6 @@ getgenv().UserConfig = {
 		["Maple Blueberry"] = 200,
 		["Maple Tomato"] = 200,
 		["Maple Bamboo"] = 999,
-		["Atlantic Giant Pumpkin"] = 9999,
 		["Gold"] = 999,
 		["Rainbow"] = 999,
             },
@@ -120,6 +119,7 @@ getgenv().UserConfig = {
         },
         ["Seed"] = {
             ["Maple Mushroom"] = {Amount = 10, To = {"HadleeElliotr1", "EleanorSoul993"}},
+            ["Atlantic Giant Pumpkin"] = {Amount = 2, To = "JamesFlashSilver2019"},
         },
         ["Gear"] = {
             ["Super Syrup Sprinkler"] = {Amount = 1, To = {"ConnerMekhi5q89", "FreyjaKash452"}},
@@ -132,7 +132,7 @@ getgenv().UserConfig = {
 	-- [ CẤU HÌNH NÂNG CAO ]
     ["Auto Plant"] = true, -- Bật tự động trồng cây
     ["Limit Auto Plant"] = 800, -- Giới hạn số lượng trồng tự động tối đa (800)
-    ["Blacklist Seed"] = {"Maple Mushroom", "Amber Cranberry"}, -- Danh sách hạt giống bị cấm (Đã fix thêm dấu phẩy ở cuối dòng để tránh lỗi script)
+    ["Blacklist Seed"] = {"Maple Mushroom", "Atlantic Giant Pumpkin", "Amber Cranberry"}, -- Danh sách hạt giống bị cấm (Đã fix thêm dấu phẩy ở cuối dòng để tránh lỗi script)
     ["Blacklist Shovel"] = {
         -- Danh sách các loại cây cấm dùng xẻng xúc theo cấp độ
 	"Maple Venus Fly Trap", 
