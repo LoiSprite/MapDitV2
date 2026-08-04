@@ -99,7 +99,7 @@ getgenv().UserConfig = {
 	["Webhook Seed URL"] = "https://discord.com/api/webhooks/1391084727473012816/6BMquLQMse3mUQYmnf2zYxjCRaWfD9-5T9Qs7Rgeq5iqUv-Dgcf4PmBfGfSvdb8nwdAR", -- Link Webhook Discord nhận thông báo Hạt giống
     ["Webhook Seed Name"] = {"Amber Cranberry"}, -- Tên các loại hạt giống cần thông báo
 	
-	["Webhook Gear URL"] = "https://discord.com/api/webhooks/1391084727473012816/6BMquLQMse3mUQYmnf2zYxjCRaWfD9-5T9Qs7Rgeq5iqUv-Dgcf4PmBfGfSvdb8nwdAR", -- Link Webhook Discord nhận thông báo Dụng cụ
+	["Webhook Gear URL"] = "", -- Link Webhook Discord nhận thông báo Dụng cụ
 	["Webhook Gear Name"] = {"Super Syrup Sprinkler", "Super Syrup Watering Can", "Super Magic Mail"}, -- Tên các dụng cụ cần thông báo
     ["Webhook Note"] = "MapCho", -- Ghi chú tên của bạn trên Webhook
     ["Discord ID"] = "600936810092167179", -- ID Discord của bạn để tag
