@@ -87,18 +87,20 @@ getgenv().UserConfig = {
         
         -- Legendary
         ["Squirrel"] = {Big = 99, Rainbow = 99},
-        ["Swan"] = {Big = 99, Rainbow = 99},
+        ["Swan"] = {Normal = 6, Big = 6, Huge = 99, Rainbow = 6},
         
         -- Mythic
         ["Fox"] = {Big = 99, Huge = 99, Rainbow = 99},
-        ["Wolf"] = {Big = 99, Huge = 99, Rainbow = 99},
+        ["Wolf"] = {Normal = 6, Big = 6, Huge = 99, Rainbow = 6},
 
         -- Super
         ["Shadow Dragon"] = 999,
     },
-	["Equip Pets"] = {
-		{"Swan", 6, 1} -- Tự động trang bị pet Unicorn
-			},
+    ["Equip Wolf At Night"] = true,
+    ["Equip Pets"] = {
+        {"Swan", 6, 1},
+        {"Turkey", 6, 2},
+    },
 	["Sell Pets"] = {
         -- Cấu hình tự động bán pet (Thêm dấu `--` ở đầu để tạm tắt)
 		-- ["Frog"] = {Normal = 6},
