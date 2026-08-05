@@ -21,6 +21,8 @@ getgenv().UserConfig = {
 		["Maple Carrot"] = 999,
 		["Maple Mushroom"] = 999,
 		["Maple Bamboo"] = 999,
+		["Maple Tomato"] = 200,
+		["Maple Blueberry"] = 200,
 		["Gold"] = 999,
 		["Rainbow"] = 999,
             },
@@ -29,6 +31,8 @@ getgenv().UserConfig = {
 	-- Xoá bớt dòng tên hạt không cần nếu muốn tiết kiệm sheckles
 		["Maple Carrot"] = 99,
 		["Maple Mushroom"] = 99,
+		["Maple Tomato"] = 200,
+		["Maple Blueberry"] = 200,
 		["Maple Venus Fly Trap"] = 99,
 		["Maple Pomegranate"] = 99,
 		["Maple Poison Apple"] = 99,
@@ -37,7 +41,28 @@ getgenv().UserConfig = {
 		["Atlantic Giant Pumpkin"] = 99,
 		["Amber Cranberry"] = 99,
     },
-	["Harvest Mutation Only"] = {}, -- Danh sách chỉ thu hoạch khi có đột biến (Mutation)
+["Harvest Mutation Only"] = {
+    -- Format cũ vẫn hoạt động bình thường
+    "Bamboo",                                    -- có mutation bất kỳ
+    ["Tomato"] = {"Rainbow", "Gold"},             -- mutation cụ thể
+
+    -- Format mới nâng cao
+    ["Mushroom"] = {
+        Mutation = {"Rainbow", "Gold", "Bloodlit"},
+        Multiplier = 1.5,
+        Mode = "Any",                            -- thoả 1 trong 2
+    },
+
+    ["Venus Fly Trap"] = {
+        Multiplier = 2.0,                        -- chỉ check multiplier
+    },
+
+    ["Venom Spitter"] = {
+        Mutation = true,                          -- có mutation bất kỳ
+        Multiplier = 1.5,
+        Mode = "All",                            -- phải thoả cả 2
+    },
+}
     ["Favorite"] = {}, -- Danh sách mục yêu thích
     ["Buy Pets"] = {
         -- Cấu hình tự động mua các loại pet (Thêm dấu `--` ở đầu để tạm tắt mua pet đó)
