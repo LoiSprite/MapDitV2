@@ -76,24 +76,9 @@ getgenv().UserConfig = {
     },
     ["Favorite"] = {}, -- Danh sách mục yêu thích
     ["Buy Pets"] = {
-        -- Cấu hình tự động mua các loại pet (Thêm dấu `--` ở đầu để tạm tắt mua pet đó)
-        
-        -- Uncommon
-        ["Dog"] = {Big = 99, Rainbow = 99},
-        
-        -- Rare
-        ["Hedgehog"] = {Big = 99, Rainbow = 99},
-        ["Turkey"] = {Big = 99, Rainbow = 99},
-        
-        -- Legendary
-        ["Squirrel"] = {Big = 99, Rainbow = 99},
-        ["Swan"] = {Normal = 6, Big = 6, Huge = 99, Rainbow = 6},
-        
-        -- Mythic
-        ["Fox"] = {Big = 99, Huge = 99, Rainbow = 99},
         ["Wolf"] = {Normal = 6, Big = 6, Huge = 99, Rainbow = 6},
-
-        -- Super
+        ["Swan"] = {Normal = 6, Big = 6, Huge = 99, Rainbow = 6},
+        ["Turkey"] = {Normal = 6},
         ["Shadow Dragon"] = 999,
     },
     ["Equip Wolf At Night"] = true,
