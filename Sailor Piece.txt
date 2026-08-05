@@ -74,7 +74,6 @@ getgenv().UserConfig = {
         ["Cinnamon Stick"] = {Multiplier = 1.0},
         ["Amber Cranberry"] = {Multiplier = 1.0},
     },
-}
     ["Favorite"] = {}, -- Danh sách mục yêu thích
     ["Buy Pets"] = {
         -- Cấu hình tự động mua các loại pet (Thêm dấu `--` ở đầu để tạm tắt mua pet đó)
