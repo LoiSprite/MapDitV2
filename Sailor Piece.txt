@@ -115,8 +115,8 @@ getgenv().UserConfig = {
             ["Conifer Cone"] = {Amount = 1, To = "HadleeElliotr1"},
         },
         ["Gear"] = {
-            ["Super Syrup Sprinkler"] = {Amount = 5, To = {"ConnerMekhi5q89", "FreyjaKash452"}},
-            ["Super Syrup Watering Can"] = {Amount = 5, To = {"Campbell_1b5x", "Murillo_zbq"}},
+            ["Super Syrup Sprinkler"] = {Amount = 2, To = {"ConnerMekhi5q89", "FreyjaKash452"}},
+            ["Super Syrup Watering Can"] = {Amount = 2, To = {"Campbell_1b5x", "Murillo_zbq"}},
         },
         ["Other"] = {
             
