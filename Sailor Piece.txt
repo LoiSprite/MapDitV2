@@ -1,9 +1,9 @@
 if not game:IsLoaded() then game.Loaded:Wait() end
 script_key = "qpuRFQapdcjKeHJtjhYHFFFymhsMqthO";
 getgenv().UserConfig = {
-    ["Auto Double Or Nothing"] = false,
+	["Auto Double Or Nothing"] = false,
     ["Double Or Nothing Target Wins"] = 1,
-    ["FPS Cap"] = 15,
+    ["FPS Cap"] = 5,
     ["Auto Buy Seed"] = true,
     ["Auto Plant Seed"] = true,
     ["Limit Plant Seed"] = {
@@ -93,32 +93,34 @@ getgenv().UserConfig = {
         },
     },
 	-- WH Pet
-    ["Webhook Pet URL"] = "https://discord.com/api/webhooks/1391084727473012816/6BMquLQMse3mUQYmnf2zYxjCRaWfD9-5T9Qs7Rgeq5iqUv-Dgcf4PmBfGfSvdb8nwdAR",
+    ["Webhook Pet URL"] = "",
     ["Webhook Pet Name"] = {},
-    ["Webhook Pet Rarity"] = {"Super"},
+    ["Webhook Pet Rarity"] = {"Mythic", "Super", "Secret"},
 	-- WH Seed
-	["Webhook Seed URL"] = "https://discord.com/api/webhooks/1391084727473012816/6BMquLQMse3mUQYmnf2zYxjCRaWfD9-5T9Qs7Rgeq5iqUv-Dgcf4PmBfGfSvdb8nwdAR",
-    ["Webhook Seed Name"] = {Amber Cranberry},
+	["Webhook Seed URL"] = "",
+    ["Webhook Seed Name"] = {},
 	-- WH Gear
 	["Webhook Gear URL"] = "",
 	["Webhook Gear Name"] = {},
-    ["Webhook Note"] = "MapCho",
-    ["Discord ID"] = "600936810092167179",
+    ["Webhook Note"] = "",
+    ["Discord ID"] = "",
 	-- Mail
     ["Mail To Username"] = {},
     ["Items To Mail"] = {
-		["Pet"] = {
+        ["Pet"] = {
             ["Shadow Dragon"] = {Normal = 1, Big = 1, Huge = 1, Rainbow = 1, To = "ReneStudio9175"},
         },
         ["Seed"] = {
             ["Atlantic Giant Pumpkin"] = {Amount = 2, To = "JamesFlashSilver2019"},
-            ["Conifer Cone"] = {Amount = 1, To = "JamesFlashSilver2019"},
+            ["Conifer Cone"] = {Amount = 1, To = "HadleeElliotr1"},
         },
         ["Gear"] = {
-            ["Super Syrup Sprinkler"] = {Amount = 1, To = {"ConnerMekhi5q89", "FreyjaKash452"}},
-            ["Super Syrup Watering Can"] = {Amount = 2, To = {"Campbell_1b5x", "Murillo_zbq"}},
+            ["Super Syrup Sprinkler"] = {Amount = 5, To = {"ConnerMekhi5q89", "FreyjaKash452"}},
+            ["Super Syrup Watering Can"] = {Amount = 5, To = {"Campbell_1b5x", "Murillo_zbq"}},
         },
-		["Other"] = {},
+        ["Other"] = {
+            
+        },
     },
     ["Claim Mail"] = true,
 	-- Advanced
@@ -128,7 +130,7 @@ getgenv().UserConfig = {
         "Maple Strawberry", "Maple Blueberry", "Maple Tomato", "Maple Apple", "Maple Corn",
         "Maple Cactus", "Maple Pineapple", "Maple Green Bean", "Maple Banana",
         "Maple Grape", "Maple Coconut", "Maple Mango",
-        "Amber Cranberry", "Atlantic Giant Pumpkin"
+        "Amber Cranberry"
     },
     ["Blacklist Shovel"] = {
         "Maple Carrot", "Maple Tulip", "Maple Bamboo", "Maple Mushroom",
