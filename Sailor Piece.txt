@@ -107,9 +107,17 @@ getgenv().UserConfig = {
 	-- Mail
     ["Mail To Username"] = {},
     ["Items To Mail"] = {
-		["Pet"] = {},
-        ["Seed"] = {},
-        ["Gear"] = {},
+		["Pet"] = {
+            ["Shadow Dragon"] = {Normal = 1, Big = 1, Huge = 1, Rainbow = 1, To = "ReneStudio9175"},
+        },
+        ["Seed"] = {
+            ["Atlantic Giant Pumpkin"] = {Amount = 2, To = "JamesFlashSilver2019"},
+            ["Conifer Cone"] = {Amount = 1, To = "JamesFlashSilver2019"},
+        },
+        ["Gear"] = {
+            ["Super Syrup Sprinkler"] = {Amount = 1, To = {"ConnerMekhi5q89", "FreyjaKash452"}},
+            ["Super Syrup Watering Can"] = {Amount = 2, To = {"Campbell_1b5x", "Murillo_zbq"}},
+        },
 		["Other"] = {},
     },
     ["Claim Mail"] = true,
