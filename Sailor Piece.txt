@@ -130,7 +130,7 @@ getgenv().UserConfig = {
         "Maple Strawberry", "Maple Blueberry", "Maple Tomato", "Maple Apple", "Maple Corn",
         "Maple Cactus", "Maple Pineapple", "Maple Green Bean", "Maple Banana",
         "Maple Grape", "Maple Coconut", "Maple Mango",
-        "Amber Cranberry"
+        "Amber Cranberry", "Atlantic Giant Pumpkin"
     },
     ["Blacklist Shovel"] = {
         "Maple Carrot", "Maple Tulip", "Maple Bamboo", "Maple Mushroom",
