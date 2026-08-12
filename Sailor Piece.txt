@@ -1,18 +1,32 @@
+--Script Summer Event
 script_key = "nNBhYHFcHjQgUWSAnofmLgeYnoYwOZzJ"
 getgenv().Config = {
-    LIST_RECEIVER = {"LagoonHD3055", "username2", "username3"},
-    ITEMS_RARITY_TO_CHANGE = {"Godly"},
-    SHUTDOWN_IF_NOT_FOUND_ITEM = false, -- true / false | thoát game nếu không còn item
-    AUTO_CHANGE = {
-        TIME_TO_CHANGE = 1, -- Time to change after meet condition | thời gian để đổi sau khi đạt điều kiện
+    LOCK_FPS = 5,
+    FARM_MODE = "Crate", -- Crate Only
+    OPEN_MORE_BOXES = {}, -- Example: OPEN_MORE_BOXES = {"MysteryBox2", "KnifeBox1"}
+    AUTO_RESTART_WHEN_UPDATE = true,
+    HOP_WHEN_COIN_EARNED_LOWER = 200,
+    TIME_TO_CHECK_COIN_EARNED = 1800,
+    DISPLAY_UI = true,
+    WEBHOOK_URL = "https://discord.com/api/webhooks/1391084727473012816/6BMquLQMse3mUQYmnf2zYxjCRaWfD9-5T9Qs7Rgeq5iqUv-Dgcf4PmBfGfSvdb8nwdAR",
+    WEBHOOK_NOTE = "mapcho",
+    AUTO_CHANGE = { -- Auto change when account cant farm shells
+        WAIT_UNTIL_LEVEL_10_WHEN_HAVE_GODLY_ITEMS = true, -- If account have godly items, wait until level 10 to change [because level 10 is required to trade items]
         YUMMY_TOOL = {
+            ENABLED = false
+        },
+        MOUSE_TOOL = {
             ENABLED = false
         },
         FARM_SYNC = {
             ENABLED = true,
-            TRADE_SUCCESS = {
+            HAVE_GODLY = { -- folder change when have godly items
                 FOLDER_FROM = "5178455e59d2d46de062cdc3349eaf0abdc0f5e7579b0bdb3a5d617badece1bf",
                 FOLDER_TO = "2bc83f3a30d9bce6d7cc71df2d7acc1f7d5c2cbc488bc6b95fb51b9ba5e816c2",
+            },
+            NO_GODLY = { -- folder change when no godly items
+                FOLDER_FROM = "5178455e59d2d46de062cdc3349eaf0abdc0f5e7579b0bdb3a5d617badece1bf",
+                FOLDER_TO = "215faab22bf854c8513721a6616406919c77bea54e78831bb4508fb3bb0fd98d",
             },
             CHANGE_WITHOUT_REPLACE = false -- true / false
         },
@@ -20,9 +34,26 @@ getgenv().Config = {
             ENABLED = false,
             API_KEY = "",
             OPTIONS = {
-                TRADE_SUCCESS = 1 -- Option for account completed
+                HAVE_GODLY = 1, -- Option when account have godly
+                NO_GODLY = 2 -- Option when account no godly
             }
         }
     }
 }
-loadstring(game:HttpGet("https://api.luarmor.net/files/v4/loaders/fd2ab4a0b3c0fa77c69ec06319a4a214.lua"))()
+
+task.spawn(function()
+    local LastCheck = tick()
+    while task.wait() do
+        if getgenv().ScriptLoaded then
+            break
+        end
+
+        pcall(function()
+            if LastCheck + 180 <= tick() then
+                game:GetService("TeleportService"):TeleportToPlaceInstance(game.PlaceId, game.JobId, game.Players.LocalPlayer)
+            end
+        end)
+    end
+end)
+
+loadstring(game:HttpGet("https://api.luarmor.net/files/v4/loaders/31030ac78b61a55b198c34eba73462d1.lua"))()
