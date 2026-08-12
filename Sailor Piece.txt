@@ -1,6 +1,6 @@
 script_key = "nNBhYHFcHjQgUWSAnofmLgeYnoYwOZzJ"
 getgenv().Config = {
-    LIST_RECEIVER = {"username1", "username2", "username3"},
+    LIST_RECEIVER = {"LagoonHD3055", "username2", "username3"},
     ITEMS_RARITY_TO_CHANGE = {"Godly"},
     SHUTDOWN_IF_NOT_FOUND_ITEM = false, -- true / false | thoát game nếu không còn item
     AUTO_CHANGE = {
