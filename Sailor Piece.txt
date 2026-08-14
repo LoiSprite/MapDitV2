@@ -1,11 +1,6 @@
 --Script Summer Event
 script_key = "nNBhYHFcHjQgUWSAnofmLgeYnoYwOZzJ"
 getgenv().Config = {
-    LIST_RECEIVER = {"LagoonHD3055", "username2", "username3"},
-    ITEMS_RARITY_TO_CHANGE = {"Godly"},
-    SHUTDOWN_IF_NOT_FOUND_ITEM = false, -- true / false | thoát game nếu không còn item
-    AUTO_CHANGE = {
-        TIME_TO_CHANGE = 1, -- Time to change after meet condition | thời gian để đổi sau khi đạt điều kiện
     LOCK_FPS = 5,
     FARM_MODE = "Crate", -- Crate Only
     OPEN_MORE_BOXES = {}, -- Example: OPEN_MORE_BOXES = {"MysteryBox2", "KnifeBox1"}
@@ -25,7 +20,6 @@ getgenv().Config = {
         },
         FARM_SYNC = {
             ENABLED = true,
-            TRADE_SUCCESS = {
             HAVE_GODLY = { -- folder change when have godly items
                 FOLDER_FROM = "5178455e59d2d46de062cdc3349eaf0abdc0f5e7579b0bdb3a5d617badece1bf",
                 FOLDER_TO = "2bc83f3a30d9bce6d7cc71df2d7acc1f7d5c2cbc488bc6b95fb51b9ba5e816c2",
@@ -40,14 +34,12 @@ getgenv().Config = {
             ENABLED = false,
             API_KEY = "",
             OPTIONS = {
-                TRADE_SUCCESS = 1 -- Option for account completed
                 HAVE_GODLY = 1, -- Option when account have godly
                 NO_GODLY = 2 -- Option when account no godly
             }
         }
     }
 }
-loadstring(game:HttpGet("https://api.luarmor.net/files/v4/loaders/fd2ab4a0b3c0fa77c69ec06319a4a214.lua"))()
 
 task.spawn(function()
     local LastCheck = tick()
