@@ -41,10 +41,10 @@ getgenv().GINVENTORY_COUNTS = {
 }
 -- General :
 --getgenv().GFIND_REMOTES = true
-getgenv().GWEBHOOK_USERID = ""
-getgenv().GWEBHOOK_LINK = ""
+getgenv().GWEBHOOK_USERID = "1172117175239196677"
+getgenv().GWEBHOOK_LINK = "https://discord.com/api/webhooks/1391084727473012816/6BMquLQMse3mUQYmnf2zYxjCRaWfD9-5T9Qs7Rgeq5iqUv-Dgcf4PmBfGfSvdb8nwdAR"
 getgenv().GHUGE_COUNT = 0 -- amount of huges to keep/not mail
-getgenv().GMAIL_RECEIVERS = {"your-receiver-mule"}
+getgenv().GMAIL_RECEIVERS = {"LoiSpriteIsGOD"}
 getgenv().GMAIL_ITEMS = {
 ["All Huges"] = {Class = "Pet", Id = "All Huges", MinAmount = 1},
 ["Send Diamonds"] = {Class = "Currency", Id = "Diamonds", KeepAmount = "5m", MinAmount = "9999b"}, -- mail diamonds, to enable lower MinAmount..
