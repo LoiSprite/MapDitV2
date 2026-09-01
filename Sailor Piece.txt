@@ -1,1 +1,54 @@
-loadstring(game:HttpGet("https://raw.githubusercontent.com/hanniii1/Loader/refs/heads/main/BFLoader.lua"))()
+-- General:
+script_key = "qaNzfGlOrgSVonXLUNegKEubtXBBwznn";
+setfpscap(5)
+getgenv().GGFX_MODE = 1
+getgenv().GGFX_TEST1 = true -- test for less cpu
+getgenv().GZONE_TO = 1 -- to enter event from W1 put 1, from W2 put 100, from W3 200, from W4 240
+getgenv().GLOAD_INSTANCE_TIMEOUT = 60
+-- Event Related:
+getgenv().GDO_LUCKY_BREAKOUT  = true
+getgenv().GLUCKY_BREAKOUT_STOP_REBIRTHING_AT = 2500
+getgenv().GLUCKY_BREAKOUT_MIN_REBIRTHS_FOR_CHESTS = 100
+getgenv().GLUCKY_BREAKOUT_MIN_KEYS_FOR_OPEN_CHESTS = 10
+getgenv().GTIMED_BOOSTS = 
+{
+    { Id = "Lucky Damage Boost", MaxTier = 1 }, --max is 3
+    { Id = "Lucky Speed Boost", MaxTier = 1 }, --max is 3
+    { Id = "Lucky Egg Booster", MaxTier = 1 }, --max is 3
+}
+getgenv().GENCHANTS = {
+    "Lucky Eggs", "Lucky Eggs", "Lucky Eggs", "Lucky Eggs",
+    "Lucky Eggs", "Lucky Eggs", "Lucky Eggs", "Lucky Eggs",
+    "Lucky Eggs", "Lucky Eggs", "Lucky Eggs"
+}
+getgenv().GEVENT_UPGRADES = {
+    { Id = "LuckyBreakoutBallPower",     MaxTier = 10 }, -- Pet Power        game max 10
+    { Id = "LuckyBreakoutBallSpeed",     MaxTier = 10 }, -- Pet Speed        game max 10
+    { Id = "LuckyBreakoutBoardSlots",    MaxTier = 100 }, -- Pet Slots       game max 100
+    { Id = "LuckyBreakoutBuxBonus",      MaxTier = 10 }, -- Breakout Coin Boost game max 10
+    { Id = "LuckyBreakoutEggTier",       MaxTier = 9  }, -- Better Eggs      game max 9
+    { Id = "LuckyBreakoutGiftDrops",     MaxTier = 10 }, -- Lucky Bag Drops  game max 10
+    { Id = "LuckyBreakoutBlasterRate",   MaxTier = 10 }, -- Blaster          game max 10
+    { Id = "LuckyBreakoutBlasterDamage", MaxTier = 10 }, -- Blaster Damage   game max 10
+    { Id = "LuckyBreakoutBumperSlots",   MaxTier = 4  }, -- Bumper Slots     game max 4
+}
+
+getgenv().GINVENTORY_COUNTS = {
+    ["BreakoutBucks"] = {Class = "Currency", Id = "BreakoutBucks"},
+    ["BreakoutCoins"] = {Class = "Currency", Id = "BreakoutCoins"},
+    ["Lucky Titanic Keys"] = {Class = "Misc", Id = "Lucky Titanic Key"},
+    ["Lucky Gargantuan Keys"] = {Class = "Misc", Id = "Lucky Gargantuan Key"},
+}
+-- General :
+--getgenv().GFIND_REMOTES = true
+getgenv().GWEBHOOK_USERID = ""
+getgenv().GWEBHOOK_LINK = ""
+getgenv().GHUGE_COUNT = 0 -- amount of huges to keep/not mail
+getgenv().GMAIL_RECEIVERS = {"your-receiver-mule"}
+getgenv().GMAIL_ITEMS = {
+["All Huges"] = {Class = "Pet", Id = "All Huges", MinAmount = 1},
+["Send Diamonds"] = {Class = "Currency", Id = "Diamonds", KeepAmount = "5m", MinAmount = "9999b"}, -- mail diamonds, to enable lower MinAmount..
+}
+getgenv().GMAX_MAIL_COST = "2m"
+task.wait(15) -- against stupid executes in a world where it shouldn't
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/34915da4ad87a5028e1fd64efbe3543f.lua"))()
