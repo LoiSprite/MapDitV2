@@ -1,2 +1,23 @@
-script_key="bQPuoCvrKPykXkPGkNLmxxORQRCeSyoq";
-loadstring(game:HttpGet("https://raw.githubusercontent.com/hanniii1/Loader/refs/heads/main/BFLoader.lua"))()
+-- .gg/duckhub
+repeat task.wait() until game:IsLoaded()
+setfpscap(10) -- FPS thấp nhất là 10
+script_key = "XPnuSwSPbhfXRknfmqbRCxCUUBtCeTOc";
+getgenv().UserConfig = {
+    ["Target Areas"] = { "Titan Temple" },
+    ["Target Rarity"] = { "Secret", "Cosmic", "Eternal", "Divine", "Demonic" },
+    ["Target Weight"] = "500k",
+    ["Sell When Full"] = 200,
+    ["Protect Min Rate"] = "10b",
+    ["Protect Min Kg"] = "1b",
+    ["Protect Mutations"] = false,
+    ["Protect Pets"] = {},
+    ["Webhook URL"] = "https://discord.com/api/webhooks/1447641028243750962/tDlf4gpZ_0f7lbkARI3V7rIebWej5D2LAC-U0n5Uxsg-aGDCMA0gdEVqSG86bE0Quo8Y",
+    ["Discord ID"] = "600936810092167179",
+    ["Webhook Note"] = "Duck Hub",
+    ["Webhook Rarity"] = { "Secret", "Eternal", "Divine", "Demonic" },
+    ["Webhook KG"] = "500k",
+    ["Webhook Rate"] = "500m",
+    ["Webhook Mutations"] = { "Golden", "Rainbow", "Diamond" },
+}
+loadstring(game:HttpGet("https://raw.githubusercontent.com/dannyhuynh25/Duck-Hub/refs/heads/main/sae.lua"))()
+-- .gg/duckhub
