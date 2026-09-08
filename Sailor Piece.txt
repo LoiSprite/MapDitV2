@@ -1,9 +1,9 @@
 -- .gg/duckhub
 repeat task.wait() until game:IsLoaded()
-setfpscap(15) -- FPS thấp nhất là 15
+setfpscap(15) -- FPS thấp nhất là 10
 script_key = "XPnuSwSPbhfXRknfmqbRCxCUUBtCeTOc";
 getgenv().UserConfig = {
-    ["Target Areas"] = { Titan Temple", "Cosmic", "Cherry Blossom },
+    ["Target Areas"] = { "Titan Temple", "Cosmic", "Cherry Blossom" },
     ["Target Rarity"] = { "Eternal", "Divine" },
     ["Target Weight"] = "50k",
     ["Sell When Full"] = 10,
@@ -17,7 +17,7 @@ getgenv().UserConfig = {
     ["Webhook Rarity"] = { "Eternal", "Divine" },
     ["Webhook KG"] = "500k",
     ["Webhook Rate"] = "500m",
-    ["Webhook Mutations"] = {"Rainbow"},
+    ["Webhook Mutations"] = { "Golden", "Rainbow", "Diamond" },
 }
 loadstring(game:HttpGet("https://raw.githubusercontent.com/dannyhuynh25/Duck-Hub/refs/heads/main/sae.lua"))()
 -- .gg/duckhub
