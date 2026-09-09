@@ -1,12 +1,12 @@
 -- .gg/duckhub
 repeat task.wait() until game:IsLoaded()
-setfpscap(10) -- FPS thấp nhất là 10
+setfpscap(15) -- FPS thấp nhất là 10
 script_key = "XPnuSwSPbhfXRknfmqbRCxCUUBtCeTOc";
 getgenv().UserConfig = {
-    ["Target Areas"] = { Titan Temple", "Cosmic", "Cherry Blossom },
+    ["Target Areas"] = { "Titan Temple", "Cosmic", "Cherry Blossom" },
     ["Target Rarity"] = { "Eternal", "Divine" },
-    ["Target Weight"] = "500k",
-    ["Sell When Full"] = 20,
+    ["Target Weight"] = "50k",
+    ["Sell When Full"] = 10,
     ["Protect Min Rate"] = "10b",
     ["Protect Min Kg"] = "1b",
     ["Protect Mutations"] = false,
@@ -14,7 +14,7 @@ getgenv().UserConfig = {
     ["Webhook URL"] = "https://discord.com/api/webhooks/1447641028243750962/tDlf4gpZ_0f7lbkARI3V7rIebWej5D2LAC-U0n5Uxsg-aGDCMA0gdEVqSG86bE0Quo8Y",
     ["Discord ID"] = "600936810092167179",
     ["Webhook Note"] = "Duck Hub",
-    ["Webhook Rarity"] = { "Secret", "Eternal", "Divine", "Demonic" },
+    ["Webhook Rarity"] = { "Eternal", "Divine" },
     ["Webhook KG"] = "500k",
     ["Webhook Rate"] = "500m",
     ["Webhook Mutations"] = { "Golden", "Rainbow", "Diamond" },
