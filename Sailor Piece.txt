@@ -51,6 +51,7 @@ getgenv().AnimeDiceConfig = {
 		MaxTier       = "",
 		AutoEquipBest = true,
 		ReserveRatio  = 0.6,
+    },
 
 	Upgrade = {
 		Enabled          = true,
