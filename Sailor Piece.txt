@@ -1,23 +1,136 @@
--- .gg/duckhub
-repeat task.wait() until game:IsLoaded()
-setfpscap(15) -- FPS thấp nhất là 10
-script_key = "XPnuSwSPbhfXRknfmqbRCxCUUBtCeTOc";
-getgenv().UserConfig = {
-    ["Target Areas"] = { "Titan Temple", "Cosmic", "Cherry Blossom" },
-    ["Target Rarity"] = { "Eternal", "Divine" },
-    ["Target Weight"] = "50k",
-    ["Sell When Full"] = 10,
-    ["Protect Min Rate"] = "10b",
-    ["Protect Min Kg"] = "1b",
-    ["Protect Mutations"] = false,
-    ["Protect Pets"] = {},
-    ["Webhook URL"] = "https://discord.com/api/webhooks/1548311864780267523/P2MWU-jTP9GMgvSZvNsFBNJVFNWfG7Gvap-8tcn92oJlPaNRWKNt77x88ChXGe3cBLTu",
-    ["Discord ID"] = "600936810092167179",
-    ["Webhook Note"] = "Duck Hub",
-    ["Webhook Rarity"] = { "Eternal", "Divine" },
-    ["Webhook KG"] = "500k",
-    ["Webhook Rate"] = "500m",
-    ["Webhook Mutations"] = { "Golden", "Rainbow", "Diamond" },
+getgenv().AnimeDiceConfig = {
+	Groups = {
+		Farm    = true,
+		Economy = true,
+		Content = true,
+		Utility = true,
+	},
+	UI = {
+		Enabled        = true,
+		StartMinimized = false,
+		ToggleKey      = Enum.KeyCode.RightControl,
+	},
+	Roll = {
+		Enabled    = true,
+		ServerAuto = false,
+	},
+	Collect = { Enabled = true, Interval = 1.0 },
+	Plot = {
+		Enabled  = true,
+		Interval = 4,
+		CompareMode = "normalized",
+		SwapMargin  = 0.02,
+		SwapPaybackSeconds = 600,
+		ForceSwapRatio = 5,
+	},
+
+	LevelUp = {
+		Enabled           = true,
+		MaxPaybackSeconds = 300,
+		MaxMoneyFraction  = 0.35,
+		MaxLevel          = 0,
+	},
+
+	Sell = {
+		Enabled         = true,
+		Interval        = 2,
+		ServerAutoSell  = true,
+		BatchSize       = 60,
+		UnlockWeakSecrets = true,
+		UseIncomeGuard = true,
+	},
+
+	Economy = {
+		Enabled  = true,
+		Priority = { "Dice", "RollSpeed", "Luck", "Damage", "Money", "Storage", "Health", "Sell", "Walkspeed" },
+		FallThroughFraction = 0.25,
+	},
+
+	Dice = {
+		Enabled       = true,
+		MaxTier       = "",
+		AutoEquipBest = true,
+		ReserveRatio  = 0.6,
+
+	Upgrade = {
+		Enabled          = true,
+		WalkspeedMaxTier = 1,
+	},
+
+	Rebirth = {
+		Enabled     = true,
+		Mode        = "smart",
+		UnlockFirst = true,
+		VsDiceRatio = 1.0,
+		Max         = 0,
+	},
+
+	Tower = {
+		Enabled          = true,
+		Interval         = 3.2,
+		Mode             = "auto",
+		Fixed            = "Dragon Tower",
+		MinFloors        = 5,
+		AutoTeam         = true,
+		FarmBoosts       = true,
+		BoostStockTarget = 3,
+		ResourceWeights  = { Gems = 1, ["Trait Reroll"] = 1 },
+		RefillEvery      = 4,
+	},
+
+	Quest = {
+		Enabled    = true,
+		ForceTower = true,
+		PushSell   = true,
+	},
+
+	Rewards = { Enabled = true, Daily = true, Group = true, Offline = true },
+	Codes   = { Enabled = true, MaxTries = 3, List = { "100KLIKES", "40KCCU", "30KCCU", "UPDATE4", "20KCCU", "10KCCU",
+			"5KCCU", "1KCCU", "UPDATE3", "UPDATE2", "UPDATE1", "RELEASE" } },
+
+	Boost   = { Enabled = true, Interval = 3, UseLuck = true, UseMoney = true, UseDamage = true, UseSpins = false },
+
+	Keep = { Interval = 0.5 },
+
+	Webhook = {
+		Enabled = true,
+		URL = "",
+		MinRarity = "Celestial",
+		NotifyExisting = false,
+	},
+
+	TicketShop = {
+		Enabled = true, Interval = 0.4, Reserve = 0,
+		Items = { "Jackpot Spin" },
+		Mode  = "priority",
+		AllowGamepass = false,
+	},
+
+	AccountSwap = {
+		Enabled    = true,
+		Interval   = 5,
+		Item       = "Jackpot Spin",
+		Amount     = 1,
+		FromFolder = "5178455e59d2d46de062cdc3349eaf0abdc0f5e7579b0bdb3a5d617badece1bf",
+		ToFolder   = "2bc83f3a30d9bce6d7cc71df2d7acc1f7d5c2cbc488bc6b95fb51b9ba5e816c2",
+		Replace    = false,
+		ConfigId   = nil,
+		KeepItem   = true,
+	},
+	LockedItems = { "Jackpot Spin" },
+
+	Performance = { Enabled = true, DisableWind = true, UIInterval = 1 },
+	WorkspaceCleanup = {
+		Enabled = true, Interval = 3, BatchSize = 4,
+		OtherPlots = true, MapDecor = true, Leaderboards = true,
+		Aggressive      = true,
+		OtherCharacters = true,
+		Limiteds        = true,
+		DebrisChildren  = true,
+		ClearTerrain    = true,
+		Zones           = true,
+	},
+
+	AntiAFK = { Enabled = true },
 }
-loadstring(game:HttpGet("https://raw.githubusercontent.com/dannyhuynh25/Duck-Hub/refs/heads/main/sae.lua"))()
--- .gg/duckhub
+loadstring(game:HttpGet("https://raw.githubusercontent.com/quoc12092008/Chuiroblox2/refs/heads/main/die.lua"))()
