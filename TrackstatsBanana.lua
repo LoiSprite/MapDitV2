@@ -8,7 +8,7 @@ getgenv().AnimeDiceAutoChangeConfig = {
         Url = "https://accountops.org",
         Key = "ak_d5001c83bb5fe8ecd64423c496c3c3aed4b6daf19c1ebd98d42cee3f07c83bf6",
         AuthMode = "x-api-key",
-        Username = "loisprite",
+        Username = "",
         Option   = 1,
         RetryEvery = 60,
     },
