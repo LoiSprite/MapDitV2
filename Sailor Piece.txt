@@ -1,4 +1,20 @@
-getgenv().Config = {
-    ["Tower Order"] = "InfGear",
+getgenv().AnimeDiceConfig = {
+    AccountSwap = {
+        Enabled  = false,
+        Interval = 5,
+        Trigger = "daily",
+        RequireRolls = true,
+        RequireTrade = true,
+        RequireDaily = true,
+        Backend = "api",
+        Api = {
+            Url      = "https://accountops.org",
+            Key      = "ak_d5001c83bb5fe8ecd64423c496c3c3aed4b6daf19c1ebd98d42cee3f07c83bf6",
+            AuthMode = "x-api-key",
+            Username = "",
+            Option   = 1,
+            RetryEvery = 60,
+        },
+    },
 }
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Albedo1224/anime-dice/refs/heads/main/Script/Anime%20Dice.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/quoc12092008/Chui1209/refs/heads/main/kaitunnnn.lua"))()
