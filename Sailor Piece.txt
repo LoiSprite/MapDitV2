@@ -1,4 +1,4 @@
 getgenv().Config = {
-     ["Tower Order"] = "inf"
+    ["Tower Order"] = "InfGear",
 }
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Albedo1224/anime-dice/refs/heads/main/Script/Anime%20Dice.lua"))()
